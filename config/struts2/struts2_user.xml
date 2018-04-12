@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+
+	<package name="user" namespace="/user" extends="struts-default"
+		strict-method-invocation="false">
+		<action name="user_*" class="com.news.user.action.UserAction"
+			method="{1}">
+			<result name="detail">/WEB-INF/views/user/detail.jsp</result>
+		</action>
+	</package>
+
+</struts>

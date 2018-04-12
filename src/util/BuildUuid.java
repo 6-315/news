@@ -2,8 +2,14 @@ package util;
 
 import java.util.UUID;
 
-public class uuid {
-	// 手动生成uuid
+/**
+ * class 鐢熸垚uuid
+ * 
+ * @author 鍒涘缓 JXX
+ * @modify JXX 2018/04/12
+ *
+ */
+public class BuildUuid {
 	public static String getUuid() {
 		UUID uuid = UUID.randomUUID();
 		String s = uuid.toString();

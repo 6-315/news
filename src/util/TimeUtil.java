@@ -4,10 +4,16 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * class æ—¶é—´å·¥å…·ç±»
+ * 
+ * @author åˆ›å»º JXX
+ * @date 2018/04/12
+ * @modify JXX 2018/04/12
+ *
+ */
 public class TimeUtil {
 	static SimpleDateFormat formatter;
-
-	// »ñµÃ¾«È·µ½ÃëµÄÊ±¼ä
 
 	public static String getStringSecond() {
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -23,13 +29,13 @@ public class TimeUtil {
 
 	}
 
-	public static String getDay_Of_Week(Date date) {
+	public static String getDayOfWeek(Date date) {
 		SimpleDateFormat sdf = new SimpleDateFormat("E");
 		String week = sdf.format(date);
 		return week;
 	}
 
-	public static String getWeek_Of_Month(Date date) {
+	public static String getWeekOfMonth(Date date) {
 		SimpleDateFormat sdf = new SimpleDateFormat("W");
 		String week = sdf.format(date);
 		return week;
@@ -77,7 +83,6 @@ public class TimeUtil {
 
 	}
 
-	// »ñÈ¡µ±Ç°Ê±¼äÊ±¼ä´Á
 	public static String getTimeChou() {
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
 		Date secondDate = new Date();

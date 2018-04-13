@@ -14,7 +14,7 @@ import com.news.user.domain.UserInfo;
  * 
  * @author 创建 JXX
  * @date 2018/4/12
- * @modify JXX 2018/4/12
+ * @modify JXX 2018/4/13
  *
  */
 public class UserDaoImpl implements UserDao {

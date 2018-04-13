@@ -1,13 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>首页</title>
 </head>
 <body>
-	<a href="${pageContext.request.contextPath}/user/user_detailAction">haha</a>
+	<form
+		action="${pageContext.request.contextPath}/user/user_detailAction">
+		用户名:<input name="userInfo.userName" type="text" /> 密 码:<input
+			name="userInfo.userPassword" type="password" /> <input type="submit"
+			value="提交" />
+	</form>
+	<a
+		href="${pageContext.request.contextPath}/user/user_listUserInfoByPageAction?">dd</a>
+
 </body>
 </html>

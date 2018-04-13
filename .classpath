@@ -58,5 +58,7 @@
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/struts2-core-2.5.13.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/struts2-spring-plugin-2.5.13.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/xmlbeans-2.6.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-test-4.0.0.RELEASE.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

@@ -1,18 +1,24 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 2018-4-12 22:03:27 by Hibernate Tools 3.5.0.Final -->
+<!-- Generated 2018-4-13 1:09:34 by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-	<class name="com.news.user.domain.UserInfo" table="USERINFO">
-		<id name="userId" type="java.lang.String">
-			<column name="userId" />
-			<generator class="assigned" />
-		</id>
-		<property name="userName" type="java.lang.String">
-			<column name="userName" />
-		</property>
-		<property name="userPassword" type="java.lang.String">
-			<column name="userPassword" />
-		</property>
-	</class>
+    <class name="com.news.user.domain.UserInfo" table="USERINFO">
+        <id name="userId" type="java.lang.String">
+            <column name="USERID" />
+            <generator class="assigned" />
+        </id>
+        <property name="userName" type="java.lang.String">
+            <column name="USERNAME" />
+        </property>
+        <property name="userPassword" type="java.lang.String">
+            <column name="USERPASSWORD" />
+        </property>
+        <property name="userCreateTime" type="java.lang.String">
+            <column name="USERCREATETIME" />
+        </property>
+        <property name="userModify" type="java.lang.String">
+            <column name="USERMODIFY" />
+        </property>
+    </class>
 </hibernate-mapping>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-4-13 1:09:34 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+	<class name="com.news.user.domain.NewsInfo" table="NEWSINFO">
+		<id name="newsId" type="java.lang.String">
+			<column name="newsId" />
+			<generator class="assigned" />
+		</id>
+		<property name="newsBelong" type="java.lang.String">
+			<column name="newsBelong" />
+		</property>
+		<property name="newsTitle" type="java.lang.String">
+			<column name="newsTitle" />
+		</property>
+		<property name="newsReleaseTime" type="java.lang.String">
+			<column name="newsReleaseTime" />
+		</property>
+		<property name="newsContent" type="java.lang.String">
+			<column name="newsContent" />
+		</property>
+		<property name="newsCreateTime" type="java.lang.String">
+			<column name="newsCreateTime" />
+		</property>
+		<property name="newsModifyTime" type="java.lang.String">
+			<column name="newsModifyTime" />
+		</property>
+	</class>
+</hibernate-mapping>

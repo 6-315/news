@@ -12,6 +12,8 @@ public class UserInfo {
 	private String userId;
 	private String userName;
 	private String userPassword;
+	private String userCreateTime;
+	private String userModify;
 
 	public String getUserId() {
 		return userId;
@@ -37,9 +39,26 @@ public class UserInfo {
 		this.userPassword = userPassword;
 	}
 
+	public String getUserCreateTime() {
+		return userCreateTime;
+	}
+
+	public void setUserCreateTime(String userCreateTime) {
+		this.userCreateTime = userCreateTime;
+	}
+
+	public String getUserModify() {
+		return userModify;
+	}
+
+	public void setUserModify(String userModify) {
+		this.userModify = userModify;
+	}
+
 	@Override
 	public String toString() {
-		return "UserInfo [userId=" + userId + ", userName=" + userName + ", userPassword=" + userPassword + "]";
+		return "UserInfo [userId=" + userId + ", userName=" + userName + ", userPassword=" + userPassword
+				+ ", userCreateTime=" + userCreateTime + ", userModify=" + userModify + "]";
 	}
 
 }

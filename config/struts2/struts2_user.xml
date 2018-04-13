@@ -8,6 +8,9 @@
 		strict-method-invocation="false">
 		<action name="user_*" class="com.news.user.action.UserAction"
 			method="{1}">
+			<result name="listUserInfoByPage" type="redirectAction">user_listUserInfoByPageAction
+			</result>
+			<result name="error" type="redirect">/error.jsp</result>
 			<result name="detail">/WEB-INF/views/user/detail.jsp</result>
 		</action>
 	</package>

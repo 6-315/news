@@ -9,7 +9,7 @@ import com.news.user.domain.UserInfo;
  * 
  * @author 创建 JXX
  * @date 2018/04/12
- * @modify JXX 2018/04/12
+ * @modify JXX 2018/04/13
  *
  */
 public interface UserDao {

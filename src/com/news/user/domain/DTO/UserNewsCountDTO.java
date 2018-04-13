@@ -7,7 +7,7 @@ import com.news.user.domain.UserInfo;
  * 
  * @author JXX
  * @date 创建 2018/04/12
- * @modify JXX 2018/04/12
+ * @modify JXX 2018/04/13
  *
  */
 public class UserNewsCountDTO {

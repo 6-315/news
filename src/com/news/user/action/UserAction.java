@@ -17,7 +17,7 @@ import com.opensymphony.xwork2.ActionSupport;
  * 
  * @author 创建 JXX
  * @date 2018/04/12
- * @modify JXX 2018/04/12
+ * @modify JXX 2018/04/13
  * 
  */
 public class UserAction extends ActionSupport implements ServletResponseAware, ServletRequestAware {

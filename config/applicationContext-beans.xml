@@ -6,5 +6,7 @@
 	<import resource="spring/spring_user.xml" />
 	<import resource="spring/spring_linkmanagement.xml" />
 	<import resource="spring/spring_navigation.xml" />
+	<import resource="spring/spring_carousel.xml" />
+	
 
 </beans>

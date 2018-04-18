@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="linkManagementAction" class="com.news.link.action.LinkManagementAction"
+		scope="prototype">
+		<property name="linkManagementService" ref="linkManagementService"></property>
+	</bean>
+	<bean id="linkManagementService" class="com.news.link.service.impl.LinkManagementServiceImpl">
+		<property name="linkManagementDao" ref="linkManagementDao"></property>
+	</bean>
+	<bean id="linkManagementDao" class="com.news.link.dao.impl.LinkManagementDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+</beans>

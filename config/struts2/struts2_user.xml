@@ -12,6 +12,10 @@
 			</result>
 			<result name="error" type="redirect">/error.jsp</result>
 			<result name="detail">/WEB-INF/views/user/detail.jsp</result>
+			<result name="yemian">/WEB-INF/views/control.jsp</result>
+			<result name="endHeader">/WEB-INF/views/end-header.jsp</result>
+			<result name="endNavbar">/WEB-INF/views/end-navbar.jsp</result>
+
 		</action>
 	</package>
 

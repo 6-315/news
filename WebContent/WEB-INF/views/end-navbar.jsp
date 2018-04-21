@@ -56,6 +56,8 @@
 		src="${pageContext.request.contextPath}/js/app.js"></script>
 	<script type="text/javascript"
 		src="${pageContext.request.contextPath}/js/toastr.js"></script>
+	<script type="text/javascript"
+		src="${pageContext.request.contextPath}/js/bootstrap.js"></script>
 </body>
 
 </html>

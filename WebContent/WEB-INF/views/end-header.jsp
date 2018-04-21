@@ -16,6 +16,8 @@
 	href="${pageContext.request.contextPath}/css/admin.css">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/app.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/toastr.css">
 </head>
 <body data-type="index">
 	<header class="am-topbar am-topbar-inverse admin-header">

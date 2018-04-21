@@ -1,18 +1,8 @@
-package com.news.user.dao;
+package com.news.jurisdiction.dao;
 
 import java.util.List;
 
-import com.news.user.domain.UserInfo;
-
-/**
- * class userdao层的接口
- * 
- * @author 创建 JXX
- * @date 2018/04/12
- * @modify JXX 2018/04/13
- *
- */
-public interface UserDao {
+public interface JurisdictionDao {
 	/**
 	 * 保存、更新对象
 	 * 
@@ -51,16 +41,7 @@ public interface UserDao {
 	public int removeObject(Object obj);
 
 	/**
-	 * 根据Id获取对象
-	 * 
-	 * @param userId
-	 * @return
-	 */
-	public UserInfo getUserInfo(UserInfo userInfo);
-
-	/**
 	 * 获取对象列表
 	 */
 	public List<?> listObject(String hql);
-
 }

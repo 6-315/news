@@ -4,7 +4,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>fdfd</title>
+<title>后台管理</title>
 </head>
 <body>
 	<s:action name="user_endHeaderAction" namespace="/user"

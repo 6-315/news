@@ -99,4 +99,16 @@ public class LinkManagementDaoImpl implements LinkManagementDao {
 		getSession().delete(obj);
 		return 1;
 	}
+
+	/**
+	 * 获取对象列表
+	 */
+	@Override
+	public List<?> listObject(String hql) {
+		Session session = getSession();
+		Query query = session.createQuery(hql);
+		List<?> list = query.list();
+		session.clear();
+		return list;
+	}
 }

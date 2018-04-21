@@ -47,4 +47,9 @@ public interface NavigationManagementDao {
 	 * @param obj
 	 */
 	public int removeObject(Object obj);
+
+	/**
+	 * 获取对象列表
+	 */
+	public List<?> listObject(String hql);
 }

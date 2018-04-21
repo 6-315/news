@@ -8,6 +8,8 @@
 <title>首页内容</title>
 </head>
 <body>
+	
+	
 	<form
 		action="${pageContext.request.contextPath}/user/user_detailAction">
 		用户名:<input name="userInfo.userName" type="text" /> 密 码:<input

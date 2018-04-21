@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="newsInfoManagementAction" class="com.news.newsinfo.action.NewsInfoManagementAction"
+		scope="prototype">
+		<property name="newsInfoManagementService" ref="newsInfoManagementService"></property>
+	</bean>
+	<bean id="newsInfoManagementService"
+		class="com.news.newsinfo.service.impl.NewsInfoManagementServiceImpl">
+		<property name="newsInfoManagementDao" ref="newsInfoManagementDao"></property>
+	</bean>
+	<bean id="newsInfoManagementDao" class="com.news.newsinfo.dao.impl.NewsInfoManagementDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+</beans>

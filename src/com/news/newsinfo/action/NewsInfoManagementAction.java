@@ -1,4 +1,4 @@
-package com.news.link.action;
+package com.news.newsinfo.action;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -6,40 +6,36 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.struts2.interceptor.ServletRequestAware;
 import org.apache.struts2.interceptor.ServletResponseAware;
 
-import com.news.link.service.LinkManagementService;
+import com.news.newsinfo.service.NewsInfoManagementService;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
- * class 链接管理
+ * class 新闻管理
  * 
  * @author JXX
- * @date 18/04/18
- * @modify 修改 JXX 18/04/18
+ * @date 2018/04/18
+ * @modify JXX 2018/04/18
  *
  */
-public class LinkManagementAction extends ActionSupport implements ServletResponseAware, ServletRequestAware {
+public class NewsInfoManagementAction extends ActionSupport implements ServletResponseAware, ServletRequestAware {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * service层注入
-	 */
-	private LinkManagementService linkManagementService;
+	private NewsInfoManagementService newsInfoManagementService;
 
-	public LinkManagementService getLinkManagementService() {
-		return linkManagementService;
+	public NewsInfoManagementService getNewsInfoManagementService() {
+		return newsInfoManagementService;
 	}
 
-	public void setLinkManagementService(LinkManagementService linkManagementService) {
-		this.linkManagementService = linkManagementService;
+	public void setNewsInfoManagementService(NewsInfoManagementService newsInfoManagementService) {
+		this.newsInfoManagementService = newsInfoManagementService;
 	}
 
 	/**
-	 * service层注入
+	 * service 层的注入完成
 	 */
-
 	/**
 	 * 实现request以及response
 	 */
@@ -76,8 +72,5 @@ public class LinkManagementAction extends ActionSupport implements ServletRespon
 	/**
 	 * 实现结束
 	 */
-	
-	
-	
 
 }

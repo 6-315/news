@@ -1,4 +1,4 @@
-package com.news.link.action;
+package com.news.carousel.action;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -6,40 +6,39 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.struts2.interceptor.ServletRequestAware;
 import org.apache.struts2.interceptor.ServletResponseAware;
 
-import com.news.link.service.LinkManagementService;
+import com.news.carousel.service.CarouselManagementService;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
- * class 链接管理
+ * class 轮播图管理
  * 
  * @author JXX
- * @date 18/04/18
- * @modify 修改 JXX 18/04/18
+ * @date 2018/04/18
+ * @modify JXX 2018/04/18
  *
  */
-public class LinkManagementAction extends ActionSupport implements ServletResponseAware, ServletRequestAware {
+public class CarouselManagementAction extends ActionSupport implements ServletResponseAware, ServletRequestAware {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * service层注入
+	 * service 层注入
 	 */
-	private LinkManagementService linkManagementService;
+	private CarouselManagementService carouselManagementService;
 
-	public LinkManagementService getLinkManagementService() {
-		return linkManagementService;
+	public CarouselManagementService getCarouselManagementService() {
+		return carouselManagementService;
 	}
 
-	public void setLinkManagementService(LinkManagementService linkManagementService) {
-		this.linkManagementService = linkManagementService;
+	public void setCarouselManagementService(CarouselManagementService carouselManagementService) {
+		this.carouselManagementService = carouselManagementService;
 	}
 
 	/**
-	 * service层注入
+	 * 
 	 */
-
 	/**
 	 * 实现request以及response
 	 */
@@ -76,8 +75,4 @@ public class LinkManagementAction extends ActionSupport implements ServletRespon
 	/**
 	 * 实现结束
 	 */
-	
-	
-	
-
 }

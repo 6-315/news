@@ -1,4 +1,4 @@
-package com.news.link.action;
+package com.news.jurisdiction.action;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -6,39 +6,24 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.struts2.interceptor.ServletRequestAware;
 import org.apache.struts2.interceptor.ServletResponseAware;
 
-import com.news.link.service.LinkManagementService;
+import com.news.jurisdiction.service.JurisdictionService;
 import com.opensymphony.xwork2.ActionSupport;
 
-/**
- * class 链接管理
- * 
- * @author JXX
- * @date 18/04/18
- * @modify 修改 JXX 18/04/18
- *
- */
-public class LinkManagementAction extends ActionSupport implements ServletResponseAware, ServletRequestAware {
+public class JurisdictionAction extends ActionSupport implements ServletResponseAware, ServletRequestAware {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * service层注入
-	 */
-	private LinkManagementService linkManagementService;
+	private JurisdictionService jurisdictionService;
 
-	public LinkManagementService getLinkManagementService() {
-		return linkManagementService;
+	public JurisdictionService getJurisdictionService() {
+		return jurisdictionService;
 	}
 
-	public void setLinkManagementService(LinkManagementService linkManagementService) {
-		this.linkManagementService = linkManagementService;
+	public void setJurisdictionService(JurisdictionService jurisdictionService) {
+		this.jurisdictionService = jurisdictionService;
 	}
-
-	/**
-	 * service层注入
-	 */
 
 	/**
 	 * 实现request以及response
@@ -76,8 +61,5 @@ public class LinkManagementAction extends ActionSupport implements ServletRespon
 	/**
 	 * 实现结束
 	 */
-	
-	
-	
 
 }

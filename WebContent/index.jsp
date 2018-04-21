@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>首页</title>
+<title>首页内容</title>
 </head>
 <body>
 	<form
@@ -16,6 +16,9 @@
 	</form>
 	<a
 		href="${pageContext.request.contextPath}/user/user_listUserInfoByPageAction?">dd</a>
-
+	<a href="${pageContext.request.contextPath}/user/user_yemianAction">后台</a>
+	
+	
+	
 </body>
 </html>

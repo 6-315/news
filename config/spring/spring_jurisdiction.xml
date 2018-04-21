@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="jurisdictionAction" class="com.news.jurisdiction.action.JurisdictionAction"
+		scope="prototype">
+		<property name="jurisdictionService" ref="jurisdictionService"></property>
+	</bean>
+	<bean id="jurisdictionService"
+		class="com.news.jurisdiction.service.impl.JurisdictionServiceImpl">
+		<property name="jurisdictionDao" ref="jurisdictionDao"></property>
+	</bean>
+	<bean id="jurisdictionDao" class="com.news.jurisdiction.dao.impl.JurisdictionDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+</beans>

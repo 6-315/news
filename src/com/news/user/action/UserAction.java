@@ -207,4 +207,25 @@ public class UserAction extends ActionSupport implements ServletResponseAware, S
 		return "listUserInfoByPage";
 	}
 
+	/**
+	 * 跳转到后台
+	 */
+	public String yemianAction() {
+		return "yemian";
+	}
+
+	/**
+	 * 头部
+	 */
+	public String endHeaderAction() {
+		return "endHeader";
+	}
+
+	/**
+	 * 侧边栏
+	 */
+	public String endNavbarAction() {
+		return "endNavbar";
+	}
+
 }

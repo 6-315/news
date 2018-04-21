@@ -4,4 +4,10 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<import resource="spring/spring_user.xml" />
+	<import resource="spring/spring_linkmanagement.xml" />
+	<import resource="spring/spring_navigation.xml" />
+	<import resource="spring/spring_carousel.xml" />
+	<import resource="spring/spring_newsinfo.xml" />
+
+
 </beans>

@@ -1,4 +1,4 @@
-package com.news.user.dao.impl;
+package com.news.link.dao.impl;
 
 import java.util.List;
 
@@ -6,18 +6,17 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
-import com.news.user.dao.UserDao;
-import com.news.user.domain.UserInfo;
+import com.news.link.dao.LinkManagementDao;
 
 /**
- * class UserDao 用户模块Dao实现类
+ * class 链接管理
  * 
- * @author 创建 JXX
- * @date 2018/4/12
- * @modify JXX 2018/4/13
+ * @author JXX
+ * @date 2018/04/18
+ * @modify JXX 2018/04/18
  *
  */
-public class UserDaoImpl implements UserDao {
+public class LinkManagementDaoImpl implements LinkManagementDao {
 	/**
 	 * session注入
 	 */
@@ -101,17 +100,6 @@ public class UserDaoImpl implements UserDao {
 		return 1;
 	}
 
-	// 根据id获取对象
-	@Override
-	public UserInfo getUserInfo(UserInfo userInfo) {
-		Session session = getSession();
-		String hql = "from UserInfo where userId = :userId";
-		Query query = session.createQuery(hql);
-		query.setParameter("userId", userInfo.getUserId());
-		session.evict(userInfo);
-		return userInfo;
-	}
-
 	/**
 	 * 获取对象列表
 	 */
@@ -123,5 +111,4 @@ public class UserDaoImpl implements UserDao {
 		session.clear();
 		return list;
 	}
-
 }

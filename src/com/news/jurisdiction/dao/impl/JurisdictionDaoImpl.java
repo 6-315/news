@@ -1,4 +1,4 @@
-package com.news.user.dao.impl;
+package com.news.jurisdiction.dao.impl;
 
 import java.util.List;
 
@@ -6,18 +6,9 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
-import com.news.user.dao.UserDao;
-import com.news.user.domain.UserInfo;
+import com.news.jurisdiction.dao.JurisdictionDao;
 
-/**
- * class UserDao 用户模块Dao实现类
- * 
- * @author 创建 JXX
- * @date 2018/4/12
- * @modify JXX 2018/4/13
- *
- */
-public class UserDaoImpl implements UserDao {
+public class JurisdictionDaoImpl implements JurisdictionDao {
 	/**
 	 * session注入
 	 */
@@ -38,7 +29,6 @@ public class UserDaoImpl implements UserDao {
 	/**
 	 * session注入结束
 	 */
-
 	/**
 	 * 保存、更新对象
 	 * 
@@ -101,17 +91,6 @@ public class UserDaoImpl implements UserDao {
 		return 1;
 	}
 
-	// 根据id获取对象
-	@Override
-	public UserInfo getUserInfo(UserInfo userInfo) {
-		Session session = getSession();
-		String hql = "from UserInfo where userId = :userId";
-		Query query = session.createQuery(hql);
-		query.setParameter("userId", userInfo.getUserId());
-		session.evict(userInfo);
-		return userInfo;
-	}
-
 	/**
 	 * 获取对象列表
 	 */
@@ -123,5 +102,4 @@ public class UserDaoImpl implements UserDao {
 		session.clear();
 		return list;
 	}
-
 }

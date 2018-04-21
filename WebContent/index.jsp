@@ -8,8 +8,9 @@
 <title>首页内容</title>
 </head>
 <body>
-	
-	
+	<!-- 
+		DTO 数据传输对象。
+	 -->	
 	<form
 		action="${pageContext.request.contextPath}/user/user_detailAction">
 		用户名:<input name="userInfo.userName" type="text" /> 密 码:<input
@@ -17,7 +18,7 @@
 			value="提交" />
 	</form>
 	<a
-		href="${pageContext.request.contextPath}/user/user_listUserInfoByPageAction?">dd</a>
+		href="${pageContext.request.contextPath}/user/user_listUserInfoByPageAction">dd</a>
 	<a href="${pageContext.request.contextPath}/user/user_yemianAction">后台</a>
 	
 	

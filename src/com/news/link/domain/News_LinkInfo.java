@@ -15,9 +15,9 @@ public class News_LinkInfo {
 
 	private String LI_Address; // 链接地址Address
 
-	private String LI_IsDisplay; // 链接是否显示
+	private int LI_IsDisplay; // 链接是否显示
 
-	private String LI_IsDelete; // 链接是否被删除
+	private int LI_IsDelete; // 链接是否被删除
 
 	private String LI_CreateTime; // 链接创建时间
 
@@ -47,19 +47,19 @@ public class News_LinkInfo {
 		LI_Address = lI_Address;
 	}
 
-	public String getLI_IsDisplay() {
+	public int getLI_IsDisplay() {
 		return LI_IsDisplay;
 	}
 
-	public void setLI_IsDisplay(String lI_IsDisplay) {
+	public void setLI_IsDisplay(int lI_IsDisplay) {
 		LI_IsDisplay = lI_IsDisplay;
 	}
 
-	public String getLI_IsDelete() {
+	public int getLI_IsDelete() {
 		return LI_IsDelete;
 	}
 
-	public void setLI_IsDelete(String lI_IsDelete) {
+	public void setLI_IsDelete(int lI_IsDelete) {
 		LI_IsDelete = lI_IsDelete;
 	}
 
@@ -86,4 +86,5 @@ public class News_LinkInfo {
 				+ ", LI_ModifyTime=" + LI_ModifyTime + "]";
 	}
 
+	
 }

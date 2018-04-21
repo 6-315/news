@@ -10,18 +10,20 @@
 <body>
 	<!-- 
 		DTO 数据传输对象。
-	 -->	
+	 -->
 	<form
-		action="${pageContext.request.contextPath}/user/user_detailAction">
-		用户名:<input name="userInfo.userName" type="text" /> 密 码:<input
-			name="userInfo.userPassword" type="password" /> <input type="submit"
-			value="提交" />
+		action="${pageContext.request.contextPath}/link/link_detailAction"
+		method="post">
+		链接名:<input name="news_LinkInfo.LI_Name" type="text" /> 链接地址:<input
+			name="news_LinkInfo.LI_Address" type="text" id="" /> <input
+			type="submit" value="提交" />
 	</form>
 	<a
 		href="${pageContext.request.contextPath}/user/user_listUserInfoByPageAction">dd</a>
-	<a href="${pageContext.request.contextPath}/user/user_yemianAction">后台</a>
-	
-	
-	
+	<a
+		href="${pageContext.request.contextPath}/link/link_listLinkInfoByPageAction">后台</a>
+
+
+
 </body>
 </html>

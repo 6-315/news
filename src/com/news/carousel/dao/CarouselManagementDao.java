@@ -2,6 +2,8 @@ package com.news.carousel.dao;
 
 import java.util.List;
 
+import com.news.newsinfo.domain.News_NewsInfo;
+
 /**
  * class 轮播图管理
  * 
@@ -52,4 +54,11 @@ public interface CarouselManagementDao {
 	 * 获取对象列表
 	 */
 	public List<?> listObject(String hql);
+
+	/**
+	 * 
+	 * @param trim
+	 * @return
+	 */
+	public News_NewsInfo getNewsInfoById(String newsInfoId);
 }

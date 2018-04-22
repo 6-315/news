@@ -4,6 +4,16 @@
 	"http://struts.apache.org/dtds/struts-2.5.dtd">
 <struts>
 
-
-
+	<package name="carousel" namespace="/carousel" extends="struts-default"
+		strict-method-invocation="false">
+		<action name="carousel_*"
+			class="com.news.carousel.action.CarouselManagementAction" method="{1}">
+			<result name="lunboguanli">carousel_selectAction?message=${message}
+			</result>
+			<result name="save" type="redirectAction">carousel_selectAction?message=${message}
+			</result>
+			<result name="listCarousel">/WEB-INF/views/carouse/index.jsp
+			</result>
+		</action>
+	</package>
 </struts>

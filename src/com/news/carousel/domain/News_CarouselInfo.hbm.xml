@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 2018-4-21 14:02:07 by Hibernate Tools 3.5.0.Final -->
+<!-- Generated 2018-4-21 18:03:50 by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
     <class name="com.news.carousel.domain.News_CarouselInfo" table="NEWS_CAROUSELINFO">
         <id name="CI_Id" type="java.lang.String">
@@ -14,7 +14,7 @@
         <property name="CI_BelongNews" type="java.lang.String">
             <column name="CI_BelongNews" />
         </property>
-        <property name="CI_IsShow" type="java.lang.String">
+        <property name="CI_IsShow" type="int">
             <column name="CI_IsShow" />
         </property>
         <property name="CI_CreateTime" type="java.lang.String">

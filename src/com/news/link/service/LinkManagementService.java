@@ -13,10 +13,11 @@ import com.news.link.domain.VO.News_LinkInfoCountVO;
  */
 public interface LinkManagementService {
 
-	int addLink(News_LinkInfo news_LinkInfo);
+	public int addLink(News_LinkInfo news_LinkInfo);
 
-	News_LinkInfoCountVO listLinkInfoByPage(News_LinkInfoCountVO news_LinkInfoCountVO);
+	public News_LinkInfoCountVO listLinkInfoByPage(News_LinkInfoCountVO news_LinkInfoCountVO);
 
-	void removeLink(News_LinkInfo news_LinkInfo);
+	public int removeLink(News_LinkInfo news_LinkInfo);
 	
+	public int updateLinkInfo(News_LinkInfo news_LinkInfo);
 }

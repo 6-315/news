@@ -40,6 +40,10 @@ public class LinkManagementServiceImpl implements LinkManagementService {
 	 * 注入结束
 	 */
 
+	/**
+	 * 添加链接 LMJ 2018/4/22
+	 */
+
 	@Override
 	public int addLink(News_LinkInfo news_LinkInfo) {
 		news_LinkInfo.setLI_Id(BuildUuid.getUuid());
@@ -49,6 +53,9 @@ public class LinkManagementServiceImpl implements LinkManagementService {
 		return 1;
 	}
 
+	/**
+	 * 分页 LMJ 2018/4/22
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public News_LinkInfoCountVO listLinkInfoByPage(News_LinkInfoCountVO news_LinkInfoCountVO) {
@@ -84,29 +91,40 @@ public class LinkManagementServiceImpl implements LinkManagementService {
 			news_LinkInfoCountVO.setHaveNextPage(true);
 		}
 		// 获取若干条DTO信息
+		System.out.println("--------------");
+		System.out.println(listNews_LinkInfoCountDTOHql);
+		System.out.println(news_LinkInfoCountVO.getPageIndex());
+		System.out.println(news_LinkInfoCountVO.getPageSize());
+		System.out.println("--------------");
 		listLinkInfo = (List<News_LinkInfo>) linkManagementDao.queryForPage(listNews_LinkInfoCountDTOHql,
 				news_LinkInfoCountVO.getPageIndex(), news_LinkInfoCountVO.getPageSize());
+		news_LinkInfoCountVO.setListNews_LinkInfo(listLinkInfo);
 		// 遍历当前的信息并且组合生成DTO
-		for (News_LinkInfo news_LinkInfo : listLinkInfo) {
-			news_LinkInfoCountDTO = new News_LinkInfoCountDTO();
-			// 根据用户id获取所拥有的新闻数量并组合进DTO中
-			String newsCount = "from NewsInfo where newsBelong = '+news_LinkInfo.getLI_Id()+'";
-			news_LinkInfoCountDTO.setLinkInfoCount(linkManagementDao.getCount(newsCount));
-			if (news_LinkInfoCountVO.getSearch() != null && news_LinkInfoCountVO.getSearch().trim().length() > 0) {
-				news_LinkInfo.setLI_Name(news_LinkInfo.getLI_Name().replaceAll(news_LinkInfoCountVO.getSearch(),
-						"<mark>" + news_LinkInfoCountVO.getSearch() + "</mark>"));
-			}
-			news_LinkInfoCountDTO.setNews_LinkInfo(news_LinkInfo);
-			listNews_LinkInfoCountDTO.add(news_LinkInfoCountDTO);
-		}
-		news_LinkInfoCountVO.setListNews_LinkInfoDTO(listNews_LinkInfoCountDTO);
 		return news_LinkInfoCountVO;
 	}
 
+	/**
+	 * 移除链接 LMJ 2018/4/22
+	 */
 	@Override
-	public void removeLink(News_LinkInfo news_LinkInfo) {
-		// TODO Auto-generated method stub
+	public int removeLink(News_LinkInfo news_LinkInfo) {
+		return linkManagementDao.removeObject(news_LinkInfo);
 
+	}
+
+	/**
+	 * 更新链接信息 LMJ 2018/4/22
+	 */
+	@Override
+	public int updateLinkInfo(News_LinkInfo news_LinkInfo) {
+		News_LinkInfo updateLinkInfo = new News_LinkInfo();
+		updateLinkInfo = (News_LinkInfo) linkManagementDao.getNews_LinkInfo(news_LinkInfo);
+		updateLinkInfo.setLI_Name(news_LinkInfo.getLI_Name());
+		updateLinkInfo.setLI_Address(news_LinkInfo.getLI_Address());
+		updateLinkInfo.setLI_CreateTime(news_LinkInfo.getLI_CreateTime());
+		updateLinkInfo.setLI_ModifyTime(TimeUtil.getStringSecond());
+		linkManagementDao.saveOrUpdateObject(updateLinkInfo);
+		return 1;
 	}
 
 }

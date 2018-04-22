@@ -2,6 +2,8 @@ package com.news.link.dao;
 
 import java.util.List;
 
+import com.news.link.domain.News_LinkInfo;
+
 /**
  * interface 链接管理
  * 
@@ -47,6 +49,10 @@ public interface LinkManagementDao {
 	 * @param obj
 	 */
 	public int removeObject(Object obj);
+	
+	public News_LinkInfo getNews_LinkInfo(News_LinkInfo news_LinkInfo);
+		
+	
 
 	/**
 	 * 获取对象列表

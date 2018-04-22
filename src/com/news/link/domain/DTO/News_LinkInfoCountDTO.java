@@ -13,7 +13,6 @@ import com.news.link.domain.News_LinkInfo;
 
 public class News_LinkInfoCountDTO {
 	private News_LinkInfo news_LinkInfo;
-	private int linkInfoCount;
 
 	public News_LinkInfo getNews_LinkInfo() {
 		return news_LinkInfo;
@@ -23,17 +22,9 @@ public class News_LinkInfoCountDTO {
 		this.news_LinkInfo = news_LinkInfo;
 	}
 
-	public int getLinkInfoCount() {
-		return linkInfoCount;
-	}
-
-	public void setLinkInfoCount(int linkInfoCount) {
-		this.linkInfoCount = linkInfoCount;
-	}
-
 	@Override
 	public String toString() {
-		return "News_LinkInfoDTO [news_LinkInfo=" + news_LinkInfo + ", linkInfoCount=" + linkInfoCount + "]";
+		return "News_LinkInfoCountDTO [news_LinkInfo=" + news_LinkInfo + "]";
 	}
 
 }

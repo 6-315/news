@@ -10,7 +10,7 @@
 			<result name="listLinkInfoByPage" type="redirectAction">link_listLinkInfoByPageAction
 			</result>
 			<result name="error" type="redirect">/error.jsp</result>
-			<result name="detail">/WEB-INF/views/link/test.jsp</result>
+			<result name="detail">/WEB-INF/views/link/LinkManagement.jsp</result>
 			<result name="yemian">/WEB-INF/views/control.jsp</result>
 			<result name="endHeader">/WEB-INF/views/end-header.jsp</result>
 			<result name="endNavbar">/WEB-INF/views/end-navbar.jsp</result>

@@ -24,7 +24,7 @@
 		<s:iterator value="news_LinkInfoCountVO.listNews_LinkInfoDTO">
 			<tr>
 				<td><s:property value="news_LinkInfo.LI_Name" escapeHtml="false" /></td>
-				<td><s:property value="newsCount" /></td>
+				<td><s:property value="news_LinkInfo.LI_Address" escapeHtml="false" /></td>
 				<td><a style="cursor: pointer;"
 					href="${pageContext.request.contextPath }/link/link_removeLinkAction?tmpId=<s:property value="news_LinkInfo.linkId" />">删除</a>
 					<a style="cursor: pointer" href="#">修改</a></td>

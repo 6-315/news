@@ -2,7 +2,7 @@ package com.news.link.domain.VO;
 
 import java.util.List;
 
-import com.news.link.domain.DTO.News_LinkInfoCountDTO;
+import com.news.link.domain.News_LinkInfo;
 
 /**
  * class 分页显示新闻链接News_LinkInfoDTO
@@ -16,14 +16,14 @@ public class News_LinkInfoCountVO {
 
 	private int pageIndex = 1;
 
-	private int pageSize = 3;
+	private int pageSize = 10;
 
 	private int totalPages = 1;
 
 	private boolean havePrePage = false;
 	private boolean haveNextPage = false;
 	// 信息表
-	private List<News_LinkInfoCountDTO> listNews_LinkInfoDTO;
+	private List<News_LinkInfo> listNews_LinkInfo;
 
 	private String search;
 
@@ -83,19 +83,19 @@ public class News_LinkInfoCountVO {
 		this.haveNextPage = haveNextPage;
 	}
 
-	public List<News_LinkInfoCountDTO> getListNews_LinkInfoDTO() {
-		return listNews_LinkInfoDTO;
+	public List<News_LinkInfo> getListNews_LinkInfo() {
+		return listNews_LinkInfo;
 	}
 
-	public void setListNews_LinkInfoDTO(List<News_LinkInfoCountDTO> listNews_LinkInfoDTO) {
-		this.listNews_LinkInfoDTO = listNews_LinkInfoDTO;
+	public void setListNews_LinkInfo(List<News_LinkInfo> listNews_LinkInfo) {
+		this.listNews_LinkInfo = listNews_LinkInfo;
 	}
 
 	@Override
 	public String toString() {
 		return "News_LinkInfoCountVO [totalRecords=" + totalRecords + ", pageIndex=" + pageIndex + ", pageSize="
 				+ pageSize + ", totalPages=" + totalPages + ", havePrePage=" + havePrePage + ", haveNextPage="
-				+ haveNextPage + ", listNews_LinkInfoDTO=" + listNews_LinkInfoDTO + ", search=" + search + "]";
+				+ haveNextPage + ", search=" + search + "]";
 	}
 
 }

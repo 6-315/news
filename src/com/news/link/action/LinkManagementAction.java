@@ -201,6 +201,20 @@ public class LinkManagementAction extends ActionSupport implements ServletRespon
 	}
 
 	/**
+	 * 更新链接
+	 * 
+	 * @return
+	 */
+
+	public String UpdateLinkInfoAction() {
+		if (linkManagementService.updateLinkInfo(news_LinkInfo) == 1) {
+			return "listLinkInfoByPage";
+		} else {
+			return "error";
+		}
+	}
+
+	/**
 	 * 跳转到后台
 	 */
 	public String yemianAction() {

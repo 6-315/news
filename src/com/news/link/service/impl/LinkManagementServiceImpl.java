@@ -47,6 +47,8 @@ public class LinkManagementServiceImpl implements LinkManagementService {
 	@Override
 	public int addLink(News_LinkInfo news_LinkInfo) {
 		news_LinkInfo.setLI_Id(BuildUuid.getUuid());
+		news_LinkInfo.setLI_IsDisplay(1);
+		news_LinkInfo.setLI_IsDelete(1);
 		news_LinkInfo.setLI_CreateTime(TimeUtil.getStringSecond());
 		news_LinkInfo.setLI_ModifyTime(TimeUtil.getStringSecond());
 		linkManagementDao.saveOrUpdateObject(news_LinkInfo);
@@ -72,7 +74,7 @@ public class LinkManagementServiceImpl implements LinkManagementService {
 			listNews_LinkInfoCountDTOHql = listNews_LinkInfoCountDTOHql + "where LI_Name like '" + search + "'";
 		}
 		// 这里如果不加desc表示正序，如果加上desc表示倒序
-		listNews_LinkInfoCountDTOHql = listNews_LinkInfoCountDTOHql + "order by LI_CreateTime desc";
+		listNews_LinkInfoCountDTOHql = listNews_LinkInfoCountDTOHql + "order by LI_ModifyTime desc";
 		int userInfoCount = linkManagementDao.getCount(news_LinkInfoCountHql);
 		// 设置总数量
 		news_LinkInfoCountVO.setTotalRecords(userInfoCount);
@@ -91,11 +93,11 @@ public class LinkManagementServiceImpl implements LinkManagementService {
 			news_LinkInfoCountVO.setHaveNextPage(true);
 		}
 		// 获取若干条DTO信息
-		System.out.println("--------------");
+		/*System.out.println("--------------");
 		System.out.println(listNews_LinkInfoCountDTOHql);
 		System.out.println(news_LinkInfoCountVO.getPageIndex());
 		System.out.println(news_LinkInfoCountVO.getPageSize());
-		System.out.println("--------------");
+		System.out.println("--------------");*/
 		listLinkInfo = (List<News_LinkInfo>) linkManagementDao.queryForPage(listNews_LinkInfoCountDTOHql,
 				news_LinkInfoCountVO.getPageIndex(), news_LinkInfoCountVO.getPageSize());
 		news_LinkInfoCountVO.setListNews_LinkInfo(listLinkInfo);
@@ -121,6 +123,8 @@ public class LinkManagementServiceImpl implements LinkManagementService {
 		updateLinkInfo = (News_LinkInfo) linkManagementDao.getNews_LinkInfo(news_LinkInfo);
 		updateLinkInfo.setLI_Name(news_LinkInfo.getLI_Name());
 		updateLinkInfo.setLI_Address(news_LinkInfo.getLI_Address());
+		updateLinkInfo.setLI_IsDisplay(news_LinkInfo.getLI_IsDisplay());
+		updateLinkInfo.setLI_IsDelete(news_LinkInfo.getLI_IsDelete());
 		updateLinkInfo.setLI_CreateTime(news_LinkInfo.getLI_CreateTime());
 		updateLinkInfo.setLI_ModifyTime(TimeUtil.getStringSecond());
 		linkManagementDao.saveOrUpdateObject(updateLinkInfo);

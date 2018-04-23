@@ -140,7 +140,7 @@ public class LinkManagementAction extends ActionSupport implements ServletRespon
 	 */
 
 	/**
-	 * 通过ID删除用户
+	 * 通过ID删除信息
 	 * 
 	 * LMJ 2018/4/21
 	 */
@@ -161,8 +161,8 @@ public class LinkManagementAction extends ActionSupport implements ServletRespon
 	/**
 	 * detail
 	 * 
-	 * @test 暂时是测试系统的正确运行
-	 * @author JXX 2018/04/12
+	 * @test 列表详情
+	 * @author LMJ 2018/04/23
 	 */
 	public String detailAction() {
 		if (linkManagementService.addLink(news_LinkInfo) == 1) {

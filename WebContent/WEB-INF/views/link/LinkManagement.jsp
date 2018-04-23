@@ -16,7 +16,7 @@
 <script type="text/javascript" src="js/jquery1.8.2.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 </head>
-<body>
+<body data-type="generalComponents">
 	<s:action name="user_endHeaderAction" namespace="/user"
 		executeResult="true" />
 	<div class="tpl-page-container tpl-page-header-fixed">
@@ -45,7 +45,7 @@
 
 						</div>
 					</div>
-					<!-- 模态框（Modal） -->
+					<!-- 添加信息模态框（Modal） -->
 					<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
 						aria-labelledby="myModalLabel" aria-hidden="true">
 						<div class="modal-dialog">
@@ -56,7 +56,7 @@
 									<div class="modal-header">
 										<button type="button" class="close" data-dismiss="modal"
 											aria-hidden="true">&times;</button>
-										<h4 class="modal-title" id="myModalLabel">模态框（Modal）标题</h4>
+										<h4 class="modal-title" id="myModalLabel">添加链接信息</h4>
 									</div>
 									<div class="modal-body">
 
@@ -81,17 +81,19 @@
 				</div>
 
 			</div>
-			<div class="am-g">
+			<div class="am-g"   style="background-color: white;">
 				<div class="am-u-sm-12">
-					<table class="am-table am-table-striped am-table-hover table-main">
+					<table class="table  table-striped table-hover table-main">
 						<thead>
 							<tr>
 								<th class="table-check"><input class="tpl-table-fz-check"
 									type="checkbox"></th>
 								<!-- <th class="table-id">ID</th> -->
-								<th class="table-title">标题</th>
-								<th class="table-type">类别</th>
-								<th class="table-author am-hide-sm-only">作者</th>
+								<th class="table-title">链接名称</th>
+								<th class="table-type">链接地址</th>
+								<th class="table-title">是否可见</th>
+								<th class="table-title">是否删除</th>
+								<th class="table-author am-hide-sm-only">创建日期</th>
 								<th class="table-date am-hide-sm-only">修改日期</th>
 								<th class="table-set">操作</th>
 							</tr>
@@ -103,26 +105,41 @@
 									<%-- <td><s:property value="news_LinkInfo.LI_Id"/></td> --%>
 									<td><s:property value="LI_Name" /></td>
 									<td><s:property value="LI_Address" /></td>
+									<td>
+									
+									<s:if test="LI_IsDisplay == 1">可见</s:if>
+									<s:if test="LI_IsDisplay != 1">不可见</s:if>
+									<%-- <s:property value="LI_IsDisplay" /> --%>
+									
+									</td>
+									
+									<td>
+									
+									<s:if test="LI_IsDelete == 1">未删除</s:if>
+									<s:if test="LI_IsDelete != 1">已删除</s:if>
+									<%-- <s:property value="LI_IsDelete" /> --%>
+									
+									</td>
 									<td class="am-hide-sm-only"><s:property
-											value="LI_CreateTime" escapeHtml="false" /></td>
+											value="LI_CreateTime"  /></td>
 									<td class="am-hide-sm-only"><s:property
-											value="LI_ModifyTime" escapeHtml="false" /></td>
+											value="LI_ModifyTime"  /></td>
 									<td>
 										<div class="am-btn-toolbar">
 											<div class="am-btn-group am-btn-group-xs">
 												<button
 													class="am-btn am-btn-default am-btn-xs am-text-secondary"
 													data-toggle="modal" data-target="#myModal_1"
-													id="<s:property value="LI_Id"/>&$&<s:property value="LI_Name"/>&$&<s:property value="LI_Address" />&$&<s:property value="news_LinkInfo.LI_CreateTime" />"
+													id="<s:property value="LI_Id"/>&$&<s:property value="LI_Name"/>&$&<s:property value="LI_Address" />&$&<s:property value="LI_CreateTime" />"
 													onclick="chuanIdForModal(this.id)">
 													<span class="am-icon-pencil-square-o"></span> 编辑
 												</button>
 
-												<a
+												<%-- <a
 													class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"
 													href="${pageContext.request.contextPath }/link/link_removeLinkAction?tmpId=<s:property value="LI_Id" />">
 													<span class="am-icon-trash-o"></span> 删除
-												</a>
+												</a> --%>
 
 												<%-- <button
 													class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"
@@ -138,7 +155,7 @@
 						</tbody>
 					</table>
 
-					<table class="am-table am-table-striped am-table-hover table-main">
+					<table class="table  table-striped table-hover table-main">
 						<tr>
 							<td>共 <s:property value="news_LinkInfoCountVO.totalPages" />
 								页
@@ -171,9 +188,9 @@
 			</div>
 			<div class="tpl-alert"></div>
 		</div>
-		<!-- 模态框（Modal） -->
+		<!-- 修改信息模态框（Modal） -->
 		<div class="modal fade" id="myModal_1" tabindex="-1" role="dialog"
-			aria-labelledby="myModalLabel" aria-hidden="true">
+			aria-labelledby="myModalLabel" aria-hidden="true" style="margin-top: 80px;">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<form
@@ -182,7 +199,7 @@
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal"
 								aria-hidden="true">&times;</button>
-							<h4 class="modal-title" id="myModalLabel">模态框（Modal）标题</h4>
+							<h4 class="modal-title" id="myModalLabel">修改链接信息</h4>
 						</div>
 						<div class="modal-body">
 							<input id="link_id" name="news_LinkInfo.LI_Id" type="hidden">
@@ -192,6 +209,17 @@
 								class="form-control input-sm" placeholder="请输入链接名称" /> 链接地址 <input
 								name="news_LinkInfo.LI_Address" id="linkAddress" type="text"
 								class="form-control input-sm" placeholder="请输入链接地址" />
+								是否可见
+								<label class="form-control input-sm">
+								<input type="radio" name="news_LinkInfo.LI_IsDisplay" id="sr1" value="1" />可见
+								<input type="radio" name="news_LinkInfo.LI_IsDisplay" id="sr1" value="-1" />不可见
+								</label>
+								是否删除
+								<label class="form-control input-sm">
+								<input type="radio" name="news_LinkInfo.LI_IsDelete" id="sr2" value="1" />未删除
+								<input type="radio" name="news_LinkInfo.LI_IsDelete" id="sr2" value="-1" />已删除
+								</label>
+								
 						</div>
 
 						<div class="modal-footer">
@@ -220,5 +248,5 @@
 
 
 </body>
-</body>
+
 </html>

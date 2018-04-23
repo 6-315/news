@@ -113,6 +113,7 @@ public class LinkManagementDaoImpl implements LinkManagementDao {
 		return list;
 	}
 
+	// 根据id获取对象
 	@Override
 	public News_LinkInfo getNews_LinkInfo(News_LinkInfo news_LinkInfo) {
 		Session session = getSession();

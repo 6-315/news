@@ -50,6 +50,12 @@ public interface LinkManagementDao {
 	 */
 	public int removeObject(Object obj);
 	
+	
+	/**
+	 * 根据Id获取对象
+	 * @param news_LinkInfo
+	 * @return
+	 */
 	public News_LinkInfo getNews_LinkInfo(News_LinkInfo news_LinkInfo);
 		
 	

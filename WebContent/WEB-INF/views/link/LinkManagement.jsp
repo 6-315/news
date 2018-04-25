@@ -38,9 +38,9 @@
 						<div class="input-icon right">
 
 
-							<i class="am-icon-search"></i> <input
+						<!-- 	<i class="am-icon-search"></i> <input
 								class="form-control form-control-solid" placeholder="搜索..."
-								type="text">
+								type="text"> -->
 
 
 						</div>
@@ -81,18 +81,18 @@
 				</div>
 
 			</div>
-			<div class="am-g"   style="background-color: white;">
+			<div class="am-g" style="background-color: white;">
 				<div class="am-u-sm-12">
 					<table class="table  table-striped table-hover table-main">
 						<thead>
 							<tr>
-								<th class="table-check"><input class="tpl-table-fz-check"
-									type="checkbox"></th>
+								<!-- <th class="table-check"><input class="tpl-table-fz-check"
+									type="checkbox"></th> -->
 								<!-- <th class="table-id">ID</th> -->
 								<th class="table-title">链接名称</th>
 								<th class="table-type">链接地址</th>
 								<th class="table-title">是否可见</th>
-								<th class="table-title">是否删除</th>
+								<!-- <th class="table-title">是否删除</th> -->
 								<th class="table-author am-hide-sm-only">创建日期</th>
 								<th class="table-date am-hide-sm-only">修改日期</th>
 								<th class="table-set">操作</th>
@@ -101,52 +101,44 @@
 						<tbody>
 							<s:iterator value="news_LinkInfoCountVO.listNews_LinkInfo">
 								<tr>
-									<td><input type="checkbox"></td>
+									<!-- <td><input type="checkbox"></td> -->
 									<%-- <td><s:property value="news_LinkInfo.LI_Id"/></td> --%>
 									<td><s:property value="LI_Name" /></td>
 									<td><s:property value="LI_Address" /></td>
-									<td>
-									
-									<s:if test="LI_IsDisplay == 1">可见</s:if>
-									<s:if test="LI_IsDisplay != 1">不可见</s:if>
-									<%-- <s:property value="LI_IsDisplay" /> --%>
-									
+									<td><s:if test="LI_IsDisplay == 1">可见</s:if> <s:if
+											test="LI_IsDisplay != 1">不可见</s:if> <%-- <s:property value="LI_IsDisplay" /> --%>
+
 									</td>
-									
-									<td>
-									
-									<s:if test="LI_IsDelete == 1">未删除</s:if>
-									<s:if test="LI_IsDelete != 1">已删除</s:if>
-									<%-- <s:property value="LI_IsDelete" /> --%>
-									
-									</td>
+
+									<%-- <td><s:if test="LI_IsDelete == 1">未删除</s:if> <s:if
+											test="LI_IsDelete != 1">已删除</s:if> <s:property value="LI_IsDelete" />
+
+									</td> --%>
 									<td class="am-hide-sm-only"><s:property
-											value="LI_CreateTime"  /></td>
+											value="LI_CreateTime" /></td>
 									<td class="am-hide-sm-only"><s:property
-											value="LI_ModifyTime"  /></td>
+											value="LI_ModifyTime" /></td>
 									<td>
 										<div class="am-btn-toolbar">
 											<div class="am-btn-group am-btn-group-xs">
 												<button
 													class="am-btn am-btn-default am-btn-xs am-text-secondary"
 													data-toggle="modal" data-target="#myModal_1"
-													id="<s:property value="LI_Id"/>&$&<s:property value="LI_Name"/>&$&<s:property value="LI_Address" />&$&<s:property value="LI_CreateTime" />"
+													id="<s:property value="LI_Id"/>&$&<s:property value="LI_Name"/>&$&<s:property value="LI_Address" />&$&<s:property value="LI_CreateTime" />"&$&<s:property value="LI_IsDelete" />"
 													onclick="chuanIdForModal(this.id)">
 													<span class="am-icon-pencil-square-o"></span> 编辑
 												</button>
-
-												<%-- <a
+												
+					
+												<button
 													class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"
-													href="${pageContext.request.contextPath }/link/link_removeLinkAction?tmpId=<s:property value="LI_Id" />">
+													data-toggle="modal" data-target="#myModal_2"
+													id="<s:property value="LI_Id"/>&$&<s:property value="LI_Name"/>&$&<s:property value="LI_Address" />&$&<s:property value="LI_CreateTime" />&$&<s:property value="LI_IsDisplay" />"
+													onclick="chuanIdForModal_1(this.id)">
 													<span class="am-icon-trash-o"></span> 删除
-												</a> --%>
-
-												<%-- <button
-													class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"
-													type="submit"
-													onclick="${pageContext.request.contextPath }/link/link_removeLinkAction?tmpId=<s:property value="LI_Id" />">
-													 删除
-												</button> --%>
+												</button>
+												
+												
 											</div>
 										</div>
 									</td>
@@ -190,7 +182,8 @@
 		</div>
 		<!-- 修改信息模态框（Modal） -->
 		<div class="modal fade" id="myModal_1" tabindex="-1" role="dialog"
-			aria-labelledby="myModalLabel" aria-hidden="true" style="margin-top: 80px;">
+			aria-labelledby="myModalLabel" aria-hidden="true"
+			style="margin-top: 80px;">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<form
@@ -203,23 +196,23 @@
 						</div>
 						<div class="modal-body">
 							<input id="link_id" name="news_LinkInfo.LI_Id" type="hidden">
+							<input id="link_isDelete" name="news_LinkInfo.LI_IsDelete" type="hidden">
 							<input id="link_createTime" name="news_LinkInfo.LI_CreateTime"
-								type="hidden"> 链接名称<input id="linkName"
+								type="hidden"> 链接名称<input id="link_Name"
 								name="news_LinkInfo.LI_Name" type="text"
 								class="form-control input-sm" placeholder="请输入链接名称" /> 链接地址 <input
-								name="news_LinkInfo.LI_Address" id="linkAddress" type="text"
-								class="form-control input-sm" placeholder="请输入链接地址" />
-								是否可见
-								<label class="form-control input-sm">
-								<input type="radio" name="news_LinkInfo.LI_IsDisplay" id="sr1" value="1" />可见
-								<input type="radio" name="news_LinkInfo.LI_IsDisplay" id="sr1" value="-1" />不可见
-								</label>
-								是否删除
-								<label class="form-control input-sm">
-								<input type="radio" name="news_LinkInfo.LI_IsDelete" id="sr2" value="1" />未删除
-								<input type="radio" name="news_LinkInfo.LI_IsDelete" id="sr2" value="-1" />已删除
-								</label>
-								
+								name="news_LinkInfo.LI_Address" id="link_Address" type="text"
+								class="form-control input-sm" placeholder="请输入链接地址" /> 是否可见 <label
+								class="form-control input-sm"> <input type="radio"
+								name="news_LinkInfo.LI_IsDisplay" id="sr1" value="1" />可见 <input
+								type="radio" name="news_LinkInfo.LI_IsDisplay" id="sr1"
+								value="-1" />不可见
+							</label> <!-- 是否删除 <label class="form-control input-sm"> <input
+								type="radio" name="news_LinkInfo.LI_IsDelete" id="sr2" value="1" />未删除
+								<input type="radio" name="news_LinkInfo.LI_IsDelete" id="sr2"
+								value="-1" />已删除
+							</label> -->
+
 						</div>
 
 						<div class="modal-footer">
@@ -232,15 +225,66 @@
 			</div>
 			<!-- /.modal -->
 		</div>
+		
+		<!-- 修改信息模态框（Modal） -->
+		<div class="modal fade" id="myModal_2" tabindex="-1" role="dialog"
+			aria-labelledby="myModalLabel" aria-hidden="true"
+			style="margin-top: 80px;">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<form
+						action="${pageContext.request.contextPath}/link/link_UpdateLinkInfoAction"
+						method="post">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"
+								aria-hidden="true">&times;</button>
+							
+						</div>
+						<div class="modal-body">
+							<input id="linkid" name="news_LinkInfo.LI_Id" type="hidden">
+							<input id="linkcreateTime" name="news_LinkInfo.LI_CreateTime"
+								type="hidden"> 
+								<input id="linkName" name="news_LinkInfo.LI_Name" type="hidden">
+								<input id="linkAddress" name="news_LinkInfo.LI_Address" type="hidden">
+								<input id="linkisDisplay" name="news_LinkInfo.LI_IsDisplay" type="hidden">
+								<input name="news_LinkInfo.LI_IsDelete" type="hidden" value="-1" >
+								<center> 是否删除？</center>
+						</div>
+
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default"
+								data-dismiss="modal">关闭</button>
+							<button type="submit" class="btn btn-primary">确认删除</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- /.modal -->
+		</div>
+		
+		
 	</div>
 	<script>
 		function chuanIdForModal(id) {
 			console.log(id)
 			var arr = id.split('&$&');
 			$('#link_id').val(arr[0])
+			$('#link_Name').val(arr[1])
+			$('#link_Address').val(arr[2])
+			$('#link_createTime').val(arr[3])
+			$('#link_isDelete').val(arr[4])
+		}
+	</script>
+	
+	<script>
+		function chuanIdForModal_1(id) {
+			console.log(id)
+			var arr = id.split('&$&');
+			$('#linkid').val(arr[0])
 			$('#linkName').val(arr[1])
 			$('#linkAddress').val(arr[2])
-			$('#link_createTime').val(arr[3])
+			$('#linkcreateTime').val(arr[3])
+			$('#linkisDisplay').val(arr[4])
 		}
 	</script>
 

@@ -16,8 +16,6 @@ public interface LinkManagementService {
 	public int addLink(News_LinkInfo news_LinkInfo);
 
 	public News_LinkInfoCountVO listLinkInfoByPage(News_LinkInfoCountVO news_LinkInfoCountVO);
-
-	public int removeLink(News_LinkInfo news_LinkInfo);
 	
 	public int updateLinkInfo(News_LinkInfo news_LinkInfo);
 }

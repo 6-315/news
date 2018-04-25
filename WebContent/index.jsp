@@ -26,10 +26,9 @@
 
 	</form>
 
-	<a
-		href="${pageContext.request.contextPath}/user/user_listUserInfoByPageAction?">dd</a>
+	
 
-	<a href="${pageContext.request.contextPath}/user/user_yemianAction">后台</a>
+	<a href="${pageContext.request.contextPath}/link/link_listLinkInfoByPageAction">后台</a>
 
 </body>
 

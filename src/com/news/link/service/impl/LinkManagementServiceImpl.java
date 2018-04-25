@@ -74,7 +74,7 @@ public class LinkManagementServiceImpl implements LinkManagementService {
 			listNews_LinkInfoCountDTOHql = listNews_LinkInfoCountDTOHql + "where LI_Name like '" + search + "'";
 		}
 		// 这里如果不加desc表示正序，如果加上desc表示倒序
-		listNews_LinkInfoCountDTOHql = listNews_LinkInfoCountDTOHql + "order by LI_ModifyTime desc";
+		listNews_LinkInfoCountDTOHql = listNews_LinkInfoCountDTOHql + "order by LI_IsDelete desc,LI_ModifyTime desc";
 		int userInfoCount = linkManagementDao.getCount(news_LinkInfoCountHql);
 		// 设置总数量
 		news_LinkInfoCountVO.setTotalRecords(userInfoCount);
@@ -93,11 +93,13 @@ public class LinkManagementServiceImpl implements LinkManagementService {
 			news_LinkInfoCountVO.setHaveNextPage(true);
 		}
 		// 获取若干条DTO信息
-		/*System.out.println("--------------");
-		System.out.println(listNews_LinkInfoCountDTOHql);
-		System.out.println(news_LinkInfoCountVO.getPageIndex());
-		System.out.println(news_LinkInfoCountVO.getPageSize());
-		System.out.println("--------------");*/
+		/*
+		 * System.out.println("--------------");
+		 * System.out.println(listNews_LinkInfoCountDTOHql);
+		 * System.out.println(news_LinkInfoCountVO.getPageIndex());
+		 * System.out.println(news_LinkInfoCountVO.getPageSize());
+		 * System.out.println("--------------");
+		 */
 		listLinkInfo = (List<News_LinkInfo>) linkManagementDao.queryForPage(listNews_LinkInfoCountDTOHql,
 				news_LinkInfoCountVO.getPageIndex(), news_LinkInfoCountVO.getPageSize());
 		news_LinkInfoCountVO.setListNews_LinkInfo(listLinkInfo);
@@ -105,14 +107,7 @@ public class LinkManagementServiceImpl implements LinkManagementService {
 		return news_LinkInfoCountVO;
 	}
 
-	/**
-	 * 移除链接 LMJ 2018/4/22
-	 */
-	@Override
-	public int removeLink(News_LinkInfo news_LinkInfo) {
-		return linkManagementDao.removeObject(news_LinkInfo);
-
-	}
+	
 
 	/**
 	 * 更新链接信息 LMJ 2018/4/22

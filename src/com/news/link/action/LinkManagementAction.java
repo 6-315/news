@@ -188,17 +188,7 @@ public class LinkManagementAction extends ActionSupport implements ServletRespon
 		return "detail";
 	}
 
-	/**
-	 * 删除链接
-	 * 
-	 * @return
-	 */
-	public String removeLinkAction() {
-		news_LinkInfo = new News_LinkInfo();
-		news_LinkInfo.setLI_Id(tmpId);
-		linkManagementService.removeLink(news_LinkInfo);
-		return "listLinkInfoByPage";
-	}
+	
 
 	/**
 	 * 更新链接
@@ -207,6 +197,7 @@ public class LinkManagementAction extends ActionSupport implements ServletRespon
 	 */
 
 	public String UpdateLinkInfoAction() {
+		
 		if (linkManagementService.updateLinkInfo(news_LinkInfo) == 1) {
 			return "listLinkInfoByPage";
 		} else {
@@ -214,6 +205,8 @@ public class LinkManagementAction extends ActionSupport implements ServletRespon
 		}
 	}
 
+	
+	
 	/**
 	 * 跳转到后台
 	 */

@@ -32,12 +32,13 @@
 				<li class="tpl-left-nav-item"><a href="#"
 					class="nav-link active"> <i class="am-icon-home"></i> <span>首页</span>
 				</a></li>
-				
-				<li class="tpl-left-nav-item"><a href="${pageContext.request.contextPath}/carousel/carousel_selectAction"
+
+				<li class="tpl-left-nav-item"><a
+					href="${pageContext.request.contextPath}/carousel/carousel_selectAction?message="
 					class="nav-link"> <i class="am-icon-home"></i> <span>管理轮播图</span>
 				</a></li>
-				
-				
+
+
 				<li class="tpl-left-nav-item"><a href="javascript:;"
 					class="nav-link tpl-left-nav-link-list"> <i
 						class="am-icon-table"></i> <span>表格</span> <i

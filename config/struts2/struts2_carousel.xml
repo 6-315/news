@@ -12,7 +12,22 @@
 			</result>
 			<result name="save" type="redirectAction">carousel_selectAction?message=${message}
 			</result>
+			<result name="delete" type="redirectAction">carousel_selectAction?message=${message}
+			</result>
+			<result name="update" type="redirectAction">carousel_selectAction?message=${message}
+			</result>
 			<result name="listCarousel">/WEB-INF/views/carouse/index.jsp
+			</result>
+		</action>
+		<action name="img_*" class="com.news.carousel.action.ImgAction"
+			method="{1}">
+			<result name="getImg" type="stream">
+				<param name="contentType">image/*</param>
+				<param name="inputName">inputStream</param>
+				<param name="contentDisposition">
+					filename=${fileImgName}
+				</param>
+				<param name="bufferSize">1024</param>
 			</result>
 		</action>
 	</package>

@@ -53,7 +53,7 @@ public class CarouselManagementServiceImpl implements CarouselManagementService 
 		List<News_CarouselInfo> listNewsCarouselInfo = new ArrayList<>();
 		News_NewsInfo newsInfo;
 		NewsCarouselDTO newsCarouselDTO;
-		listNewsCarouselInfo = (List<News_CarouselInfo>) carouselManagementDao.listObject("from News_CarouselInfo");
+		listNewsCarouselInfo = (List<News_CarouselInfo>) carouselManagementDao.listObject("from News_CarouselInfo where CI_IsDelete = '1' order by CI_ModifyTime desc");
 		for (News_CarouselInfo news_CarouselInfo : listNewsCarouselInfo) {
 			newsInfo = new News_NewsInfo();
 			newsCarouselDTO = new NewsCarouselDTO();
@@ -95,4 +95,32 @@ public class CarouselManagementServiceImpl implements CarouselManagementService 
 		return null;
 	}
 
+	@Override
+	public int update(News_CarouselInfo news_CarouselInfo) {
+		News_CarouselInfo update = new News_CarouselInfo();
+		update.setCI_BelongNews(news_CarouselInfo.getCI_BelongNews());
+		update.setCI_CreateTime(news_CarouselInfo.getCI_CreateTime());
+		update.setCI_Id(news_CarouselInfo.getCI_Id());
+		update.setCI_Img(news_CarouselInfo.getCI_Img());
+		update.setCI_IsShow(news_CarouselInfo.getCI_IsShow());
+		update.setCI_IsDelete(news_CarouselInfo.getCI_IsDelete());
+		update.setCI_ModifyTime(TimeUtil.getStringSecond());
+		carouselManagementDao.saveOrUpdateObject(update);
+		return 1;
+	}
+
+	@Override
+	public int delete(News_CarouselInfo news_CarouselInfo) {
+		News_CarouselInfo delete = new News_CarouselInfo();
+		delete.setCI_BelongNews(news_CarouselInfo.getCI_BelongNews());
+		delete.setCI_CreateTime(news_CarouselInfo.getCI_CreateTime());
+		delete.setCI_Id(news_CarouselInfo.getCI_Id());
+		delete.setCI_Img(news_CarouselInfo.getCI_Img());
+		delete.setCI_IsShow(news_CarouselInfo.getCI_IsShow());
+		delete.setCI_IsDelete(news_CarouselInfo.getCI_IsDelete());
+		delete.setCI_ModifyTime(TimeUtil.getStringSecond());
+		carouselManagementDao.saveOrUpdateObject(delete);
+		
+		return 1;
+	}
 }

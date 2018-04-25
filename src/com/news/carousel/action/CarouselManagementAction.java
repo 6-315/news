@@ -172,6 +172,12 @@ public class CarouselManagementAction extends ActionSupport implements ServletRe
 	/**
 	 * 跳转到轮播管理
 	 */
+
+	/**
+	 * 结束
+	 * 
+	 * @return
+	 */
 	public String lunboguanliAction() {
 		System.out.println("9999999");
 		return "lunboguanli";
@@ -193,6 +199,7 @@ public class CarouselManagementAction extends ActionSupport implements ServletRe
 		File file = new File(path + fileName);
 		try {
 			news_CarouselInfo.setCI_Img(fileName);
+			news_CarouselInfo.setCI_IsDelete("1");
 			carouselManagementService.addCarousel(news_CarouselInfo);
 			FileUtil.copyFile(myfile, file);
 		} catch (IOException e) {
@@ -208,6 +215,25 @@ public class CarouselManagementAction extends ActionSupport implements ServletRe
 		listNewsCarouselDTO = carouselManagementService.listNewsCarouselDTO();
 		listNews = carouselManagementService.getCarouselNews();
 		return "listCarousel";
+	}
+
+	/**
+	 * update
+	 * 
+	 */
+
+	public String updateAction() {
+		System.out.println(news_CarouselInfo);
+		carouselManagementService.update(news_CarouselInfo);
+		return "update";
+	}
+
+	public String deleteAction() {
+		System.out.println("pppp" + news_CarouselInfo);
+		news_CarouselInfo.setCI_IsDelete("-1");
+		carouselManagementService.delete(news_CarouselInfo);
+		setMessage("shanchu");
+		return "delete";
 	}
 
 	/**

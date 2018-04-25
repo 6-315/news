@@ -38,4 +38,8 @@ public interface CarouselManagementService {
 
 	public List<News_CarouselInfo> ListNews_CarouselInfol();
 
+	public int update(News_CarouselInfo news_CarouselInfo);
+
+	public int delete(News_CarouselInfo news_CarouselInfo);
+
 }

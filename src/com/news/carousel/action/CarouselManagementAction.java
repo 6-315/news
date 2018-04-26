@@ -278,5 +278,4 @@ public class CarouselManagementAction extends ActionSupport implements ServletRe
 	public void setMyfileContentType(String myfileContentType) {
 		this.myfileContentType = myfileContentType;
 	}
-
 }

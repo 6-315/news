@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-4-22 0:18:31 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.news.link.domain.News_LinkInfo" table="NEWS_LINKINFO">
+        <id name="LI_Id" type="java.lang.String">
+            <column name="LI_Id" />
+            <generator class="assigned" />
+        </id>
+        <property name="LI_Name" type="java.lang.String">
+            <column name="LI_Name" />
+        </property>
+        <property name="LI_Address" type="java.lang.String">
+            <column name="LI_Address" />
+        </property>
+        <property name="LI_IsDisplay" type="int">
+            <column name="LI_IsDisplay" />
+        </property>
+        <property name="LI_IsDelete" type="int">
+            <column name="LI_IsDelete" />
+        </property>
+        <property name="LI_CreateTime" type="java.lang.String">
+            <column name="LI_CreateTime" />
+        </property>
+        <property name="LI_ModifyTime" type="java.lang.String">
+            <column name="LI_ModifyTime" />
+        </property>
+    </class>
+</hibernate-mapping>

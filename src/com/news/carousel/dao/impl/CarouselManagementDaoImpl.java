@@ -7,6 +7,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
 import com.news.carousel.dao.CarouselManagementDao;
+import com.news.carousel.domain.News_CarouselInfo;
+import com.news.newsinfo.domain.News_NewsInfo;
 
 /**
  * class 轮播图管理
@@ -110,5 +112,29 @@ public class CarouselManagementDaoImpl implements CarouselManagementDao {
 		List<?> list = query.list();
 		session.clear();
 		return list;
+	}
+
+	/**
+	 * 
+	 */
+	@Override
+	public News_NewsInfo getNewsInfoById(String newsInfoId) {
+		News_NewsInfo newsInfo = new News_NewsInfo();
+		Session session = getSession();
+		String hql = "from News_NewsInfo where NI_Id = :newsId";
+		Query query = session.createQuery(hql);
+		query.setParameter("newsId", newsInfoId);
+		newsInfo = (News_NewsInfo) query.uniqueResult();
+		return newsInfo;
+	}
+
+	@Override
+	public News_CarouselInfo getupdate(News_CarouselInfo news_CarouselInfo) {
+		Session session = getSession();
+		String hql = "from  News_CarouselInfo where CI_Id = :userId";
+		Query query = session.createQuery(hql);
+		query.setParameter("userId", news_CarouselInfo.getCI_Id());
+		session.evict(news_CarouselInfo);
+		return news_CarouselInfo;
 	}
 }

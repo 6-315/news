@@ -6,7 +6,7 @@
 <head>
 <title>后台管理</title>
 </head>
-<body>
+<body onload="user_detail()">
 	<s:action name="user_endHeaderAction" namespace="/user"
 		executeResult="true" />
 	<div class="tpl-page-container tpl-page-header-fixed">
@@ -20,5 +20,15 @@
 
 
 	</div>
+	<script type="text/javascript">
+		function user_detail() {
+			console.log('ffff')
+			var val = "${message}";
+			console.log(val)
+			if (val == "success") {
+				toastr.success("跳转至后台页面成功")
+			}
+		}
+	</script>
 </body>
 </html>

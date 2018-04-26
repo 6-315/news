@@ -1,15 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<%@ taglib uri="/struts-tags" prefix="s"%>
+<!DOCTYPE html >
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>测试轮播图管理</title>
+
+
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/bootstrap.css">
-<title>首页内容</title>
 </head>
 <body>
-	<a href="${pageContext.request.contextPath}/user/user_yemianAction">后台</a>
-</body>
 
+
+</body>
 </html>

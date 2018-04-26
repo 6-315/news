@@ -3,7 +3,20 @@
 	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
 	"http://struts.apache.org/dtds/struts-2.5.dtd">
 <struts>
+	<package name="link" namespace="/link" extends="struts-default"
+		strict-method-invocation="false">
+		<action name="link_*" class="com.news.link.action.LinkManagementAction"
+			method="{1}">
+			<result name="listLinkInfoByPage" type="redirectAction">link_listLinkInfoByPageAction
+			</result>
+			<result name="error" type="redirect">/error.jsp</result>
+			<result name="detail">/WEB-INF/views/link/LinkManagement.jsp</result>
+			<result name="yemian">/WEB-INF/views/control.jsp</result>
+			<result name="endHeader">/WEB-INF/views/end-header.jsp</result>
+			<result name="endNavbar">/WEB-INF/views/end-navbar.jsp</result>
 
+		</action>
+	</package>
 
 
 </struts>

@@ -7,6 +7,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
 import com.news.link.dao.LinkManagementDao;
+import com.news.link.domain.News_LinkInfo;
 
 /**
  * class 链接管理
@@ -67,7 +68,7 @@ public class LinkManagementDaoImpl implements LinkManagementDao {
 	public List<?> queryForPage(String hql, int offset, int length) {
 		Session session = getSession();
 		Query query = session.createQuery(hql);
-		query.setFirstResult(offset - 1);
+		query.setFirstResult((offset - 1) * length);
 		query.setMaxResults(length);
 		List<?> list = query.list();
 		session.clear();
@@ -110,5 +111,16 @@ public class LinkManagementDaoImpl implements LinkManagementDao {
 		List<?> list = query.list();
 		session.clear();
 		return list;
+	}
+
+	// 根据id获取对象
+	@Override
+	public News_LinkInfo getNews_LinkInfo(News_LinkInfo news_LinkInfo) {
+		Session session = getSession();
+		String hql = "from News_LinkInfo where LI_Id =:LI_Id";
+		Query query = session.createQuery(hql);
+		query.setParameter("LI_Id", news_LinkInfo.getLI_Id());
+		session.evict(news_LinkInfo);
+		return news_LinkInfo;
 	}
 }

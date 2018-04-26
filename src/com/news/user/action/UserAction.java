@@ -137,6 +137,16 @@ public class UserAction extends ActionSupport implements ServletResponseAware, S
 	/**
 	 * 实现结束
 	 */
+	private String message;
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
 	/**
 	 * 删除用户Id
 	 */
@@ -211,6 +221,7 @@ public class UserAction extends ActionSupport implements ServletResponseAware, S
 	 * 跳转到后台
 	 */
 	public String yemianAction() {
+		setMessage("success");
 		return "yemian";
 	}
 

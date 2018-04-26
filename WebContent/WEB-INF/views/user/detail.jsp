@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
+<body onload="user_detail()">
 	<form
 		action="${pageContext.request.contextPath }/user/user_listUserInfoByPageAction"
 		method="post">
@@ -56,9 +56,15 @@
 				</s:if> <s:else>下一页&nbsp;&nbsp;&nbsp;&nbsp; 最后一页</s:else></td>
 		</tr>
 	</table>
-
-	<script type="text/javascript">
-		
+	<script>
+		function user_detail() {
+			console.log('ffff')
+			var val = "${message}";
+			console.log(val)
+			if (val == "success") {
+				toastr.success("跳转至后台页面成功")
+			}
+		}
 	</script>
 
 </body>

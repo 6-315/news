@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-4-25 11:04:12 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.news.carousel.domain.News_CarouselInfo" table="NEWS_CAROUSELINFO">
+        <id name="CI_Id" type="java.lang.String">
+            <column name="CI_Id" />
+            <generator class="assigned" />
+        </id>
+        <property name="CI_Img" type="java.lang.String">
+            <column name="CI_Img" />
+        </property>
+        <property name="CI_BelongNews" type="java.lang.String">
+            <column name="CI_BelongNews" />
+        </property>
+        <property name="CI_IsShow" type="int">
+            <column name="CI_IsShow" />
+        </property>
+        <property name="CI_CreateTime" type="java.lang.String">
+            <column name="CI_CreateTime" />
+        </property>
+        <property name="CI_ModifyTime" type="java.lang.String">
+            <column name="CI_ModifyTime" />
+        </property>
+        <property name="CI_IsDelete" type="java.lang.String">
+            <column name="CI_IsDelete" />
+        </property>
+    </class>
+</hibernate-mapping>

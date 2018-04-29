@@ -29,7 +29,7 @@
 				<li><a href="#">Amaze UI CSS</a></li>
 				<li class="am-active">文字列表</li>
 			</ol>
-			<div class="tpl-portlet-components">
+			<div class="tpl-portlet-components" >
 				<div class="portlet-title">
 					<button class="btn btn-primary btn-lg" data-toggle="modal"
 						data-target="#myModal">添加链接</button>
@@ -80,8 +80,11 @@
 					</div>
 				</div>
 
-			</div>
-			<div class="am-g" style="background-color: white;">
+
+
+
+<!-- 1 -->
+	<div class="am-g" style="background-color: white;">
 				<div class="am-u-sm-12">
 					<table class="table  table-striped table-hover table-main">
 						<thead>
@@ -178,6 +181,9 @@
 
 				</div>
 			</div>
+<!-- 5 -->
+			</div>
+		
 			<div class="tpl-alert"></div>
 		</div>
 		<!-- 修改信息模态框（Modal） -->

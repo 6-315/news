@@ -60,31 +60,37 @@
 					class="nav-link active"> <i class="am-icon-home"></i> <span>首页</span>
 
 				</a></li>
-
+				
+			<li class="tpl-left-nav-item"><a
+					href="${pageContext.request.contextPath}/newsinfo/info_SelectNewsAction"
+					class="nav-link"> <i class="am-icon-home"></i> <span>新闻信息管理</span>
+				</a></li> 
 				<li class="tpl-left-nav-item"><a
 					href="${pageContext.request.contextPath}/carousel/carousel_selectAction?message="
 					class="nav-link"> <i class="am-icon-home"></i> <span>管理轮播图</span>
 				</a></li>
+
 				<li class="tpl-left-nav-item"><a
 					href="${pageContext.request.contextPath}/link/link_listLinkInfoByPageAction"
 					class="nav-link"> <i class="am-icon-home"></i> <span>管理链接</span>
 				</a></li>
 
+
 				<li class="tpl-left-nav-item"><a href="javascript:;"
 					class="nav-link tpl-left-nav-link-list"> <i
-						class="am-icon-table"></i> <span>表格</span> <i
+						class="am-icon-table"></i> <span>新闻管理</span> <i
 						class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
 
 				</a>
 
 					<ul class="tpl-left-nav-sub-menu">
 
-						<li><a href="#"> <i class="am-icon-angle-right"></i> <span>文字表格</span>
+						<li><a href="${pageContext.request.contextPath}/newsinfo/newsinfo_selectAction"> <i class="am-icon-angle-right"></i> <span>添加新闻</span>
 
 								<i
 								class="am-icon-star tpl-left-nav-content-ico am-fr am-margin-right"></i>
 
-						</a> <a href="#"> <i class="am-icon-angle-right"></i> <span>图片表格</span></a></li>
+						</a> <a href="${pageContext.request.contextPath}/newsinfo/newsinfo_manageAction"> <i class="am-icon-angle-right"></i> <span>新闻管理</span></a></li>
 
 					</ul></li>
 

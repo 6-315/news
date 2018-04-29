@@ -6,7 +6,11 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
+import com.news.navigation.domain.News_TwoNavigationInfo;
 import com.news.newsinfo.dao.NewsInfoManagementDao;
+import com.news.newsinfo.domain.News_NewsInfo;
+
+import util.TimeUtil;
 
 /**
  * class 新闻管理
@@ -111,4 +115,17 @@ public class NewsInfoManagementDaoImpl implements NewsInfoManagementDao {
 		session.clear();
 		return list;
 	}
+
+	@Override
+	public News_TwoNavigationInfo getnews(String trim) {
+		News_TwoNavigationInfo newsTwoNavigationInfo = new News_TwoNavigationInfo();
+		Session session = getSession();
+		String hql = "from News_TwoNavigationInfo where TNI_Id = :newsId";
+		Query query = session.createQuery(hql);
+		query.setParameter("newsId", trim);
+		newsTwoNavigationInfo = (News_TwoNavigationInfo) query.uniqueResult();
+		return newsTwoNavigationInfo;
+	}
+
+
 }

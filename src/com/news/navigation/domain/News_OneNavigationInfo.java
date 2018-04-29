@@ -9,5 +9,6 @@ package com.news.navigation.domain;
  *
  */
 public class News_OneNavigationInfo {
+	
 
 }

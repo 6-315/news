@@ -50,7 +50,7 @@
 							data-toggle="modal" data-target="#myModal" type="submit">添加轮播图</button>
 
 
-						<!-- 模态框（Modal） -->
+						<!-- 添加的模态框（Modal） -->
 
 						<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
 							aria-labelledby="myModalLabel" aria-hidden="true"

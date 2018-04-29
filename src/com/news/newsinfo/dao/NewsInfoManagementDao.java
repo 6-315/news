@@ -2,6 +2,8 @@ package com.news.newsinfo.dao;
 
 import java.util.List;
 
+import com.news.navigation.domain.News_TwoNavigationInfo;
+
 /**
  * interface 新闻管理
  * 
@@ -52,4 +54,7 @@ public interface NewsInfoManagementDao {
 	 * 获取对象列表
 	 */
 	public List<?> listObject(String hql);
+
+	public News_TwoNavigationInfo getnews(String trim);
+
 }

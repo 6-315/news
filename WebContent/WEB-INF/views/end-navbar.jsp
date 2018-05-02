@@ -65,9 +65,15 @@
 					href="${pageContext.request.contextPath}/carousel/carousel_selectAction?message="
 					class="nav-link"> <i class="am-icon-home"></i> <span>管理轮播图</span>
 				</a></li>
+				
 				<li class="tpl-left-nav-item"><a
 					href="${pageContext.request.contextPath}/link/link_listLinkInfoByPageAction"
 					class="nav-link"> <i class="am-icon-home"></i> <span>管理链接</span>
+				</a></li>
+
+				<li class="tpl-left-nav-item"><a
+					href="${pageContext.request.contextPath}/navigation/navigation_listNavigationInfoByPageAction"
+					class="nav-link"> <i class="am-icon-home"></i> <span>管理导航</span>
 				</a></li>
 
 				<li class="tpl-left-nav-item"><a href="javascript:;"

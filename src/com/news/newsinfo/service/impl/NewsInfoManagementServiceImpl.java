@@ -72,30 +72,42 @@ public class NewsInfoManagementServiceImpl implements NewsInfoManagementService 
 
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<SelectAllDTO> listSelectAllDTO() {
 		List<SelectAllDTO> listSelectAllDTO = new ArrayList<>();
 		List<News_NewsInfo> listNewsNewsInfo = new ArrayList<>();
-		News_TwoNavigationInfo newsTwoNavigationInfo;
+		List<News_TwoNavigationInfo> listTwo = new ArrayList<>();
 		SelectAllDTO selectAllDTO;
-
-		listNewsNewsInfo = (List<News_NewsInfo>) newsInfoManagementDao
-				.listObject("from News_NewsInfo where NI_IsDelete='1'");
-		for (News_NewsInfo news_NewsInfo : listNewsNewsInfo) {
-			newsTwoNavigationInfo = new News_TwoNavigationInfo();
+		listTwo = (List<News_TwoNavigationInfo>) newsInfoManagementDao
+				.listObject("from News_TwoNavigationInfo where TNI_IsDelete='1'");
+		System.out.println(listTwo.size());
+		for (News_TwoNavigationInfo news_TwoNavigationInfo : listTwo) {
+			listNewsNewsInfo = new ArrayList<>();
 			selectAllDTO = new SelectAllDTO();
-			if (news_NewsInfo.getNI_BelongNavigation() != null
-					&& news_NewsInfo.getNI_BelongNavigation().trim().length() > 0) {
-				newsTwoNavigationInfo = newsInfoManagementDao.getnews(news_NewsInfo.getNI_BelongNavigation().trim());
-				if (newsTwoNavigationInfo != null) {
-					selectAllDTO.setNews_TwoNavigationInfo(newsTwoNavigationInfo);
-				}
-
-			}
-			selectAllDTO.setNews_NewsInfo(news_NewsInfo);
+			listNewsNewsInfo = (List<News_NewsInfo>) newsInfoManagementDao.listObject(
+					"from News_NewsInfo where NI_BelongNavigation = '" + news_TwoNavigationInfo.getTNI_Id() + "'");
+			selectAllDTO.setNews_TwoNavigationInfo(news_TwoNavigationInfo);
+			selectAllDTO.setNews_NewsInfo(listNewsNewsInfo);
 			listSelectAllDTO.add(selectAllDTO);
 		}
 		return listSelectAllDTO;
+		/*
+		 * listNewsNewsInfo = (List<News_NewsInfo>)
+		 * newsInfoManagementDao.listObject(
+		 * "from News_NewsInfo where NI_IsDelete='1'"); for (News_NewsInfo
+		 * news_NewsInfo : listNewsNewsInfo) { newsTwoNavigationInfo = new
+		 * News_TwoNavigationInfo(); selectAllDTO = new SelectAllDTO(); if
+		 * (news_NewsInfo.getNI_BelongNavigation() != null &&
+		 * news_NewsInfo.getNI_BelongNavigation().trim().length() > 0) {
+		 * newsTwoNavigationInfo =
+		 * newsInfoManagementDao.getnews(news_NewsInfo.getNI_BelongNavigation().
+		 * trim()); if (newsTwoNavigationInfo != null) {
+		 * selectAllDTO.setNews_TwoNavigationInfo(newsTwoNavigationInfo); }
+		 * 
+		 * } selectAllDTO.setNews_NewsInfo((List<News_NewsInfo>) news_NewsInfo);
+		 * listSelectAllDTO.add(selectAllDTO); } return listSelectAllDTO;
+		 */
 	}
 
 	@Override

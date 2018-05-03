@@ -1,14 +1,11 @@
 package ppp;
 
 import java.util.List;
-
 import javax.annotation.Resource;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
 import com.news.newsinfo.domain.News_NewsInfo;
 import com.news.newsinfo.domain.DTO.SelectAllDTO;
 import com.news.newsinfo.service.NewsInfoManagementService;
@@ -26,17 +23,17 @@ public class jjj {
 	public void setNewsInfoManagementService(NewsInfoManagementService newsInfoManagementService) {
 		this.newsInfoManagementService = newsInfoManagementService;
 	}
-	
+
 	@Test
-	public void ff(){
+	public void ff() {
 		List<SelectAllDTO> listSelectAllDTO = newsInfoManagementService.listSelectAllDTO();
+		System.out.println(listSelectAllDTO.size());
 		System.out.println(listSelectAllDTO);
 	}
-	@Test
-	public void gg(){
-		List<News_NewsInfo> listNews=newsInfoManagementService.getNews();
-		System.out.println(listNews);
-		
-	}
 
+	@Test
+	public void gg() {
+		List<News_NewsInfo> listNews = newsInfoManagementService.getNews();
+		System.out.println(listNews);
+	}
 }

@@ -127,5 +127,11 @@ public class NewsInfoManagementDaoImpl implements NewsInfoManagementDao {
 		return newsTwoNavigationInfo;
 	}
 
+	@Override
+	public News_NewsInfo getnew(String trim) {
+		
+		return null;
+	}
+
 
 }

@@ -26,4 +26,6 @@ public interface NewsInfoManagementService {
 
 	public int delete(News_NewsInfo news_NewsInfo);
 
+	public int update(News_NewsInfo news_NewsInfo);
+
 }

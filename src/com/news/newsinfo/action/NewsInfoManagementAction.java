@@ -120,10 +120,11 @@ public class NewsInfoManagementAction extends ActionSupport implements ServletRe
 	 */
 	private News_NewsInfo news_NewsInfo;
 	private News_Content news_Content;
-	private List<News_NewsInfo> listNews;	
+	private List<News_NewsInfo> listNews;
+
 	/**
 	 * 结束
-	
+	 * 
 	 */
 	/**
 	 * 结束
@@ -131,13 +132,12 @@ public class NewsInfoManagementAction extends ActionSupport implements ServletRe
 	 * @return
 	 */
 	public String savaAction() {
-		System.out.println("LLLLL"+news_Content);
 		news_NewsInfo.setNI_IsDelete("1");
 		news_NewsInfo.setNI_IsShow("-1");
 		news_NewsInfo.setNI_IsRecommend("1");
 		news_NewsInfo.setNI_IsCarousel("-1");
 		news_NewsInfo.setNI_BrowserCount("0");
-		newsInfoManagementService.addInfo(news_Content,news_NewsInfo);
+		newsInfoManagementService.addInfo(news_Content, news_NewsInfo);
 		return "sava";
 	}
 
@@ -145,17 +145,21 @@ public class NewsInfoManagementAction extends ActionSupport implements ServletRe
 		setMessage("success");
 		return "popo";
 	}
-	public String manageAction(){
-		listNews=newsInfoManagementService.getNews();
-		System.out.println("LLLL"+listNews);
+
+	public String manageAction() {
+		listNews = newsInfoManagementService.getNews();
 		return "manage";
-		
-	}
-	public String deleteAction(){
-		System.out.println("ddd"+news_NewsInfo);
-		news_NewsInfo.setNI_IsDelete("-1");
-	    newsInfoManagementService.delete(news_NewsInfo);
-		return"delete";
+
 	}
 
+	public String deleteAction() {
+		news_NewsInfo.setNI_IsDelete("-1");
+		newsInfoManagementService.delete(news_NewsInfo);
+		return "delete";
+	}
+
+	public String updateAction() {
+		newsInfoManagementService.update(news_NewsInfo);
+		return "update";
+	}
 }

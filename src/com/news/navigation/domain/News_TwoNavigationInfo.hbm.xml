@@ -1,36 +1,37 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 2018-5-4 10:29:56 by Hibernate Tools 3.5.0.Final -->
+<!-- Generated 2018-5-4 20:25:26 by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-    <class name="com.news.navigation.domain.News_TwoNavigationInfo" table="NEWS_TWONAVIGATIONINFO">
-        <id name="TNI_Id" type="java.lang.String">
-            <column name="TNI_Id" />
-            <generator class="assigned" />
-        </id>
-        <property name="TNI_BelongOneNavigator" type="java.lang.String">
-            <column name="TNI_BelongOneNavigator" />
-        </property>
-        <property name="TNI_Name" type="java.lang.String">
-            <column name="TNI_Name" />
-        </property>
-        <property name="TNI_IsDisplay" type="int">
-            <column name="TNI_IsDisplay" />
-        </property>
-        <property name="TNI_Order" type="int">
-            <column name="TNI_Order" />
-        </property>
-        <property name="TNI_NavigatorIntroduce" type="java.lang.String">
-            <column name="TNI_NavigatorIntroduce" />
-        </property>
-        <property name="TNI_IsDelete" type="int">
-            <column name="TNI_IsDelete" />
-        </property>
-        <property name="TNI_CreateTime" type="java.lang.String">
-            <column name="TNI_CreateTime" />
-        </property>
-        <property name="TNI_ModifyTime" type="java.lang.String">
-            <column name="TNI_ModifyTime" />
-        </property>
-    </class>
+	<class name="com.news.navigation.domain.News_TwoNavigationInfo"
+		table="NEWS_TWONAVIGATIONINFO">
+		<id name="TNI_Id" type="java.lang.String">
+			<column name="TNI_ID" />
+			<generator class="assigned" />
+		</id>
+		<property name="TNI_BelongOneNavigator" type="java.lang.String">
+			<column name="TNI_BELONGONENAVIGATOR" />
+		</property>
+		<property name="TNI_Name" type="java.lang.String">
+			<column name="TNI_NAME" />
+		</property>
+		<property name="TNI_IsDisplay" type="int">
+			<column name="TNI_ISDISPLAY" />
+		</property>
+		<property name="TNI_Order" type="int">
+			<column name="TNI_ORDER" />
+		</property>
+		<property name="TNI_NavigatorIntroduce" type="java.lang.String">
+			<column name="TNI_NAVIGATORINTRODUCE" />
+		</property>
+		<property name="TNI_IsDelete" type="int">
+			<column name="TNI_ISDELETE" />
+		</property>
+		<property name="TNI_CreateTime" type="java.lang.String">
+			<column name="TNI_CREATETIME" />
+		</property>
+		<property name="TNI_ModifyTime" type="java.lang.String">
+			<column name="TNI_MODIFYTIME" />
+		</property>
+	</class>
 </hibernate-mapping>

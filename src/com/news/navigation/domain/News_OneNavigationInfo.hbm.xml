@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-4-28 9:18:09 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.news.navigation.domain.News_OneNavigationInfo" table="NEWS_ONENAVIGATIONINFO">
+        <id name="ONI_Id" type="java.lang.String">
+            <column name="ONI_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="ONI_Name" type="java.lang.String">
+            <column name="ONI_NAME" />
+        </property>
+        <property name="ONI_IsDisplay" type="int">
+            <column name="ONI_ISDISPLAY" />
+        </property>
+        <property name="ONI_Order" type="int">
+            <column name="ONI_ORDER" />
+        </property>
+        <property name="ONI_NavigatorIntroduce" type="java.lang.String">
+            <column name="ONI_NAVIGATORINTRODUCE" />
+        </property>
+        <property name="ONI_IsDelete" type="int">
+            <column name="ONI_ISDELETE" />
+        </property>
+        <property name="ONI_CreateTime" type="java.lang.String">
+            <column name="ONI_CREATETIME" />
+        </property>
+        <property name="ONI_ModifyTime" type="java.lang.String">
+            <column name="ONI_MODIFYTIME" />
+        </property>
+    </class>
+</hibernate-mapping>

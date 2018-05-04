@@ -34,6 +34,10 @@
 					href="${pageContext.request.contextPath}/link/link_listLinkInfoByPageAction"
 					class="nav-link"> <i class="am-icon-home"></i> <span>管理链接</span>
 				</a></li>
+				<li class="tpl-left-nav-item"><a
+					href="${pageContext.request.contextPath}/navigation/navigation_listNavigationInfoByPageAction"
+					class="nav-link"> <i class="am-icon-home"></i> <span>管理导航</span>
+				</a></li>
 				<li class="tpl-left-nav-item"><a href="javascript:;"
 					class="nav-link tpl-left-nav-link-list"> <i
 						class="am-icon-table"></i> <span>新闻管理</span> <i
@@ -54,24 +58,15 @@
 	</div>
 	<script type="text/javascript"
 		src="${pageContext.request.contextPath}/js/jquery1.8.2.js"></script>
-
 	<script type="text/javascript"
 		src="${pageContext.request.contextPath}/js/amazeui.min.js"></script>
-
 	<script type="text/javascript"
 		src="${pageContext.request.contextPath}/js/iscroll.js"></script>
-
 	<script type="text/javascript"
 		src="${pageContext.request.contextPath}/js/app.js"></script>
-
 	<script type="text/javascript"
 		src="${pageContext.request.contextPath}/js/toastr.js"></script>
-
 	<script type="text/javascript"
 		src="${pageContext.request.contextPath}/js/bootstrap.js"></script>
-
 </body>
-
-
-
 </html>

@@ -143,7 +143,7 @@ public class NavigationManagementDaoImpl implements NavigationManagementDao {
 	public List<News_TwoNavigationInfo> getlistNews_TwoNavigationInfo(String trim) {
 		Object listNews_TwoNavigationInfo = new ArrayList<>();
 		Session session = getSession();
-		String hql = "from News_TwoNavigationInfo where TNI_BelongOneNavigator = :newsId";
+		String hql = "from News_TwoNavigationInfo where TNI_BelongOneNavigator = :newsId and TNI_IsDelete = '1' ";
 		Query query = session.createQuery(hql);
 		query.setParameter("newsId", trim);
 		listNews_TwoNavigationInfo = query.list();

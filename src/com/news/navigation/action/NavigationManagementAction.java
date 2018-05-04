@@ -151,10 +151,7 @@ public class NavigationManagementAction extends ActionSupport implements Servlet
 	 * detail
 	 * 
 	 * @test 一级和二级导航详情
-	 * @author LMJ 2018/04/27
-	 * 更新
-	 * LMJ
-	 * 2018/4/29
+	 * @author LMJ 2018/04/27 更新 LMJ 2018/4/29
 	 */
 	public String detailOneAction() {
 		navigationManagementService.addOneNavigation(news_OneNavigationInfo);
@@ -180,17 +177,14 @@ public class NavigationManagementAction extends ActionSupport implements Servlet
 		news_NavigationInfoCountVO.setPageIndex(page);
 		news_NavigationInfoCountVO.setSearch(search);
 		news_NavigationInfoCountVO = navigationManagementService.listNavigationInfoByPage(news_NavigationInfoCountVO);
-		System.out.println(news_NavigationInfoCountVO);
+		System.out.println(news_NavigationInfoCountVO.getListNews_NavigationInfoCountDTO());
 		return "detail";
 	}
 
 	/**
 	 * 更新一级和二级导航
 	 * 
-	 * LMJ 2018/4/27
-	 * 更新
-	 * LMJ
-	 * 2018/4/29
+	 * LMJ 2018/4/27 更新 LMJ 2018/4/29
 	 */
 
 	public String UpdateOneNavigationInfoAction() {

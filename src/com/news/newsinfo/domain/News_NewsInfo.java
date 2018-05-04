@@ -10,7 +10,6 @@ package com.news.newsinfo.domain;
 
 public class News_NewsInfo {
 	private String NI_Id;// id
-	private String NI_ContentId;// 新闻内容对应Id
 	private String NI_Title;// 新闻标题
 	private String NI_Keywords;// 新闻关键词
 	private String NI_IsCarousel;// 是否可为轮播
@@ -18,7 +17,7 @@ public class News_NewsInfo {
 	private String NI_BrowserCount;// 新闻浏览次数
 	private String NI_Source;// 新闻源头
 	private String NI_Author;// 新闻编辑
-	private String NI_Content;// 新闻内容
+	private String NI_Content;// 新闻内容对应Id
 	private String NI_IsDelete;// 新闻新闻是否删除
 	private String NI_IsShow;// 新闻是否发布
 	private String NI_ShowTime;// 新闻发布时间
@@ -34,13 +33,6 @@ public class News_NewsInfo {
 		NI_Id = nI_Id;
 	}
 
-	public String getNI_ContentId() {
-		return NI_ContentId;
-	}
-
-	public void setNI_ContentId(String nI_ContentId) {
-		NI_ContentId = nI_ContentId;
-	}
 
 	public String getNI_Title() {
 		return NI_Title;
@@ -156,12 +148,14 @@ public class News_NewsInfo {
 
 	@Override
 	public String toString() {
-		return "News_NewsInfo [NI_Id=" + NI_Id + ", NI_ContentId=" + NI_ContentId + ", NI_Title=" + NI_Title
-				+ ", NI_Keywords=" + NI_Keywords + ", NI_IsCarousel=" + NI_IsCarousel + ", NI_BelongNavigation="
-				+ NI_BelongNavigation + ", NI_BrowserCount=" + NI_BrowserCount + ", NI_Source=" + NI_Source
-				+ ", NI_Author=" + NI_Author + ", NI_Content=" + NI_Content + ", NI_IsDelete=" + NI_IsDelete
-				+ ", NI_IsShow=" + NI_IsShow + ", NI_ShowTime=" + NI_ShowTime + ", NI_CreateTime=" + NI_CreateTime
-				+ ", NI_ModifyTime=" + NI_ModifyTime + ", NI_IsRecommend=" + NI_IsRecommend + "]";
+		return "News_NewsInfo [NI_Id=" + NI_Id + ", NI_Title=" + NI_Title + ", NI_Keywords=" + NI_Keywords
+				+ ", NI_IsCarousel=" + NI_IsCarousel + ", NI_BelongNavigation=" + NI_BelongNavigation
+				+ ", NI_BrowserCount=" + NI_BrowserCount + ", NI_Source=" + NI_Source + ", NI_Author=" + NI_Author
+				+ ", NI_Content=" + NI_Content + ", NI_IsDelete=" + NI_IsDelete + ", NI_IsShow=" + NI_IsShow
+				+ ", NI_ShowTime=" + NI_ShowTime + ", NI_CreateTime=" + NI_CreateTime + ", NI_ModifyTime="
+				+ NI_ModifyTime + ", NI_IsRecommend=" + NI_IsRecommend + "]";
 	}
+
+
 
 }

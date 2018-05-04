@@ -76,13 +76,13 @@
 												<div class="am-btn-toolbar">
 													<div class="am-btn-group am-btn-group-xs">
 														<button data-target="#update" data-toggle="modal"
-															class="am-btn am-btn-default am-btn-xs am-text-secondary" id="<s:property value="NI_Id"/>&$&<s:property value="NI_ContentId"/>&$&<s:property value="NI_Title"/>&$&<s:property value="NI_Keywords"/>&$&<s:property value="NI_IsCarousel"/>&$&<s:property value="NI_BelongNavigation"/>&$&<s:property value="NI_BrowserCount"/> &$&<s:property value="NI_Source"/> &$&<s:property value="NI_Author"/> &$&<s:property value="NI_Content"/> &$&<s:property value="NI_IsDelete"/> &$&<s:property value="NI_IsShow"/> &$&<s:property value="NI_ShowTime"/> &$&<s:property value="NI_CreateTime"/> &$&<s:property value="NI_ModifyTime"/> &$&<s:property value="NI_IsRecommend"/> "
+															class="am-btn am-btn-default am-btn-xs am-text-secondary" id="<s:property value="NI_Id"/>&$&<s:property value="NI_Title"/>&$&<s:property value="NI_Keywords"/>&$&<s:property value="NI_IsCarousel"/>&$&<s:property value="NI_BelongNavigation"/>&$&<s:property value="NI_BrowserCount"/> &$&<s:property value="NI_Source"/> &$&<s:property value="NI_Author"/> &$&<s:property value="NI_Content"/> &$&<s:property value="NI_IsDelete"/> &$&<s:property value="NI_IsShow"/> &$&<s:property value="NI_ShowTime"/> &$&<s:property value="NI_CreateTime"/> &$&<s:property value="NI_ModifyTime"/> &$&<s:property value="NI_IsRecommend"/> "
 																onclick="chuanIdForModal23(this.id)" >
 															<span class="am-icon-pencil-square-o"></span> 编辑
 														</button>
 														<button data-target="#delete" data-toggle="modal"
 															class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"
-															id="<s:property value="NI_Id"/>&$&<s:property value="NI_ContentId"/>&$&<s:property value="NI_Title"/>&$&<s:property value="NI_Keywords"/>&$&<s:property value="NI_IsCarousel"/>&$&<s:property value="NI_BelongNavigation"/>&$&<s:property value="NI_BrowserCount"/> &$&<s:property value="NI_Source"/> &$&<s:property value="NI_Author"/> &$&<s:property value="NI_Content"/> &$&<s:property value="NI_IsDelete"/> &$&<s:property value="NI_IsShow"/> &$&<s:property value="NI_ShowTime"/> &$&<s:property value="NI_CreateTime"/> &$&<s:property value="NI_ModifyTime"/> &$&<s:property value="NI_IsRecommend"/> "
+															id="<s:property value="NI_Id"/>&$&<s:property value="NI_Title"/>&$&<s:property value="NI_Keywords"/>&$&<s:property value="NI_IsCarousel"/>&$&<s:property value="NI_BelongNavigation"/>&$&<s:property value="NI_BrowserCount"/> &$&<s:property value="NI_Source"/> &$&<s:property value="NI_Author"/> &$&<s:property value="NI_Content"/> &$&<s:property value="NI_IsDelete"/> &$&<s:property value="NI_IsShow"/> &$&<s:property value="NI_ShowTime"/> &$&<s:property value="NI_CreateTime"/> &$&<s:property value="NI_ModifyTime"/> &$&<s:property value="NI_IsRecommend"/> "
 															onclick="chuanIdForModal2(this.id)">
 															<span class="am-icon-trash-o"></span> 删除
 														</button>
@@ -153,9 +153,7 @@
 						<br>
 						<!-- 单选框 -->
 						<div style="margin-left: 33%;">
-							<input type="hidden" id="NI_Id" name="news_NewsInfo.NI_Id" /> <input
-								type="hidden" id="NI_ContentId"
-								name="news_NewsInfo.NI_ContentId" /> <input type="hidden"
+							<input type="hidden" id="NI_Id" name="news_NewsInfo.NI_Id" />  <input type="hidden"
 								id="NI_Title" name="news_NewsInfo.NI_Title" /> <input
 								type="hidden" id="NI_Keywords" name="news_NewsInfo.NI_Keywords" />
 							<input type="hidden" id="NI_IsCarousel"
@@ -231,8 +229,7 @@
 								<option value="1">不推荐</option>
 							</select> <br>
 							<!-- 2 -->
-							<input type="hidden" id="NIId" name="news_NewsInfo.NI_Id" /> <input
-								type="hidden" id="NIContentId" name="news_NewsInfo.NI_ContentId" />
+							<input type="hidden" id="NIId" name="news_NewsInfo.NI_Id" /> 
 							<input type="hidden" id="NIKeywords"
 								name="news_NewsInfo.NI_Keywords" />
 							<!-- 	<input type="hidden" id="NIIsCarousel"name="news_NewsInfo.NI_IsCarousel" />  -->
@@ -274,40 +271,38 @@
 		function chuanIdForModal2(id) {
 			var arr = id.split('&$&')
 			$('#NI_Id').val(arr[0])
-			$('#NI_ContentId').val(arr[1])
-			$('#NI_Title').val(arr[2])
-			$('#NI_Keywords').val(arr[3])
-			$('#NI_IsCarousel').val(arr[4])
-			$('#NI_BelongNavigation').val(arr[5])
-			$('#NI_BrowserCount').val(arr[6])
-			$('#NI_Source').val(arr[7])
-			$('#NI_Author').val(arr[8])
-			$('#NI_Content').val(arr[9])
-			$('#NI_IsDelete').val(arr[10])
-			$('#NI_IsShow').val(arr[11])
-			$('#NI_ShowTime').val(arr[12])
-			$('#NI_CreateTime').val(arr[13])
-			$('#NI_ModifyTime').val(arr[14])
-			$('#NI_IsRecommend').val(arr[15])
+			$('#NI_Title').val(arr[1])
+			$('#NI_Keywords').val(arr[2])
+			$('#NI_IsCarousel').val(arr[3])
+			$('#NI_BelongNavigation').val(arr[4])
+			$('#NI_BrowserCount').val(arr[5])
+			$('#NI_Source').val(arr[6])
+			$('#NI_Author').val(arr[7])
+			$('#NI_Content').val(arr[8])
+			$('#NI_IsDelete').val(arr[9])
+			$('#NI_IsShow').val(arr[110])
+			$('#NI_ShowTime').val(arr[11])
+			$('#NI_CreateTime').val(arr[12])
+			$('#NI_ModifyTime').val(arr[13])
+			$('#NI_IsRecommend').val(arr[14])
 		}
 		function chuanIdForModal23(id) {
 		 var arr = id.split('&$&');
 		 $('#NIId').val(arr[0])
-		 $('#NIContentId').val(arr[1])
-		 $('#NITitle').val(arr[2])
-		 $('#NIKeywords').val(arr[3])
-		 $('#NIIsCarousel').val(arr[4])
-		 $('#NIBelongNavigation').val(arr[5])
-		 $('#NIBrowserCount').val(arr[6])
-		 $('#NISource').val(arr[7])
-		 $('#NIAuthor').val(arr[8])
-		 $('#NIContent').val(arr[9])
-		 $('#NIIsDelete').val(arr[10])
-		 $('#NIIsShow').val(arr[11])
-		 $('#NIShowTime').val(arr[12])
-		 $('#NICreateTime').val(arr[13])
-		 $('#NIModifyTime').val(arr[14])
-		 $('#NIIsRecommend').val(arr[15])
+		 $('#NITitle').val(arr[1])
+		 $('#NIKeywords').val(arr[2])
+		 $('#NIIsCarousel').val(arr[3])
+		 $('#NIBelongNavigation').val(arr[4])
+		 $('#NIBrowserCount').val(arr[5])
+		 $('#NISource').val(arr[6])
+		 $('#NIAuthor').val(arr[7])
+		 $('#NIContent').val(arr[8])
+		 $('#NIIsDelete').val(arr[9])
+		 $('#NIIsShow').val(arr[10])
+		 $('#NIShowTime').val(arr[11])
+		 $('#NICreateTime').val(arr[12])
+		 $('#NIModifyTime').val(arr[13])
+		 $('#NIIsRecommend').val(arr[14])
 		 } 
 	</script>
 </body>

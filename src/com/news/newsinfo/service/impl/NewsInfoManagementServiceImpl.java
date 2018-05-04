@@ -69,7 +69,6 @@ public class NewsInfoManagementServiceImpl implements NewsInfoManagementService 
 		news_NewsInfo.setNI_CreateTime(TimeUtil.getStringSecond());
 		news_NewsInfo.setNI_ModifyTime(TimeUtil.getStringSecond());
 		news_NewsInfo.setNI_ShowTime(TimeUtil.getStringSecond());
-		news_NewsInfo.setNI_ContentId(news_Content.getNC_Id());
 		newsInfoManagementDao.saveOrUpdateObject(news_NewsInfo);
 
 	}
@@ -127,7 +126,6 @@ public class NewsInfoManagementServiceImpl implements NewsInfoManagementService 
 		delete.setNI_BelongNavigation(news_NewsInfo.getNI_BelongNavigation());
 		delete.setNI_BrowserCount(news_NewsInfo.getNI_BrowserCount());
 		delete.setNI_Content(news_NewsInfo.getNI_Content());
-		delete.setNI_ContentId(news_NewsInfo.getNI_ContentId());
 		delete.setNI_CreateTime(news_NewsInfo.getNI_CreateTime());
 		delete.setNI_IsCarousel(news_NewsInfo.getNI_IsCarousel());
 		delete.setNI_IsDelete(news_NewsInfo.getNI_IsDelete());
@@ -150,7 +148,6 @@ public class NewsInfoManagementServiceImpl implements NewsInfoManagementService 
 		update.setNI_BelongNavigation(news_NewsInfo.getNI_BelongNavigation());
 		update.setNI_BrowserCount(news_NewsInfo.getNI_BrowserCount());
 		update.setNI_Content(news_NewsInfo.getNI_Content());
-		update.setNI_ContentId(news_NewsInfo.getNI_ContentId());
 		update.setNI_CreateTime(news_NewsInfo.getNI_CreateTime());
 		update.setNI_IsCarousel(news_NewsInfo.getNI_IsCarousel());
 		update.setNI_IsDelete(news_NewsInfo.getNI_IsDelete());

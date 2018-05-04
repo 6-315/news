@@ -8,9 +8,6 @@
 			<column name="NI_Id" />
 			<generator class="assigned" />
 		</id>
-		<property name="NI_ContentId" type="java.lang.String">
-			<column name="NI_ContentId" />
-		</property>
 		<property name="NI_Title" type="java.lang.String">
 			<column name="NI_Title" />
 		</property>

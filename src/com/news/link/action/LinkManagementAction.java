@@ -139,25 +139,26 @@ public class LinkManagementAction extends ActionSupport implements ServletRespon
 	 * 实现结束
 	 */
 
+	
 	/**
 	 * 通过ID删除信息
 	 * 
 	 * LMJ 2018/4/21
 	 */
-	private String tmpId;
-
-	public String getTmpId() {
-		return tmpId;
-	}
-
-	public void setTmpId(String tmpId) {
-		this.tmpId = tmpId;
-	}
+	
+	/*
+	 * private String tmpId;
+	 * 
+	 * public String getTmpId() { return tmpId; }
+	 * 
+	 * public void setTmpId(String tmpId) { this.tmpId = tmpId; }
+	 */
 
 	/**
 	 * 结束
 	 */
 
+	
 	/**
 	 * detail
 	 * 

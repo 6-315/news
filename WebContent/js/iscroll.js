@@ -6,7 +6,7 @@
 			|| window.msRequestAnimationFrame || function(callback) {
 				window.setTimeout(callback, 1000 / 60);
 			};
-
+			
 	var utils = (function() {
 		var me = {};
 
@@ -89,8 +89,8 @@
 			hasPerspective : _prefixStyle('perspective') in _elementStyle,
 			hasTouch : 'ontouchstart' in window,
 			hasPointer : !!(window.PointerEvent || window.MSPointerEvent), // IE10
-																			// is
-																			// prefixed
+			// is
+			// prefixed
 			hasTransition : _prefixStyle('transition') in _elementStyle
 		});
 
@@ -212,11 +212,11 @@
 			},
 			circular : {
 				style : 'cubic-bezier(0.1, 0.57, 0.1, 1)', // Not properly
-															// "circular" but
-															// this looks
-															// better, it should
-															// be (0.075, 0.82,
-															// 0.165, 1)
+				// "circular" but
+				// this looks
+				// better, it should
+				// be (0.075, 0.82,
+				// 0.165, 1)
 				fn : function(k) {
 					return Math.sqrt(1 - (--k * k));
 				}
@@ -300,7 +300,7 @@
 		this.wrapper = typeof el == 'string' ? document.querySelector(el) : el;
 		this.scroller = this.wrapper.children[0];
 		this.scrollerStyle = this.scroller.style; // cache style for better
-													// performance
+		// performance
 
 		this.options = {
 
@@ -522,7 +522,7 @@
 			}
 
 			if (this.options.preventDefault) { // increases performance on
-												// Android? TODO: check!
+				// Android? TODO: check!
 				e.preventDefault();
 			}
 
@@ -642,7 +642,7 @@
 			}
 
 			this.scrollTo(newX, newY); // ensures that the last position is
-										// rounded
+			// rounded
 
 			// we scrolled less than 10 pixels
 			if (!this.moved) {
@@ -1562,7 +1562,7 @@
 			}
 
 			var snap = this.options.snap, // we are using this alot, better to
-											// cache it
+			// cache it
 			newX = snap ? this.currentPage.pageX : this.x, newY = snap ? this.currentPage.pageY
 					: this.y, now = utils.getTime(), prevTime = this.keyTime || 0, acceleration = 0.250, pos;
 

@@ -19,7 +19,7 @@ import util.TimeUtil;
  * 
  * @author JXX
  * @date 2018/04/18
- * @modify JXX 2018/04/18
+ * @modify LMJ 2018/04/27
  *
  */
 public class LinkManagementServiceImpl implements LinkManagementService {
@@ -61,9 +61,9 @@ public class LinkManagementServiceImpl implements LinkManagementService {
 	@SuppressWarnings("unchecked")
 	@Override
 	public News_LinkInfoCountVO listLinkInfoByPage(News_LinkInfoCountVO news_LinkInfoCountVO) {
-		List<News_LinkInfoCountDTO> listNews_LinkInfoCountDTO = new ArrayList<>();
+		/*List<News_LinkInfoCountDTO> listNews_LinkInfoCountDTO = new ArrayList<>();*/
 		List<News_LinkInfo> listLinkInfo = new ArrayList<>();
-		News_LinkInfoCountDTO news_LinkInfoCountDTO = null;
+		/*News_LinkInfoCountDTO news_LinkInfoCountDTO = null;*/
 		// 获取数量
 		// 链接数量的hql以及遍历的hql
 		String news_LinkInfoCountHql = "select count(*) from News_LinkInfo ";

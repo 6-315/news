@@ -4,10 +4,9 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>后台管理</title>
+<title>链接管理</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Amaze UI Admin index Examples</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="renderer" content="webkit">
 <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -30,9 +29,9 @@
 				<li class="am-active">文字列表</li>
 			</ol>
 			<div class="tpl-portlet-components">
-				<div class="portlet-title">
+				<div class="portlet-title" style="border-bottom-width: 0px;">
 					<button class="btn btn-primary btn-lg" data-toggle="modal"
-						data-target="#myModal">添加链接</button>
+						data-target="#myModal" style="margin-left: 14px;">添加链接</button>
 					<div class="portlet-input input-small input-inline"
 						style="float: right;">
 						<div class="input-icon right">
@@ -177,95 +176,93 @@
 					</div>
 				</div>
 			</div>
-
-			<div class="tpl-alert"></div>
 		</div>
-		<!-- 修改信息模态框（Modal） -->
-		<div class="modal fade" id="myModal_1" tabindex="-1" role="dialog"
-			aria-labelledby="myModalLabel" aria-hidden="true"
-			style="margin-top: 80px;">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<form
-						action="${pageContext.request.contextPath}/link/link_UpdateLinkInfoAction"
-						method="post">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal"
-								aria-hidden="true">&times;</button>
-							<h4 class="modal-title" id="myModalLabel">修改链接信息</h4>
-						</div>
-						<div class="modal-body">
-							<input id="link_id" name="news_LinkInfo.LI_Id" type="hidden">
-							<input id="link_isDelete" name="news_LinkInfo.LI_IsDelete"
-								type="hidden"> <input id="link_createTime"
-								name="news_LinkInfo.LI_CreateTime" type="hidden"> 链接名称<input
-								id="link_Name" name="news_LinkInfo.LI_Name" type="text"
-								class="form-control input-sm" placeholder="请输入链接名称" /> 链接地址 <input
-								name="news_LinkInfo.LI_Address" id="link_Address" type="text"
-								class="form-control input-sm" placeholder="请输入链接地址" /> 是否可见 <label
-								class="form-control input-sm"> <input type="radio"
-								name="news_LinkInfo.LI_IsDisplay" id="sr1" value="1" />可见 <input
-								type="radio" name="news_LinkInfo.LI_IsDisplay" id="sr1"
-								value="-1" />不可见
-							</label>
-							<!-- 是否删除 <label class="form-control input-sm"> <input
+
+		<div class="tpl-alert"></div>
+	</div>
+	<!-- 修改信息模态框（Modal） -->
+	<div class="modal fade" id="myModal_1" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel" aria-hidden="true"
+		style="margin-top: 80px;">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<form
+					action="${pageContext.request.contextPath}/link/link_UpdateLinkInfoAction"
+					method="post">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"
+							aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">修改链接信息</h4>
+					</div>
+					<div class="modal-body">
+						<input id="link_id" name="news_LinkInfo.LI_Id" type="hidden">
+						<input id="link_isDelete" name="news_LinkInfo.LI_IsDelete"
+							type="hidden"> <input id="link_createTime"
+							name="news_LinkInfo.LI_CreateTime" type="hidden"> 链接名称<input
+							id="link_Name" name="news_LinkInfo.LI_Name" type="text"
+							class="form-control input-sm" placeholder="请输入链接名称" /> 链接地址 <input
+							name="news_LinkInfo.LI_Address" id="link_Address" type="text"
+							class="form-control input-sm" placeholder="请输入链接地址" /> 是否可见 <label
+							class="form-control input-sm"> <input type="radio"
+							name="news_LinkInfo.LI_IsDisplay" id="sr1" value="1" />可见 <input
+							type="radio" name="news_LinkInfo.LI_IsDisplay" id="sr1"
+							value="-1" />不可见
+						</label>
+						<!-- 是否删除 <label class="form-control input-sm"> <input
 								type="radio" name="news_LinkInfo.LI_IsDelete" id="sr2" value="1" />未删除
 								<input type="radio" name="news_LinkInfo.LI_IsDelete" id="sr2"
 								value="-1" />已删除
 							</label> -->
 
-						</div>
+					</div>
 
-						<div class="modal-footer">
-							<button type="button" class="btn btn-default"
-								data-dismiss="modal">关闭</button>
-							<button type="submit" class="btn btn-primary">确认修改</button>
-						</div>
-					</form>
-				</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+						<button type="submit" class="btn btn-primary">确认修改</button>
+					</div>
+				</form>
 			</div>
-			<!-- /.modal -->
 		</div>
-
-		<!-- 修改信息模态框（Modal） -->
-		<div class="modal fade" id="myModal_2" tabindex="-1" role="dialog"
-			aria-labelledby="myModalLabel" aria-hidden="true"
-			style="margin-top: 80px;">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<form
-						action="${pageContext.request.contextPath}/link/link_UpdateLinkInfoAction"
-						method="post">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal"
-								aria-hidden="true">&times;</button>
-
-						</div>
-						<div class="modal-body">
-							<input id="linkid" name="news_LinkInfo.LI_Id" type="hidden">
-							<input id="linkcreateTime" name="news_LinkInfo.LI_CreateTime"
-								type="hidden"> <input id="linkName"
-								name="news_LinkInfo.LI_Name" type="hidden"> <input
-								id="linkAddress" name="news_LinkInfo.LI_Address" type="hidden">
-							<input id="linkisDisplay" name="news_LinkInfo.LI_IsDisplay"
-								type="hidden"> <input name="news_LinkInfo.LI_IsDelete"
-								type="hidden" value="-1">
-							<center>是否删除？</center>
-						</div>
-
-						<div class="modal-footer">
-							<button type="button" class="btn btn-default"
-								data-dismiss="modal">关闭</button>
-							<button type="submit" class="btn btn-primary">确认删除</button>
-						</div>
-					</form>
-				</div>
-			</div>
-			<!-- /.modal -->
-		</div>
-
-
+		<!-- /.modal -->
 	</div>
+
+	<!-- 修改信息模态框（Modal） -->
+	<div class="modal fade" id="myModal_2" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel" aria-hidden="true"
+		style="margin-top: 80px;">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<form
+					action="${pageContext.request.contextPath}/link/link_UpdateLinkInfoAction"
+					method="post">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"
+							aria-hidden="true">&times;</button>
+
+					</div>
+					<div class="modal-body">
+						<input id="linkid" name="news_LinkInfo.LI_Id" type="hidden">
+						<input id="linkcreateTime" name="news_LinkInfo.LI_CreateTime"
+							type="hidden"> <input id="linkName"
+							name="news_LinkInfo.LI_Name" type="hidden"> <input
+							id="linkAddress" name="news_LinkInfo.LI_Address" type="hidden">
+						<input id="linkisDisplay" name="news_LinkInfo.LI_IsDisplay"
+							type="hidden"> <input name="news_LinkInfo.LI_IsDelete"
+							type="hidden" value="-1"> <span style="margin: auto;">是否删除？
+						</span>
+					</div>
+
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+						<button type="submit" class="btn btn-primary">确认删除</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- /.modal -->
+	</div>
+
+
 	<script>
 		function chuanIdForModal(id) {
 			console.log(id)
@@ -289,10 +286,6 @@
 			$('#linkisDisplay').val(arr[4])
 		}
 	</script>
-
-
-
-
 </body>
 
 </html>

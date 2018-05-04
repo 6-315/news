@@ -1,33 +1,36 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 2018-4-28 9:19:09 by Hibernate Tools 3.5.0.Final -->
+<!-- Generated 2018-5-4 10:29:56 by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
     <class name="com.news.navigation.domain.News_TwoNavigationInfo" table="NEWS_TWONAVIGATIONINFO">
         <id name="TNI_Id" type="java.lang.String">
             <column name="TNI_Id" />
             <generator class="assigned" />
         </id>
-        <property name="ONI_Name" type="java.lang.String">
-            <column name="ONI_Name" />
+        <property name="TNI_BelongOneNavigator" type="java.lang.String">
+            <column name="TNI_BelongOneNavigator" />
         </property>
-        <property name="ONI_IsDisplay" type="int">
-            <column name="ONI_IsDisplay" />
+        <property name="TNI_Name" type="java.lang.String">
+            <column name="TNI_Name" />
         </property>
-        <property name="ONI_Order" type="int">
-            <column name="ONI_Order" />
+        <property name="TNI_IsDisplay" type="int">
+            <column name="TNI_IsDisplay" />
         </property>
-        <property name="ONI_NavigatorIntroduce" type="java.lang.String">
-            <column name="ONI_NavigatorIntroduce" />
+        <property name="TNI_Order" type="int">
+            <column name="TNI_Order" />
         </property>
-        <property name="ONI_IsDelete" type="int">
-            <column name="ONI_IsDelete" />
+        <property name="TNI_NavigatorIntroduce" type="java.lang.String">
+            <column name="TNI_NavigatorIntroduce" />
         </property>
-        <property name="ONI_CreateTime" type="java.lang.String">
-            <column name="ONI_CreateTime" />
+        <property name="TNI_IsDelete" type="int">
+            <column name="TNI_IsDelete" />
         </property>
-        <property name="ONI_ModifyTime" type="java.lang.String">
-            <column name="ONI_ModifyTime" />
+        <property name="TNI_CreateTime" type="java.lang.String">
+            <column name="TNI_CreateTime" />
+        </property>
+        <property name="TNI_ModifyTime" type="java.lang.String">
+            <column name="TNI_ModifyTime" />
         </property>
     </class>
 </hibernate-mapping>

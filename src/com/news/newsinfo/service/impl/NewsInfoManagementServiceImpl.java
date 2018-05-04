@@ -7,7 +7,9 @@ import com.news.navigation.domain.News_TwoNavigationInfo;
 import com.news.newsinfo.dao.NewsInfoManagementDao;
 import com.news.newsinfo.domain.News_Content;
 import com.news.newsinfo.domain.News_NewsInfo;
+import com.news.newsinfo.domain.DTO.NewsinfoDTO;
 import com.news.newsinfo.domain.DTO.SelectAllDTO;
+import com.news.newsinfo.domain.VO.NewsinfoVO;
 import com.news.newsinfo.service.NewsInfoManagementService;
 
 import util.BuildUuid;
@@ -161,6 +163,75 @@ public class NewsInfoManagementServiceImpl implements NewsInfoManagementService 
 		update.setNI_ModifyTime(TimeUtil.getStringSecond());
 		newsInfoManagementDao.saveOrUpdateObject(update);
 		return 1;
+	}
+
+	@Override
+	public List<News_TwoNavigationInfo> getNavigation() {
+		List<News_TwoNavigationInfo> listNavigation;
+		listNavigation = (List<News_TwoNavigationInfo>) newsInfoManagementDao
+				.listObject("from News_TwoNavigationInfo where TNI_IsDelete =  1");
+		return listNavigation;
+	}
+
+	@Override
+	public NewsinfoVO getNews2(NewsinfoVO newsinfoVO) {
+		List<News_NewsInfo> listNews = new ArrayList<>();
+		String userInfoCountHql = "select count(*) from News_NewsInfo where NI_IsDelete = '1'";
+		String listUserNewsCountDTOHql = "from News_NewsInfo where NI_IsDelete = '1'";
+		/*
+		 * if (newsinfoVO.getSearch() != null &&
+		 * newsinfoVO.getSearch().trim().length() > 0) { String search = "%" +
+		 * newsinfoVO.getSearch().trim() + "%"; userInfoCountHql =
+		 * userInfoCountHql + "where userName like '" + search + "' ";
+		 * listUserNewsCountDTOHql = listUserNewsCountDTOHql +
+		 * "where userName like '" + search + "'"; }
+		 */ // 这里如果不加desc表示正序，如果加上desc表示倒序
+		listUserNewsCountDTOHql = listUserNewsCountDTOHql + "order by NI_ModifyTime desc";
+		int userInfoCount = newsInfoManagementDao.getCount(userInfoCountHql);
+		// 设置总数量
+		newsinfoVO.setTotalRecords(userInfoCount);
+		// 设置总页数
+		newsinfoVO.setTotalPages(((userInfoCount - 1) / newsinfoVO.getPageSize()) + 1);
+		// 判断是否拥有上一页
+		if (newsinfoVO.getPageIndex() <= 1) {
+			newsinfoVO.setHavePrePage(false);
+		} else {
+			newsinfoVO.setHavePrePage(true);
+		}
+		// 判断是否拥有下一页
+		if (newsinfoVO.getPageIndex() >= newsinfoVO.getTotalPages()) {
+			newsinfoVO.setHaveNextPage(false);
+		} else {
+			newsinfoVO.setHaveNextPage(true);
+		}
+		// listnews = (List<News_NewsInfo>)
+		// newsInfoManagementDao.listObject("from News_NewsInfo where
+		// NI_IsDelete = 1");
+		listNews = (List<News_NewsInfo>) newsInfoManagementDao.queryForPage(listUserNewsCountDTOHql,
+				newsinfoVO.getPageIndex(), newsinfoVO.getPageSize());
+		newsinfoVO.setListNews(listNews);
+		return newsinfoVO;
+	}
+
+	@Override
+	public NewsinfoDTO getExact(String ni_Content) {
+		if (ni_Content == null || ni_Content.trim().length() <= 0) {
+			return null;
+		}
+		System.out.println("fdf:" + ni_Content);
+		NewsinfoDTO newsinfoDTO = new NewsinfoDTO();
+		News_NewsInfo news_NewsInfo;
+		News_Content news_Content;
+		// news_NewsInfo = newsInfoManagementDao.listObject("from News_NewsInfo
+		// where NI_Content = '" + ni_Content + "'");
+		// news_Content = newsInfoManagementDao.listObject("from News_Content
+		// where NC_Id = '" + ni_Content + "'");
+		 news_Content = newsInfoManagementDao.getContent(ni_Content);
+		news_NewsInfo = newsInfoManagementDao.getinfo(ni_Content);
+
+		newsinfoDTO.setNews_Content(news_Content);
+		newsinfoDTO.setNews_NewsInfo(news_NewsInfo);
+		return newsinfoDTO;
 	}
 
 }

@@ -8,6 +8,7 @@ import org.hibernate.SessionFactory;
 
 import com.news.navigation.domain.News_TwoNavigationInfo;
 import com.news.newsinfo.dao.NewsInfoManagementDao;
+import com.news.newsinfo.domain.News_Content;
 import com.news.newsinfo.domain.News_NewsInfo;
 
 import util.TimeUtil;
@@ -71,7 +72,7 @@ public class NewsInfoManagementDaoImpl implements NewsInfoManagementDao {
 	public List<?> queryForPage(String hql, int offset, int length) {
 		Session session = getSession();
 		Query query = session.createQuery(hql);
-		query.setFirstResult(offset - 1);
+		query.setFirstResult((offset - 1) * length);
 		query.setMaxResults(length);
 		List<?> list = query.list();
 		session.clear();
@@ -129,9 +130,30 @@ public class NewsInfoManagementDaoImpl implements NewsInfoManagementDao {
 
 	@Override
 	public News_NewsInfo getnew(String trim) {
-		
+
 		return null;
 	}
 
+	@Override
+	public News_NewsInfo getinfo(String ni_Content) {
+		News_NewsInfo news_NewsInfo = new News_NewsInfo();
+		Session session = getSession();
+		String hql = "from News_NewsInfo where NI_Content = :newsId";
+		Query query = session.createQuery(hql);
+		query.setParameter("newsId", ni_Content);
+		news_NewsInfo = (News_NewsInfo) query.uniqueResult();
+		return news_NewsInfo;
+	}
+
+	@Override
+	public News_Content getContent(String ni_Content) {
+		News_Content news_Content = new News_Content();
+		Session session = getSession();
+		String hql = "from News_Content where NC_Id = :newsId";
+		Query query = session.createQuery(hql);
+		query.setParameter("newsId", ni_Content);
+		news_Content = (News_Content) query.uniqueResult();
+		return news_Content;
+	}
 
 }

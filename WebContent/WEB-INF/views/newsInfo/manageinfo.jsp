@@ -21,7 +21,7 @@
 				<li class="am-active">新闻管理</li>
 			</ol>
 			<div class="tpl-portlet-components">
-				<div class="portlet-title">
+				<div class="portlet-title" style="border-bottom-width: 0px;">
 					<div class="caption font-green bold">
 						<span class="am-icon-code"></span> 李伟最帅
 					</div>
@@ -44,7 +44,7 @@
 					<div class="am-g">
 						<div class="am-u-sm-12">
 							<table
-								class="am-table am-table-striped am-table-hover table-main">
+								class="table  table-striped table-hover table-main">
 								<thead>
 									<tr>
 										<th class="table-check"><input class="tpl-table-fz-check"
@@ -59,7 +59,7 @@
 									</tr>
 								</thead>
 								<tbody>
-									<s:iterator value="listNews">
+									<s:iterator value="newsinfoVO.listNews">
 										<tr>
 											<td><input type="checkbox"></td>
 											<td><a href="#"><s:property value="NI_Title" /> </a></td>
@@ -76,8 +76,8 @@
 												<div class="am-btn-toolbar">
 													<div class="am-btn-group am-btn-group-xs">
 														<button data-target="#update" data-toggle="modal"
-															class="am-btn am-btn-default am-btn-xs am-text-secondary"<%-- id="<s:property value="NI_Id"/>&$&<s:property value="NI_ContentId"/>&$&<s:property value="NI_Title"/>&$&<s:property value="NI_Keywords"/>&$&<s:property value="NI_IsCarousel"/>&$&<s:property value="NI_BelongNavigation"/>&$&<s:property value="NI_BrowserCount"/> &$&<s:property value="NI_Source"/> &$&<s:property value="NI_Author"/> &$&<s:property value="NI_Content"/> &$&<s:property value="NI_IsDelete"/> &$&<s:property value="NI_IsShow"/> &$&<s:property value="NI_ShowTime"/> &$&<s:property value="NI_CreateTime"/> &$&<s:property value="NI_ModifyTime"/> &$&<s:property value="NI_IsRecommend"/> "
-																onclick="chuanIdForModal23(this.id)" --%>>
+															class="am-btn am-btn-default am-btn-xs am-text-secondary" id="<s:property value="NI_Id"/>&$&<s:property value="NI_ContentId"/>&$&<s:property value="NI_Title"/>&$&<s:property value="NI_Keywords"/>&$&<s:property value="NI_IsCarousel"/>&$&<s:property value="NI_BelongNavigation"/>&$&<s:property value="NI_BrowserCount"/> &$&<s:property value="NI_Source"/> &$&<s:property value="NI_Author"/> &$&<s:property value="NI_Content"/> &$&<s:property value="NI_IsDelete"/> &$&<s:property value="NI_IsShow"/> &$&<s:property value="NI_ShowTime"/> &$&<s:property value="NI_CreateTime"/> &$&<s:property value="NI_ModifyTime"/> &$&<s:property value="NI_IsRecommend"/> "
+																onclick="chuanIdForModal23(this.id)" >
 															<span class="am-icon-pencil-square-o"></span> 编辑
 														</button>
 														<button data-target="#delete" data-toggle="modal"
@@ -94,10 +94,38 @@
 								</tbody>
 							</table>
 
-							<hr>
+     <!-- 分页 -->
+                   <table class="table  table-striped table-hover table-main" >
+						<tr>
+							<td>共 <s:property value="newsinfoVO.totalPages" />
+								页
+							</td>
+							<td>共 <s:property value="newsinfoVO.totalRecords" />
+								条记录
+							</td>
+							<td>当前第 <s:property value="newsinfoVO.pageIndex" />
+								页
+							</td>
+							<td colspan="4"><s:if
+									test="%{newsinfoVO.pageIndex == 1}">第一页&nbsp;&nbsp;&nbsp;&nbsp;上一页&nbsp;&nbsp;&nbsp;&nbsp;</s:if>
+								<s:else>
+									<a
+										href="${pageContext.request.contextPath }/newsinfo/newsinfo_manageAction?page=1">第一页&nbsp;&nbsp;&nbsp;&nbsp;</a>
+									<a
+										href="${pageContext.request.contextPath }/newsinfo/newsinfo_manageAction?page=<s:property value="%{newsinfoVO.pageIndex-1}"/>">上一页&nbsp;&nbsp;&nbsp;&nbsp;</a>
 
+								</s:else> <s:if
+									test="%{newsinfoVO.pageIndex != newsinfoVO.totalPages}">
+									<a
+										href="${pageContext.request.contextPath }/newsinfo/newsinfo_manageAction?page=<s:property value="%{newsinfoVO.pageIndex+1}"/>">下一页&nbsp;&nbsp;&nbsp;&nbsp;</a>
+									<a
+										href="${pageContext.request.contextPath }/newsinfo/newsinfo_manageAction?page=<s:property value="newsinfoVO.totalPages"/>">最后一页</a>
+								</s:if> <s:else>下一页&nbsp;&nbsp;&nbsp;&nbsp; 最后一页</s:else></td>
+						</tr>
+					</table>
+                   <!--结束  -->
 						</div>
-
+              
 					</div>
 				</div>
 				<div class="tpl-alert"></div>
@@ -175,7 +203,7 @@
 				</div>
 				<!-- 是否删除 -->
 				<form
-					action="${pageContext.request.contextPath}/newsinfo/newsinfo_deleteAction"
+					action="${pageContext.request.contextPath}/newsinfo/newsinfo_updateAction"
 					method="post">
 					<div class="form-group">
 						<br>
@@ -215,7 +243,7 @@
 								id="NISource" name="news_NewsInfo.NI_Source" /> <input
 								type="hidden" id="NIAuthor" name="news_NewsInfo.NI_Author" /> <input
 								type="hidden" id="NIContent" name="news_NewsInfo.NI_Content" />
-							<input type="hidden" id="NI_IsDelete" name="news_NewsInfo.NI_Id" />
+							<input type="hidden" id="NIIsDelete" name="news_NewsInfo.NI_IsDelete" />
 							<!-- 	<input type="hidden" id="NIIsShow"name="news_NewsInfo.NI_IsShow" />  -->
 							<input type="hidden" id="NIShowTime"
 								name="news_NewsInfo.NI_ShowTime" /> <input type="hidden"
@@ -262,7 +290,7 @@
 			$('#NI_ModifyTime').val(arr[14])
 			$('#NI_IsRecommend').val(arr[15])
 		}
-		/* 		function chuanIdForModal23(id) {
+		function chuanIdForModal23(id) {
 		 var arr = id.split('&$&');
 		 $('#NIId').val(arr[0])
 		 $('#NIContentId').val(arr[1])
@@ -280,7 +308,7 @@
 		 $('#NICreateTime').val(arr[13])
 		 $('#NIModifyTime').val(arr[14])
 		 $('#NIIsRecommend').val(arr[15])
-		 } */
+		 } 
 	</script>
 </body>
 </html>

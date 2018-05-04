@@ -75,11 +75,13 @@
 								<div style="width: 130px; height: 70px; margin-left: 26.5%">
 
 									<select class="form-control" name="news_NewsInfo.NI_BelongNavigation">
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
+									
+									<s:iterator value="listNavigation">
+										<option value="<s:property value="TNI_Id" />">
+										
+										<s:property value="TNI_Name" />
+										</option>
+										</s:iterator>
 									</select>
 								</div>
 								<!-- 结束 -->

@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.struts2.interceptor.ServletRequestAware;
 import org.apache.struts2.interceptor.ServletResponseAware;
 
+import com.news.newsinfo.domain.News_NewsInfo;
+import com.news.newsinfo.domain.DTO.NewsinfoDTO;
 import com.news.newsinfo.domain.DTO.SelectAllDTO;
 import com.news.newsinfo.service.NewsInfoManagementService;
 import com.opensymphony.xwork2.ActionSupport;
@@ -73,6 +75,8 @@ public class SelectAllAction extends ActionSupport implements ServletResponseAwa
 	 * 使用域模型SelectAllDTO
 	 */
 	private List<SelectAllDTO> listSelectAllDTO;
+	private NewsinfoDTO newsinfoDTO;
+	private News_NewsInfo news;
 
 	public List<SelectAllDTO> getListSelectAllDTO() {
 		return listSelectAllDTO;
@@ -82,11 +86,26 @@ public class SelectAllAction extends ActionSupport implements ServletResponseAwa
 		this.listSelectAllDTO = listSelectAllDTO;
 	}
 	
+	public NewsinfoDTO getNewsinfoDTO() {
+		return newsinfoDTO;
+	}
+
+	public void setNewsinfoDTO(NewsinfoDTO newsinfoDTO) {
+		this.newsinfoDTO = newsinfoDTO;
+	}
+
+	//查找二级栏目下的所有新闻
 	public String SelectNewsAction(){
 		listSelectAllDTO = newsInfoManagementService.listSelectAllDTO();
 		System.out.println(listSelectAllDTO);
 		return "";
 	}
+	//查找详细新闻，根据新闻ID
+	public String exactAction(){
+		newsinfoDTO = newsInfoManagementService.getExact(news.getNI_Content());
+		return"";
+	}
+	
 	/**
 	 *结束
 	 */

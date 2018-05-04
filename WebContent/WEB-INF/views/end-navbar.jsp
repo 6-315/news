@@ -61,10 +61,7 @@
 
 				</a></li>
 				
-			<li class="tpl-left-nav-item"><a
-					href="${pageContext.request.contextPath}/newsinfo/info_SelectNewsAction"
-					class="nav-link"> <i class="am-icon-home"></i> <span>新闻信息管理</span>
-				</a></li> 
+		
 				<li class="tpl-left-nav-item"><a
 					href="${pageContext.request.contextPath}/carousel/carousel_selectAction?message="
 					class="nav-link"> <i class="am-icon-home"></i> <span>管理轮播图</span>

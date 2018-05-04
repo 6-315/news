@@ -11,9 +11,11 @@ import org.apache.struts2.interceptor.ServletRequestAware;
 import org.apache.struts2.interceptor.ServletResponseAware;
 import org.aspectj.util.FileUtil;
 
+import com.news.navigation.domain.News_TwoNavigationInfo;
 import com.news.newsinfo.domain.News_Content;
 import com.news.newsinfo.domain.News_NewsInfo;
 import com.news.newsinfo.domain.DTO.NewsinfoDTO;
+import com.news.newsinfo.domain.VO.NewsinfoVO;
 import com.news.newsinfo.service.NewsInfoManagementService;
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -111,6 +113,30 @@ public class NewsInfoManagementAction extends ActionSupport implements ServletRe
 		this.listNews = listNews;
 	}
 
+	public List<News_TwoNavigationInfo> getListNavigation() {
+		return listNavigation;
+	}
+
+	public void setListNavigation(List<News_TwoNavigationInfo> listNavigation) {
+		this.listNavigation = listNavigation;
+	}
+
+	public NewsinfoVO getNewsinfoVO() {
+		return newsinfoVO;
+	}
+
+	public void setNewsinfoVO(NewsinfoVO newsinfoVO) {
+		this.newsinfoVO = newsinfoVO;
+	}
+
+	public int getPage() {
+		return page;
+	}
+
+	public void setPage(int page) {
+		this.page = page;
+	}
+
 	/**
 	 * 实现结束
 	 */
@@ -120,10 +146,14 @@ public class NewsInfoManagementAction extends ActionSupport implements ServletRe
 	 */
 	private News_NewsInfo news_NewsInfo;
 	private News_Content news_Content;
-	private List<News_NewsInfo> listNews;	
+	private List<News_NewsInfo> listNews;
+	private List<News_TwoNavigationInfo> listNavigation;
+	private NewsinfoVO newsinfoVO;
+	private int page = 1;
+
 	/**
 	 * 结束
-	
+	 * 
 	 */
 	/**
 	 * 结束
@@ -131,31 +161,40 @@ public class NewsInfoManagementAction extends ActionSupport implements ServletRe
 	 * @return
 	 */
 	public String savaAction() {
-		System.out.println("LLLLL"+news_Content);
 		news_NewsInfo.setNI_IsDelete("1");
 		news_NewsInfo.setNI_IsShow("-1");
 		news_NewsInfo.setNI_IsRecommend("1");
-		news_NewsInfo.setNI_IsCarousel("-1");
+		news_NewsInfo.setNI_IsCarousel("1");
 		news_NewsInfo.setNI_BrowserCount("0");
-		newsInfoManagementService.addInfo(news_Content,news_NewsInfo);
+
+		newsInfoManagementService.addInfo(news_Content, news_NewsInfo);
 		return "sava";
 	}
 
 	public String selectAction() {
+		listNavigation = newsInfoManagementService.getNavigation();
 		setMessage("success");
 		return "popo";
 	}
-	public String manageAction(){
-		listNews=newsInfoManagementService.getNews();
-		System.out.println("LLLL"+listNews);
+
+	public String manageAction() {
+		newsinfoVO = new NewsinfoVO();
+		newsinfoVO.setPageIndex(page);//
+		newsinfoVO.getSearch();
+		newsinfoVO = newsInfoManagementService.getNews2(newsinfoVO);
+		// listNews = newsInfoManagementService.getNews();
 		return "manage";
-		
-	}
-	public String deleteAction(){
-		System.out.println("ddd"+news_NewsInfo);
-		news_NewsInfo.setNI_IsDelete("-1");
-	    newsInfoManagementService.delete(news_NewsInfo);
-		return"delete";
+
 	}
 
+	public String deleteAction() {
+		news_NewsInfo.setNI_IsDelete("-1");
+		newsInfoManagementService.delete(news_NewsInfo);
+		return "delete";
+	}
+
+	public String updateAction() {
+		newsInfoManagementService.update(news_NewsInfo);
+		return "update";
+	}
 }

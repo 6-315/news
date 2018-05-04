@@ -16,6 +16,8 @@
 			</result>
 			<result name="delete" type="redirectAction">newsinfo_manageAction
 			</result>
+			<result name="update" type="redirectAction">newsinfo_manageAction
+			</result>
 		</action>
 		<action name="info_*"
 		class="com.news.newsinfo.action.SelectAllAction" method="{1}">

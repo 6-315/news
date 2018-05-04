@@ -30,9 +30,9 @@
 				<li class="am-active">文字列表</li>
 			</ol>
 			<div class="tpl-portlet-components" >
-				<div class="portlet-title">
-					<button class="btn btn-primary btn-lg" data-toggle="modal"
-						data-target="#myModal">添加链接</button>
+				<div class="portlet-title" style="border-bottom-width: 0px;" >
+					<button class="btn btn-primary btn-lg" data-toggle="modal" 
+						data-target="#myModal" style="margin-left: 14px;">添加链接</button>
 					<div class="portlet-input input-small input-inline"
 						style="float: right;">
 						<div class="input-icon right">

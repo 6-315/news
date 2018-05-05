@@ -53,7 +53,7 @@ public class jjj {
 	@Test
 	public void oo() {
 		News_Content news_Content;
-		NewsinfoDTO newsinfoDTO = newsInfoManagementService.getExact("dfaff211-f8ab-4614-b1fb-7921168deafe");
+		NewsinfoDTO newsinfoDTO = newsInfoManagementService.getExact("4a65b627-fe6c-43cf-8d64-7e905a58d992");
 	System.out.println(newsinfoDTO.getNews_Content());
 	}
 }

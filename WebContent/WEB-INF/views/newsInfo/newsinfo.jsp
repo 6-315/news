@@ -53,8 +53,9 @@
 										<span class="tpl-form-line-small-title">Title</span>
 									</label>
 									<div class="am-u-sm-9">
-										<input class="tpl-form-input" id="user-name"name="news_NewsInfo.NI_Title"
-											placeholder="请输入标题文字" type="text"> <small>请填写标题文字10-20字左右。</small>
+										<input class="tpl-form-input" id="user-name"
+											name="news_NewsInfo.NI_Title" placeholder="请输入标题文字"
+											type="text"> <small>请填写标题文字10-20字左右。</small>
 									</div>
 								</div>
 
@@ -74,13 +75,14 @@
 								</label>
 								<div style="width: 130px; height: 70px; margin-left: 26.5%">
 
-									<select class="form-control" name="news_NewsInfo.NI_BelongNavigation">
-									
-									<s:iterator value="listNavigation">
-										<option value="<s:property value="TNI_Id" />">
-										
-										<s:property value="TNI_Name" />
-										</option>
+									<select class="form-control"
+										name="news_NewsInfo.NI_BelongNavigation">
+
+										<s:iterator value="listNavigation">
+											<option value="<s:property value="TNI_Id" />">
+
+												<s:property value="TNI_Name" />
+											</option>
 										</s:iterator>
 									</select>
 								</div>
@@ -90,7 +92,8 @@
 									<label class="am-u-sm-3 am-form-label">SEO关键字 <span
 										class="tpl-form-line-small-title">SEO</span></label>
 									<div class="am-u-sm-9">
-										<input placeholder="输入SEO关键字" type="text" name="news_NewsInfo.NI_Keywords">
+										<input placeholder="输入SEO关键字" type="text"
+											name="news_NewsInfo.NI_Keywords">
 									</div>
 								</div>
 
@@ -99,17 +102,29 @@
 										<span class="tpl-form-line-small-title">Source</span>
 									</label>
 									<div class="am-u-sm-9">
-										<input id="user-weibo" placeholder="请添加分类用点号隔开" type="text" name="news_NewsInfo.NI_Source">
+										<input id="user-weibo" placeholder="请添加分类用点号隔开" type="text"
+											name="news_NewsInfo.NI_Source">
 										<div></div>
 									</div>
 								</div>
 
+								<label for="user-intro" class="am-u-sm-3 am-form-label">文章内容
+								<span
+										class="tpl-form-line-small-title">Content</span>
+								</label>
+								<div class="am-form-group" id="div1"
+									style="width: 830px; margin-left: 300px;">
 
-								<div class="am-form-group">
-									<label for="user-intro" class="am-u-sm-3 am-form-label">文章内容</label>
 									<div class="am-u-sm-9">
-										<textarea class="" rows="10" id="user-intro"
-											placeholder="请输入文章内容" name="news_Content.NC_Content"></textarea>
+										<!-- <textarea class="" rows="10" id="user-intro"
+											placeholder="请输入文章内容" name="news_Content.NC_Content"></textarea> -->
+										<!-- 开始 -->
+
+										<input id="text1" type="hidden" name="news_Content.NC_Content">
+										<p>
+											欢迎使用 <b>wangEditor</b> 富文本编辑器
+										</p>
+										<!-- 结束 -->
 									</div>
 								</div>
 
@@ -131,7 +146,23 @@
 		</div>
 		<!-- 添加新闻结束 -->
 	</div>
+	<script type="text/javascript"
+		src="${pageContext.request.contextPath }/js/jquery1.8.2.js"></script>
+	<script type="text/javascript"
+		src="${pageContext.request.contextPath }/js/wangEditor.js"></script>
 	<script type="text/javascript">
+		/* 老王编辑器 */
+		var E = window.wangEditor
+		var editor = new E('#div1')
+		editor.customConfig.pasteFilterStyle = false
+		editor.customConfig.uploadImgShowBase64 = true
+		var $text1 = $('#text1')
+		editor.customConfig.onchange = function(html) {
+			$text1.val(html)
+		}
+		editor.create()
+		$text1.val(editor.txt.html())
+
 		function user_detail() {
 			console.log('ffff')
 			var val = "${message}";

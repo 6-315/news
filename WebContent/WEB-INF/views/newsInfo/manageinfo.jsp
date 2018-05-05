@@ -62,7 +62,7 @@
 									<s:iterator value="newsinfoVO.listNews">
 										<tr>
 											<td><input type="checkbox"></td>
-											<td><a href="#"><s:property value="NI_Title" /> </a></td>
+											<td><a href="${pageContext.request.contextPath }/newsinfo/info_exactAction?news.NI_Id=<s:property value="NI_Id" />"><s:property value="NI_Title" /> </a></td>
 											<td><s:if test="NI_IsCarousel == 1">不可轮播</s:if> <s:if
 													test="NI_IsCarousel == -1">轮播</s:if></td>
 											<td><s:if test="NI_IsShow == 1">发布</s:if> <s:if

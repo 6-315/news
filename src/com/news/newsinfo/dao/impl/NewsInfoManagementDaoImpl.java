@@ -135,12 +135,12 @@ public class NewsInfoManagementDaoImpl implements NewsInfoManagementDao {
 	}
 
 	@Override
-	public News_NewsInfo getinfo(String ni_Content) {
+	public News_NewsInfo getinfo(String ni_NewsId) {
 		News_NewsInfo news_NewsInfo = new News_NewsInfo();
 		Session session = getSession();
-		String hql = "from News_NewsInfo where NI_Content = :newsId";
+		String hql = "from News_NewsInfo where NI_Id = :newsId";
 		Query query = session.createQuery(hql);
-		query.setParameter("newsId", ni_Content);
+		query.setParameter("newsId", ni_NewsId);
 		news_NewsInfo = (News_NewsInfo) query.uniqueResult();
 		return news_NewsInfo;
 	}

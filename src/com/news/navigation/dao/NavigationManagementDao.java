@@ -2,6 +2,9 @@ package com.news.navigation.dao;
 
 import java.util.List;
 
+import com.news.navigation.domain.News_OneNavigationInfo;
+import com.news.navigation.domain.News_TwoNavigationInfo;
+
 /**
  * interface 轮播图管理
  * 
@@ -52,4 +55,10 @@ public interface NavigationManagementDao {
 	 * 获取对象列表
 	 */
 	public List<?> listObject(String hql);
+
+	public News_TwoNavigationInfo getNews_TwoNavigationInfo(String trim);
+	
+	public News_OneNavigationInfo getNews_OneNavigationInfo(String trim);
+
+	public List<News_TwoNavigationInfo> getlistNews_TwoNavigationInfo(String trim);
 }

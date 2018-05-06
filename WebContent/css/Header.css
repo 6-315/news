@@ -1,0 +1,258 @@
+@charset "gbk";
+/*
+Site Name: LOL Website
+Site URL: http://lol.qq.com
+Author: smallni
+Author URL: http://www.smallni.com
+Description:  LOL Website Public Style
+Version: 2.0
+*/
+
+/* ====================================================================================================
+ * Public Styles (全站级公共样式)
+ * ==================================================================================================== */
+
+/* reset */
+*{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+em{font-style:normal}
+ol,ul{list-style:none}
+fieldset,img,abbr,acronym{border:0}
+input,select{font-family:Microsoft YaHei}
+input.checkbox{vertical-align:middle}
+q:before,q:after{content:''}
+body{font:normal 12px/1.6em Microsoft YaHei,Tahoma,simsun; color:#666;min-width:100%;margin:0 auto;background:#f7f8f8}
+
+/* base */
+.clearfix,.hd,.layout{*zoom:1}
+.clearfix:after,.hd:after,.layout:after{content:'\20';display:block;height:0;line-height:0;visibility:hidden;clear:both}
+a{text-decoration:none}
+a:hover,a:visited{text-decoration:none}
+.hid{display:none}
+.tnd{overflow:hidden;text-indent:-9999em}
+.ovh{overflow: hidden;}
+.fl{float:left;display:inline}
+.fr{float:right;display:inline}
+li{list-style-type: none;}
+.pa{ position:absolute;}
+.pr{ position:relative;}
+.ht{display:block;overflow:hidden;text-indent:-999em}
+.w100{width: 100%}
+.cred{color:#E3583C}
+.cgray{color:#999}
+.cgreen{color:#00A483}
+.lnk-red{color:#E3583C;border-bottom:1px dotted #E3583C}
+.lnk-normal{color:#666;border-bottom:1px dotted #666}
+.lnk-red:hover,.lnk-normal:hover{text-decoration:none;border-bottom-style:solid}
+.checkbox,.radio{margin-right:3px}
+.colbox{border:1px solid #E1E1E1;box-shadow:0 0 2px rgba(0,0,0,.1);background:#fff}
+.borline{border-bottom:1px dotted #BFBFBF; overflow: hidden; zoom: 1}
+.borlineX{border-bottom:1px solid #eee}
+
+/* layout */
+.layout{width:1240px;margin:0 auto}
+.bd{ overflow: hidden; zoom: 1}
+
+/* spr */
+.logo,.icon-top-play,.icon-top-search,.icon-arrow-down,.icon-top-app,.icon-guide,.icon-yz,.icon-mall,.icon-icon,.icon-prestige,.icon-cdk,.icon-rgm,.icon-info,.icon-reward,.icon-weibo,.icon-bbs,.icon-kefu,.icon-18,.user-mask,.icon-tag-live,.icon-cjf,.icon-new,.icon-hot,.icon-search-inner,.top-search-close,.icon-free-drag,.icon-tr{background-repeat:no-repeat;background-image:url(http://ossweb-img.qq.com/images/lol/v2/spr-v2.png); background-position: -9999em -9999em;}
+
+.icon-play,.more,.icon-video,.icon-submit,.icon-hero,.btn-long,.icon-activity,.ico-arrowdown{background-repeat:no-repeat;background-image:url(http://ossweb-img.qq.com/images/lol/v1/public-spr.png); background-position: -9999em -9999em;}
+
+
+
+/* ====================================================================================================
+ * Public Mod (公共模块)
+ * ==================================================================================================== */
+
+/*tab*/
+.tab{ position: relative; height: 50px; border-bottom: 3px solid #ededee;}
+.tab-title{ float: left; font-size: 26px; line-height: 50px; color: #404040; margin-right: 40px; font-weight: normal}
+.tab-nav{ float: left; margin-top: 14px; position: relative; height: 36px; }
+.tab-nav li{float: left; height: 36px; line-height: 36px; overflow: hidden; cursor: pointer; color: #666666; font-size: 16px; text-align: center}
+.tab-nav .current{ color: #d1ab57; font-weight: bold; border-bottom: 3px solid #d1ab57}
+/*home-mod*/
+.home-mod{ margin-bottom: 50px;}
+
+
+
+/* ====================================================================================================
+ * Header  (公共头部)
+ * ==================================================================================================== */
+
+.chromeframe{background: #000;color: #fff;padding: 10px 0; text-align: center;width: 100%;font-size: 14px}
+.chromeframe a{color: #F13C35}
+.pop-top-video{ position:relative; left:50%; top:50%; width:900px; height: 550px; margin-left:-375px; z-index:9999; background: #000 }
+.pop-close{	position: absolute; top: 0; right: -60px; width: 50px; height: 50px; line-height: 50px; cursor: pointer; z-index: 8040; color: #d1ab57; font-size:80px; }
+.header{ height:840px; overflow: hidden; background: url(http://ossweb-img.qq.com/images/lol/v2/banner/pic-big-v20.jpg) no-repeat center 90px; -webkit-transition:all .8s ease; transition:all .8s ease; }
+/*.inner-page-header,.toper .header{ height: 450px; background: url(http://ossweb-img.qq.com/images/lol/v1/banner/pic-inner-v21.jpg) no-repeat center 80px; }*/
+.header-inner{ position: relative; height: 750px;-webkit-transition:all .8s ease; transition:all .8s ease;}
+.inner-page-header .header-inner,.toper  .header-inner{ height: 370px;}
+.top{ position: relative; height: 90px; background: #0b0b0b}
+.top-inner{ height: 90px;}
+.main-nav-wrap{ margin-left: 200px; float: left; height: 90px; width: 720px;  }
+.main-nav{ width: 720px; height: 90px; overflow: hidden; zoom: 1}
+.main-nav li{ float: left; width: 120px; height: 90px;}
+.main-nav a{ display: block; width: 100%; padding-top: 30px; text-align: center; color: #fafafa; font-size: 18px;}
+.main-nav span{ display: block; font-size: 10px; color: #838383; font-family: 'Tahoma'; text-transform: uppercase}
+.main-nav a.n{ cursor: default}
+.main-nav a:hover{ text-decoration: none}
+.top-search,.top-app{ float: left; width: 40px; height: 90px; margin-left: 5px; text-align: center }
+.icon-top-search{ display: inline-block; width: 27px; height: 27px; margin-top: 25px; background-position: -8px 0; cursor: pointer}
+.icon-top-app{display: inline-block; width: 21px; height: 27px; margin-top: 25px; background-position: -45px 0; vertical-align: middle }
+/*.top-user{ float: right; position: relative; width: 350px;}
+.top-user-info{ height: 90px; overflow: hidden; zoom: 1}
+.top-user-side{ float: left; position: relative; width: 100px; height: 90px;}
+.top-user-side img{ width: 66px; height: 66px; margin-left: 17px; margin-top: 12px; border-radius: 33px;}
+.top-user-side .top-user-rank{display:block; position:absolute; bottom:8px; right:6px; width: 24px; height: 24px; text-align: center; line-height: 24px; border-radius: 50%; background: #000; border: 1px solid #cea34a; color: #fff; font-size: 12px; z-index: 3}
+.user-mask{ position: absolute; left: 13px; top: 8px; z-index: 2; width: 74px; height: 74px; background-position: 0 -169px;}
+.top-user-main{ padding-top: 18px; overflow: hidden; zoom: 1; margin-left: 110px;}
+.top-user-name{ font-size: 24px; margin-bottom: 10px; color: #fff; font-weight: bold}
+.top-user-area{ color: #999999; font-size: 14px;}
+.top-user-area a{ color:#999999 }
+.top-user-unlogin{ font-size: 16px; color: #fff; padding: 5px 0; }
+.top-user-unlogin em,.top-user-unlogin a{ color: #dfb257; text-decoration: underline; margin: 0 3px; cursor: pointer}
+.top-user-tips{ color: #999; font-size: 12px;}*/
+.icon-arrow-down{ display: inline-block; width: 14px; height: 9px; margin-left: 5px; vertical-align: middle; background-position: -207px -52px; }
+.link-loginout{ float: right; padding-right: 5px; text-decoration: underline;}
+.top-user-hover{ background:#1b1b1b;  background:rgba(27,27,27,0.9);}
+.top-user-drop{ position: absolute; visibility: hidden; top: 88px; left: 0; width: 100%; padding-top: 20px; z-index: 3; background: #1b1b1b; background:rgba(27,27,27,0.9)}
+.top-user-drop-content{ padding-bottom: 14px;}
+.top-user-drop .pic{ float: left; width: 125px; padding-bottom: 20px; text-align: center; font-size: 12px; color: #5b5b5b }
+.top-user-drop .pic img{ width: 110px; height: 110px; margin: -10px 0 -10px 7px; }
+.top-user-drop .pic em{ display: block; font-size: 14px; color: #ffffff}
+.top-user-drop .info{ overflow: hidden; zoom: 1; margin-left: 130px;}
+.top-user-drop-tips{ padding: 10px 30px 30px; text-align: left; color: #868686; font-size: 14px;}
+.top-user-data-tips{  position: absolute; bottom: 42px; left: 42px; color: #999;}
+.top-user-item{ display: inline-block; width: 100px; height: 50px; padding-top: 15px; margin-right: 6px; margin-bottom: 6px; border-radius: 5px; background: #11100f; color: #868686; font-size: 12px; text-align: center}
+.top-user-item strong{ display: block; font-size: 22px; color: #dfb257; font-family: Georgia}
+.top-link-personal{ clear: both; display: block; width: 100%; height: 36px; line-height: 36px; background: #161413; color: #e0e0e0; font-size: 12px; text-align: center;}
+/*drop nav*/
+.sub-nav{ position: absolute; visibility: hidden; top: 88px; left: 0; width: 100%; padding-top: 20px; padding-bottom: 20px; background: #000; background: rgba(0,0,0,0.7); z-index: 3;}
+.sub-nav-inner{ width: 1040px; height: 190px; padding-left: 200px; margin: 0 auto; overflow: hidden; zoom: 1; }
+.sub-nav .sub-nav-item{ float: left; width: 120px; }
+.sub-nav a.sub-nav-lnk{ display: block; width: 120px; height: 28px; line-height: 28px; color:#e1e1e1; font-size: 14px; text-align: center; }
+.sub-nav a.sub-nav-lnk:hover{ color: #e9c06c}
+.icon-new,.icon-hot{ display: inline-block; vertical-align: middle; width: 14px; height: 14px; margin-right: 2px;}
+.icon-new{ background-position: -129px 0}
+.icon-hot{ background-position: -107px 0}
+/*top act*/
+.logo{ position:absolute; left:0; top:-85px; z-index:4; width:190px; height:100px; background-position: 0 -30px;}
+.logo a{ display: block; width: 100%; height: 100%; text-indent: -9999em; overflow: hidden}
+.top-act{ position: relative; height: 635px; padding-top: 115px; z-index: 2;-webkit-transition:all .8s ease; transition:all .8s ease;}
+.inner-page-header .top-act,.toper  .top-act{ height: 195px; padding-top: 60px;}
+.top-act-name{ position: relative; height: 50px; margin-bottom: 50px; color: #ffcb60; font-size: 50px; line-height: 50px; font-weight: bold; background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(255,232,184,1)), to(rgba(175,133,48,1))); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+.top-act-name span {position: absolute; left: 0; color: transparent; text-shadow: 0 0 10px #000; z-index: -1;}
+.top-act-desc{ width: 550px; height: 60px; margin-bottom: 25px;  font-size: 14px; color: #dbdbdb; line-height: 30px; overflow: hidden; text-shadow: 0 0 5px #000;-webkit-transition:all .8s ease; transition:all .8s ease; }
+.top-act-video{ position: relative; z-index: 2; width: 220px; height: 120px; margin-bottom: 25px; border: 1px solid #987630; box-shadow: inset 0 0 2px #000; background: url(http://ossweb-img.qq.com/images/lol/v2/banner/pic-small-v9.jpg) no-repeat center center }
+.top-small-video{ display:block; width: 220px; height: 120px;}
+.icon-top-play{ display: block; width: 35px; height: 50px; margin-top: 35px; margin-left: 93px; background-position: -230px -30px; }
+.btn-top-play{ position: absolute; left: 0; top: 0;  width: 220px; height: 120px; z-index: 1; }
+.top-big-video{ position: absolute; z-index: 2; left: 50%; top: 0; margin-left: -960px; width: 1920px; height: 750px; opacity: 1; filter:alpha(opacity=100);
+    -webkit-transition:all .8s ease; transition:all .8s ease;}
+.top-back-video{ position: absolute; z-index: 1; left: 50%; top: 0; margin-left: -960px; width: 1920px; height: 350px;-webkit-transition:all .8s ease; transition:all .8s ease;opacity: 0; filter:alpha(opacity=0);transition-delay: .8s;-moz-transition-delay: .8s;-webkit-transition-delay: .8s;-o-transition-delay: .8s;}
+/*a.top-act-link{ display: block; width: 155px; height: 36px; text-align: center; line-height: 36px; }*/
+a.top-act-link{ display: block; width: 155px; height: 36px; border: 2px solid #bd9440; text-align: center; line-height: 36px; background:#000; background: rgba(0,0,0,0.65); font-size: 14px; font-weight: bold; color: #c89b3c;
+    -moz-border-image: -moz-linear-gradient(top, #6b5024 0%, #b88d35 100%);
+    -webkit-border-image: -webkit-linear-gradient(top, #6b5024 0%, #b88d35 100%);
+    border-image: linear-gradient(to bottom, #6b5024 0%, #b88d35 100%);
+    border-image-slice: 1;
+    margin-top: 372px;
+    margin-left: 536px;
+}
+a.top-act-link:hover{ background: #111; background: rgba(0,0,0,0.9)}
+/*a.top-act-link{ width: 220px; height: 70px; text-indent: -999em; margin-top: 494px; margin-left: 509px;}*/
+.toper  .top-act-video,.toper  .top-big-video,.inner-page-header  .top-act-video,.inner-page-header  .top-big-video{ display: none }
+
+.header-6th .top-act{ height: auto; padding-top: 515px; text-align: center}
+.header-6th .top-act-name span{ left: 516px;}
+.header-6th a.top-act-link{ margin-left: 540px;}
+.header-6th .top-act-desc{ width: 100%}
+
+.top-search-main{  position: absolute; margin-left:800px; width:440px; height: 90px; z-index: 4; background:#0b0b0b  }
+.top-search-inner{ margin-top: 27px; width: 100%; height: 36px; background: #fff; overflow: hidden}
+.icon-search-inner{  float: left; width:30px; height: 30px; margin: 3px 4px 0; background-position: -662px -136px;}
+.input-search-box{  float: left; width:368px; height:20px; line-height: 20px; margin-top: 8px; background: #fff; border: 0 none; font-size: 16px; color: #545454 }
+.top-search-close{ float: right; margin-right: 5px; cursor: pointer; width: 28px; height: 36px; background-position: -664px -175px;}
+.top-search-quick{ position: absolute; width: 420px; padding: 15px 10px; top: 70px; background: #fff;}
+.search-quick-title{ display: block; padding-left: 30px; height: 30px; line-height: 30px; font-size: 12px; color: #a4a4a4; }
+.top-search-quick a{ display: block; padding-left: 50px; height: 30px;  line-height:30px; color: #696969; font-size: 14px;}
+.top-search-quick a:hover{ color: #c89b3c; background: #f2f2f2 }
+.input-search-tips{ position: absolute; top: 36px; right: 65px; color: #999; font-size: 12px;}
+
+.top-version{ position: absolute; z-index: 2; right: 0; bottom: 30px; font-size: 14px; color: #888787}
+.top-version em{ color: #f5d185; margin-right: 10px;}
+.top-version-link{ display: inline-block; padding: 0 15px; height: 22px; border: 2px solid #f5d185; text-align: center; line-height: 22px;background:#000; background: rgba(0,0,0,0.65);  font-size: 12px;color: #f5d185;
+    -moz-border-image: -moz-linear-gradient(top, #6b5024 0%, #b88d35 100%);
+    -webkit-border-image: -webkit-linear-gradient(top, #6b5024 0%, #b88d35 100%);
+    border-image: linear-gradient(to bottom, #6b5024 0%, #b88d35 100%);
+    border-image-slice: 1;}
+a.top-version-link:hover{ background: #111; background: rgba(0,0,0,0.9)}
+
+
+
+
+
+
+
+/*模拟单选框*/
+/*.ms-radio{margin-right:3px;display:inline-block;width:14px;height:14px;border:1px solid #B1B1B1;border-radius:10px;cursor:pointer;position:relative}
+.ms-radio .i{display:inline-block;position:absolute;top:2px;left:2px;height:10px;width:10px;cursor:pointer;background:#fff}
+.current .ms-radio .i{background:#00A383;border-radius:10px}*/
+
+
+
+/***进度条*/
+/*.sidbar{display:block;margin-top:2px;height:9px;border:1px solid #E0E0E0;padding:2px;background:#fff;position:relative;overflow:hidden}
+.upbar-red,.upbar-green,.sidbar .empt{display:block;width:100%;height:9px;background:#eee}
+.upbar-red,.upbar-green{margin-top:-9px;position:relative}
+.upbar-green{background:#00A483}
+.upbar-red{background:#E04502}*/
+
+
+/* 翻入-X轴 */
+/*@-webkit-keyframes flipinX{
+    0%{-webkit-transform:perspective(400px) rotateX(90deg);}
+    40%{-webkit-transform:perspective(400px) rotateX(-10deg);}
+    70%{-webkit-transform:perspective(400px) rotateX(10deg);}
+    100%{-webkit-transform:perspective(400px) rotateX(0deg);}
+}
+@-moz-keyframes flipinX{
+    0%{-moz-transform:perspective(400px) rotateX(90deg);}
+    40%{-moz-transform:perspective(400px) rotateX(-10deg);}
+    70%{-moz-transform:perspective(400px) rotateX(10deg);}
+    100%{-moz-transform:perspective(400px) rotateX(0deg);}
+}
+@-ms-keyframes flipinX{
+    0%{-ms-transform:perspective(400px) rotateX(90deg);}
+    40%{-ms-transform:perspective(400px) rotateX(-10deg);}
+    70%{-ms-transform:perspective(400px) rotateX(10deg);}
+    100%{-ms-transform:perspective(400px) rotateX(0deg);}
+}
+@keyframes flipinX{
+    0%{transform:perspective(400px) rotateX(90deg);}
+    40%{transform:perspective(400px) rotateX(-10deg);}
+    70%{transform:perspective(400px) rotateX(10deg);}
+    100%{transform:perspective(400px) rotateX(0deg);}
+}
+.m_city_tips{float:right;color:#e3583c;}
+.m_city_hd h2{float:left;margin-right:15px;display:inline;}
+.m_city_focus{float:left;}
+.m_city_focus span{border:#e7e7e7 1px solid;display:inline-block;margin-right:5px;height:30px;padding:0 5px;}
+.m_city_add{cursor:pointer;overflow:hidden;zoom:1;}
+.u_city_n{float:left;}
+.u_city_i{float:left;border:1px solid #B1B1B1;display:inline-block;height:14px;position:relative;width:14px;background:#fff;margin:2px 5px 0 0;}
+.current .u_city_i{background-position:-184px 3px;border-color:#00a383;}
+.u_update_sel{float:left;}
+.u_update_sel select{border:#e7e7e7 1px solid;height:30px;line-height:30px;width:120px;}
+.u_update_file{float:left;display:inline;margin-left:20px;}
+.u_update_tip{color:#e3583c;padding:10px 0 20px;}
+.u_update_btn a{width:139px;height:40px;line-height:40px;text-align:center;display:block;background-position:0 -45px;color:#fff;font-size:14px;}*/
+
+
+/*掌盟浮窗*/
+/*.appfix{width: 104px;height: 130px;position: fixed;top: 400px;right: 50%;margin-right: -610px;}
+.appfix a{width: 104px;height: 130px;display: block;overflow: hidden;color: #6b6b6b;font-size: 12px;text-align: center;line-height: 26px}
+.appfix img{vertical-align: top;width: 104px;height: 104px;display: block;}*/
+
+
+

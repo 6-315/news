@@ -53,4 +53,6 @@ public interface UserService {
 	 */
 	public int updateUser(UserInfo userInfo);
 
+	public UserInfo loginUser(UserInfo userInfo);
+
 }

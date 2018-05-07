@@ -43,8 +43,7 @@
 					</div>
 					<div class="am-g">
 						<div class="am-u-sm-12">
-							<table
-								class="table  table-striped table-hover table-main">
+							<table class="table  table-striped table-hover table-main">
 								<thead>
 									<tr>
 										<th class="table-check"><input class="tpl-table-fz-check"
@@ -76,8 +75,9 @@
 												<div class="am-btn-toolbar">
 													<div class="am-btn-group am-btn-group-xs">
 														<button data-target="#update" data-toggle="modal"
-															class="am-btn am-btn-default am-btn-xs am-text-secondary" id="<s:property value="NI_Id"/>&$&<s:property value="NI_Title"/>&$&<s:property value="NI_Keywords"/>&$&<s:property value="NI_IsCarousel"/>&$&<s:property value="NI_BelongNavigation"/>&$&<s:property value="NI_BrowserCount"/> &$&<s:property value="NI_Source"/> &$&<s:property value="NI_Author"/> &$&<s:property value="NI_Content"/> &$&<s:property value="NI_IsDelete"/> &$&<s:property value="NI_IsShow"/> &$&<s:property value="NI_ShowTime"/> &$&<s:property value="NI_CreateTime"/> &$&<s:property value="NI_ModifyTime"/> &$&<s:property value="NI_IsRecommend"/> "
-																onclick="chuanIdForModal23(this.id)" >
+															class="am-btn am-btn-default am-btn-xs am-text-secondary"
+															id="<s:property value="NI_Id"/>&$&<s:property value="NI_Title"/>&$&<s:property value="NI_Keywords"/>&$&<s:property value="NI_IsCarousel"/>&$&<s:property value="NI_BelongNavigation"/>&$&<s:property value="NI_BrowserCount"/> &$&<s:property value="NI_Source"/> &$&<s:property value="NI_Author"/> &$&<s:property value="NI_Content"/> &$&<s:property value="NI_IsDelete"/> &$&<s:property value="NI_IsShow"/> &$&<s:property value="NI_ShowTime"/> &$&<s:property value="NI_CreateTime"/> &$&<s:property value="NI_ModifyTime"/> &$&<s:property value="NI_IsRecommend"/> "
+															onclick="chuanIdForModal23(this.id)">
 															<span class="am-icon-pencil-square-o"></span> 编辑
 														</button>
 														<button data-target="#delete" data-toggle="modal"
@@ -94,38 +94,33 @@
 								</tbody>
 							</table>
 
-     <!-- 分页 -->
-                   <table class="table  table-striped table-hover table-main" >
-						<tr>
-							<td>共 <s:property value="newsinfoVO.totalPages" />
-								页
-							</td>
-							<td>共 <s:property value="newsinfoVO.totalRecords" />
-								条记录
-							</td>
-							<td>当前第 <s:property value="newsinfoVO.pageIndex" />
-								页
-							</td>
-							<td colspan="4"><s:if
-									test="%{newsinfoVO.pageIndex == 1}">第一页&nbsp;&nbsp;&nbsp;&nbsp;上一页&nbsp;&nbsp;&nbsp;&nbsp;</s:if>
-								<s:else>
-									<a
-										href="${pageContext.request.contextPath }/newsinfo/newsinfo_manageAction?page=1">第一页&nbsp;&nbsp;&nbsp;&nbsp;</a>
-									<a
-										href="${pageContext.request.contextPath }/newsinfo/newsinfo_manageAction?page=<s:property value="%{newsinfoVO.pageIndex-1}"/>">上一页&nbsp;&nbsp;&nbsp;&nbsp;</a>
+							<!-- 分页 -->
+							<table class="table  table-striped table-hover table-main">
+								<tr>
+									<td>共 <s:property value="newsinfoVO.totalPages" /> 页
+									</td>
+									<td>共 <s:property value="newsinfoVO.totalRecords" /> 条记录
+									</td>
+									<td>当前第 <s:property value="newsinfoVO.pageIndex" /> 页
+									</td>
+									<td colspan="4"><s:if test="%{newsinfoVO.pageIndex == 1}">第一页&nbsp;&nbsp;&nbsp;&nbsp;上一页&nbsp;&nbsp;&nbsp;&nbsp;</s:if>
+										<s:else>
+											<a
+												href="${pageContext.request.contextPath }/newsinfo/newsinfo_manageAction?page=1">第一页&nbsp;&nbsp;&nbsp;&nbsp;</a>
+											<a
+												href="${pageContext.request.contextPath }/newsinfo/newsinfo_manageAction?page=<s:property value="%{newsinfoVO.pageIndex-1}"/>">上一页&nbsp;&nbsp;&nbsp;&nbsp;</a>
 
-								</s:else> <s:if
-									test="%{newsinfoVO.pageIndex != newsinfoVO.totalPages}">
-									<a
-										href="${pageContext.request.contextPath }/newsinfo/newsinfo_manageAction?page=<s:property value="%{newsinfoVO.pageIndex+1}"/>">下一页&nbsp;&nbsp;&nbsp;&nbsp;</a>
-									<a
-										href="${pageContext.request.contextPath }/newsinfo/newsinfo_manageAction?page=<s:property value="newsinfoVO.totalPages"/>">最后一页</a>
-								</s:if> <s:else>下一页&nbsp;&nbsp;&nbsp;&nbsp; 最后一页</s:else></td>
-						</tr>
-					</table>
-                   <!--结束  -->
+										</s:else> <s:if test="%{newsinfoVO.pageIndex != newsinfoVO.totalPages}">
+											<a
+												href="${pageContext.request.contextPath }/newsinfo/newsinfo_manageAction?page=<s:property value="%{newsinfoVO.pageIndex+1}"/>">下一页&nbsp;&nbsp;&nbsp;&nbsp;</a>
+											<a
+												href="${pageContext.request.contextPath }/newsinfo/newsinfo_manageAction?page=<s:property value="newsinfoVO.totalPages"/>">最后一页</a>
+										</s:if> <s:else>下一页&nbsp;&nbsp;&nbsp;&nbsp; 最后一页</s:else></td>
+								</tr>
+							</table>
+							<!--结束  -->
 						</div>
-              
+
 					</div>
 				</div>
 				<div class="tpl-alert"></div>
@@ -153,8 +148,8 @@
 						<br>
 						<!-- 单选框 -->
 						<div style="margin-left: 33%;">
-							<input type="hidden" id="NI_Id" name="news_NewsInfo.NI_Id" />  <input type="hidden"
-								id="NI_Title" name="news_NewsInfo.NI_Title" /> <input
+							<input type="hidden" id="NI_Id" name="news_NewsInfo.NI_Id" /> <input
+								type="hidden" id="NI_Title" name="news_NewsInfo.NI_Title" /> <input
 								type="hidden" id="NI_Keywords" name="news_NewsInfo.NI_Keywords" />
 							<input type="hidden" id="NI_IsCarousel"
 								name="news_NewsInfo.NI_IsCarousel" /> <input type="hidden"
@@ -229,9 +224,8 @@
 								<option value="1">不推荐</option>
 							</select> <br>
 							<!-- 2 -->
-							<input type="hidden" id="NIId" name="news_NewsInfo.NI_Id" /> 
-							<input type="hidden" id="NIKeywords"
-								name="news_NewsInfo.NI_Keywords" />
+							<input type="hidden" id="NIId" name="news_NewsInfo.NI_Id" /> <input
+								type="hidden" id="NIKeywords" name="news_NewsInfo.NI_Keywords" />
 							<!-- 	<input type="hidden" id="NIIsCarousel"name="news_NewsInfo.NI_IsCarousel" />  -->
 							<input type="hidden" id="NIBelongNavigation"
 								name="news_NewsInfo.NI_BelongNavigation" /> <input
@@ -240,7 +234,8 @@
 								id="NISource" name="news_NewsInfo.NI_Source" /> <input
 								type="hidden" id="NIAuthor" name="news_NewsInfo.NI_Author" /> <input
 								type="hidden" id="NIContent" name="news_NewsInfo.NI_Content" />
-							<input type="hidden" id="NIIsDelete" name="news_NewsInfo.NI_IsDelete" />
+							<input type="hidden" id="NIIsDelete"
+								name="news_NewsInfo.NI_IsDelete" />
 							<!-- 	<input type="hidden" id="NIIsShow"name="news_NewsInfo.NI_IsShow" />  -->
 							<input type="hidden" id="NIShowTime"
 								name="news_NewsInfo.NI_ShowTime" /> <input type="hidden"
@@ -287,23 +282,24 @@
 			$('#NI_IsRecommend').val(arr[14])
 		}
 		function chuanIdForModal23(id) {
-		 var arr = id.split('&$&');
-		 $('#NIId').val(arr[0])
-		 $('#NITitle').val(arr[1])
-		 $('#NIKeywords').val(arr[2])
-		 $('#NIIsCarousel').val(arr[3])
-		 $('#NIBelongNavigation').val(arr[4])
-		 $('#NIBrowserCount').val(arr[5])
-		 $('#NISource').val(arr[6])
-		 $('#NIAuthor').val(arr[7])
-		 $('#NIContent').val(arr[8])
-		 $('#NIIsDelete').val(arr[9])
-		 $('#NIIsShow').val(arr[10])
-		 $('#NIShowTime').val(arr[11])
-		 $('#NICreateTime').val(arr[12])
-		 $('#NIModifyTime').val(arr[13])
-		 $('#NIIsRecommend').val(arr[14])
-		 } 
+			var arr = id.split('&$&');
+			$('#NIId').val(arr[0])
+			$('#NITitle').val(arr[1])
+			$('#NIKeywords').val(arr[2])
+			$('#NIIsCarousel').val(arr[3])
+			$('#NIBelongNavigation').val(arr[4])
+			$('#NIBrowserCount').val(arr[5])
+			$('#NISource').val(arr[6])
+			$('#NIAuthor').val(arr[7])
+			$('#NIContent').val(arr[8])
+			$('#NIIsDelete').val(arr[9])
+			$('#NIIsShow').val(arr[10])
+			$('#NIShowTime').val(arr[11])
+			$('#NICreateTime').val(arr[12])
+			$('#NIModifyTime').val(arr[13])
+			$('#NIIsRecommend').val(arr[14])
+		}
 	</script>
 </body>
+
 </html>

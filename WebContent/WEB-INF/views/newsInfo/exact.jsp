@@ -12,14 +12,25 @@
 	<div class="am-cf admin-main">
 		<s:action name="user_endNavbarAction" namespace="/user"
 			executeResult="true" />
+		<%-- <s:action name="carousel_selectAction2" namespace="/carousel"
+			executeResult="true" /> --%>
 
-<h1>测试</h1>
-<s:iterator value="newsinfoDTO">
-<s:property value="news_NewsInfo.NI_Title" escapeHtml="false"/>
-<s:property value="news_Content.NC_Content" escapeHtml="false"/>
+		<h1>测试</h1>
+		<s:iterator value="newsinfoDTO">
+			1<s:property value="news_NewsInfo.NI_Title" escapeHtml="false" />
+			
+			2<s:property value="news_Content.NC_Content" escapeHtml="false" />
 
-</s:iterator>
+		</s:iterator>
+		<!-- 测试轮播图的action -->
+		<%-- <s:iterator value="listNewsCarouselDTO">
 
+			<h1>
+				QQQQQQQQQQ:
+				<s:property value="newsInfo.NI_Title" />
+			</h1>
+		</s:iterator> --%>
+		<!-- 结束 -->
 
 		<!--  1111-->
 

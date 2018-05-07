@@ -318,6 +318,9 @@
 			if (val == 'error') {
 				toastr.error(val)
 			}
+			if (val == 'NO Title') {
+				toastr.error(val)
+			}
 			if (val == "success") {
 				toastr.success(val)
 			}

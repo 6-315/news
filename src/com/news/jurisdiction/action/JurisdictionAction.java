@@ -194,4 +194,11 @@ public class JurisdictionAction extends ActionSupport implements ServletResponse
 
 		return "endNavbar";
 	}
+	
+	/**
+	 * 登录页面
+	 */
+	public String loginAction(){
+		return "login";
+	}
 }

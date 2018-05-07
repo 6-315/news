@@ -414,72 +414,42 @@
 			<div class="home-service-wrap">
 				<div class="home-service-list">
 					<ul style="padding-left: 0px;">
-						<li class="home-service-item"><a href=""> <span
-								class="home-service-icon"> <img
-									src="//imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/img/home2017/market/microapp.svg"
-									alt="微信小程序"> <img
-									src="//imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/img/home2017/market/microapp-actived.svg"
-									alt="微信小程序" class="active-img">
-							</span> <span class="home-service-m-icon"> <img
-									src="//imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/img/home2017/market/microapp-m.svg"
-									alt="">
-							</span> <b class="home-service-tit"> 加入中粮 </b>
-						</a></li>
-						<li class="home-service-item"><a href=""> <span
-								class="home-service-icon"> <img
-									src="//imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/img/home2017/market/microapp.svg"
-									alt="微信小程序"> <img
-									src="//imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/img/home2017/market/microapp-actived.svg"
-									alt="微信小程序" class="active-img">
-							</span> <span class="home-service-m-icon"> <img
-									src="//imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/img/home2017/market/microapp-m.svg"
-									alt="">
-							</span> <b class="home-service-tit"> 加入中粮 </b>
-						</a></li>
-						<li class="home-service-item"><a href=""> <span
-								class="home-service-icon"> <img
-									src="//imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/img/home2017/market/microapp.svg"
-									alt="微信小程序"> <img
-									src="//imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/img/home2017/market/microapp-actived.svg"
-									alt="微信小程序" class="active-img">
-							</span> <span class="home-service-m-icon"> <img
-									src="//imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/img/home2017/market/microapp-m.svg"
-									alt="">
-							</span> <b class="home-service-tit"> 加入中粮 </b>
-						</a></li>
-						<li class="home-service-item"><a href=""> <span
-								class="home-service-icon"> <img
-									src="//imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/img/home2017/market/microapp.svg"
-									alt="微信小程序"> <img
-									src="//imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/img/home2017/market/microapp-actived.svg"
-									alt="微信小程序" class="active-img">
-							</span> <span class="home-service-m-icon"> <img
-									src="//imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/img/home2017/market/microapp-m.svg"
-									alt="">
-							</span> <b class="home-service-tit"> 加入中粮 </b>
-						</a></li>
-						<li class="home-service-item"><a href=""> <span
-								class="home-service-icon"> <img
-									src="//imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/img/home2017/market/microapp.svg"
-									alt="微信小程序"> <img
-									src="//imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/img/home2017/market/microapp-actived.svg"
-									alt="微信小程序" class="active-img">
-							</span> <span class="home-service-m-icon"> <img
-									src="//imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/img/home2017/market/microapp-m.svg"
-									alt="">
-							</span> <b class="home-service-tit"> 加入中粮 </b>
-						</a></li>
-						<li class="home-service-item"><a href=""> <span
-								class="home-service-icon"> <img
-									src="//imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/img/home2017/market/microapp.svg"
-									alt="微信小程序"> <img
-									src="//imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/img/home2017/market/microapp-actived.svg"
-									alt="微信小程序" class="active-img">
-							</span> <span class="home-service-m-icon"> <img
-									src="//imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/img/home2017/market/microapp-m.svg"
-									alt="">
-							</span> <b class="home-service-tit"> 加入中粮 </b>
-						</a></li>
+						<li class="home-service-item">
+							<a href="" >
+								<div class="home-service-icon"> <img src="//imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/img/home2017/market/mirror.svg" alt="镜像服务"> <img src="//imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/img/home2017/market/mirror-actived.svg" alt="" class="active-img"> </div>
+								<div class="home-service-m-icon"> <img src="//imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/img/home2017/market/mirror-m.svg" alt="镜像服务"> </div>
+								<h4 class="home-service-tit"> 关于中粮 </h4> </a>
+						</li>
+						<li class="home-service-item">
+							<a href="" hotrep="hp.market.operation">
+								<div class="home-service-icon"> <img src="//imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/img/home2017/market/operation.svg" alt="运维服务"> <img src="//imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/img/home2017/market/operation-actived.svg" alt="运维服务" class="active-img"> </div>
+								<div class="home-service-m-icon"> <img src="//imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/img/home2017/market/operation-m.svg" alt=""> </div>
+								<h4 class="home-service-tit"> 咨询动态 </h4> </a>
+						</li>
+						<li class="home-service-item">
+							<a href="" hotrep="hp.market.soft">
+								<div class="home-service-icon"> <img src="//imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/img/home2017/market/soft.svg" alt=""> <img src="//imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/img/home2017/market/soft-actived.svg" alt="软件服务" class="active-img"> </div>
+								<div class="home-service-m-icon"> <img src="//imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/img/home2017/market/soft-m.svg" alt="软件服务"> </div>
+								<h4 class="home-service-tit"> 业务概况 </h4> </a>
+						</li>
+						<li class="home-service-item">
+							<a href="" hotrep="hp.market.security">
+								<div class="home-service-icon"> <img src="//imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/img/home2017/market/security.svg" alt="安全服务"> <img src="//imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/img/home2017/market/security-actived.svg" alt="安全服务" class="active-img"> </div>
+								<div class="home-service-m-icon"> <img src="//imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/img/home2017/market/security-m.svg" alt=""> </div>
+								<h4 class="home-service-tit"> 信息公开 </h4> </a>
+						</li>
+						<li class="home-service-item">
+							<a href="" hotrep="hp.market.website">
+								<div class="home-service-icon"> <img src="//imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/img/home2017/market/domain.svg" alt="建站服务"> <img src="//imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/img/home2017/market/domain-actived.svg" alt="" class="active-img"> </div>
+								<div class="home-service-m-icon"> <img src="//imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/img/home2017/market/domain-m.svg" alt="建站服务"> </div>
+								<h4 class="home-service-tit"> 企业责任 </h4> </a>
+						</li>
+						<li class="home-service-item">
+							<a href="" hotrep="hp.market.microapp">
+								<div class="home-service-icon"> <img src="//imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/img/home2017/market/microapp.svg" alt="微信小程序"> <img src="//imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/img/home2017/market/microapp-actived.svg" alt="微信小程序" class="active-img"> </div>
+								<div class="home-service-m-icon"> <img src="//imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/portal/css/img/home2017/market/microapp-m.svg" alt=""> </div>
+								<h4 class="home-service-tit"> 加入中粮 </h4> </a>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -495,21 +465,21 @@
 							<h2>常用链接</h2>
 							<ul>
 								<li><a
-									href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/intothu-3-2.html"
+									href=""
 									target="_blank">投资者专区</a></li>
 								<li><a
-									href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/intothu-2-1.html"
+									href=""
 									target="_blank">加入中粮</a></li>
-								<li><a href="http://www.tuef.tsinghua.edu.cn/"
+								<li><a href=""
 									target="_blank">隐私政策</a></li>
 								<li><a
-									href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/intothu-3-1.html"
+									href=""
 									target="_blank">网站地图</a></li>
 								<li><a
-									href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/intothu-3.html"
+									href=""
 									target="_blank">实用信息</a></li>
 								<li><a
-									href="http://www.tsinghua.org.cn/publish/alumni/index.html"
+									href=""
 									target="_blank">联系我们</a></li>
 							</ul>
 						</div>
@@ -553,10 +523,9 @@
 									;
 								});
 					</script>
-					<div class="copyrights">
-						版权所有 © 2017 中粮集团有限公司<span>京ICP备05002557号</span><i
-							class="icon-chart-bar"></i> <span id="total"
-							style="padding: 0; opacity: 1;"></span>
+					<!--class="copyrights" -->
+					<div style="color:#fff;opacity: 0.6;border-top: 1px solid rgba(255, 255, 255, 0.4);padding-top: 20px;line-height: 0;font-size: 12px;">					
+						版权所有<a href="${pageContext.request.contextPath}/jurisdiction/jurisdiction_loginAction" style="color:#fff" target="_blank">©</a>2017 中粮集团有限公司<span>京ICP备05002557号</span>
 					</div>
 				</div>
 			</div>

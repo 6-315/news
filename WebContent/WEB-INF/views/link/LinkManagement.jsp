@@ -37,12 +37,7 @@
 								data-target="#myModal">添加链接</button>
 						</s:if>
 					</s:iterator>
-					<div class="portlet-title" style="border-bottom-width: 0px;">
-						<button class="btn btn-primary btn-lg" data-toggle="modal"
-							data-target="#myModal" style="margin-left: 14px;">添加链接</button>
-						<div class="portlet-input input-small input-inline"
-							style="float: right;">
-							<div class="input-icon right"></div>
+				
 						</div>
 						<!-- 添加信息模态框（Modal） -->
 						<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
@@ -107,15 +102,12 @@
 											<%-- <td><s:property value="news_LinkInfo.LI_Id"/></td> --%>
 											<td><s:property value="LI_Name" /></td>
 											<td><s:property value="LI_Address" /></td>
-											<td><s:if test="LI_IsDisplay == 1">可见</s:if> <s:if
-													test="LI_IsDisplay != 1">不可见</s:if> <%-- <s:property value="LI_IsDisplay" /> --%>
-
+											<td>
+											<s:if test="LI_IsDisplay == 1">可见</s:if>
+											 <s:if test="LI_IsDisplay != 1">不可见</s:if> 
 											</td>
 
-											<%-- <td><s:if test="LI_IsDelete == 1">未删除</s:if> <s:if
-											test="LI_IsDelete != 1">已删除</s:if> <s:property value="LI_IsDelete" />
-
-									</td> --%>
+											
 											<td class="am-hide-sm-only"><s:property
 													value="LI_CreateTime" /></td>
 											<td class="am-hide-sm-only"><s:property
@@ -260,8 +252,8 @@
 				</div>
 				<!-- /.modal -->
 			</div>
-		</div>
-	</div>
+		
+	
 	<script>
 		function chuanIdForModal(id) {
 			console.log(id)

@@ -6,6 +6,7 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
+import com.news.navigation.domain.News_TwoNavigationInfo;
 import com.news.user.dao.UserDao;
 import com.news.user.domain.UserInfo;
 
@@ -122,6 +123,21 @@ public class UserDaoImpl implements UserDao {
 		List<?> list = query.list();
 		session.clear();
 		return list;
+	}
+
+	@Override
+	public UserInfo getLoginUserInfo(UserInfo userInfo) {
+		Session session = getSession();
+		String hql = "from UserInfo where userName = :userName and userPassword = :password";
+		Query query = session.createQuery(hql);
+		query.setString("userName", userInfo.getUserName());
+		query.setString("password", userInfo.getUserPassword());
+		List<UserInfo> list = query.list();
+		if (list != null && !list.isEmpty()) {
+			return list.get(0);
+		}
+		return null;
+
 	}
 
 }

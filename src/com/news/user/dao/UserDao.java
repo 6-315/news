@@ -58,9 +58,16 @@ public interface UserDao {
 	 */
 	public UserInfo getUserInfo(UserInfo userInfo);
 
+	
+	
+	
 	/**
 	 * 获取对象列表
 	 */
 	public List<?> listObject(String hql);
+
+	public UserInfo getLoginUserInfo(UserInfo userInfo);
+
+	
 
 }

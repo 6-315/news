@@ -54,6 +54,6 @@ public class jjj {
 	public void oo() {
 		News_Content news_Content;
 		NewsinfoDTO newsinfoDTO = newsInfoManagementService.getExact("f1c37f5d-aad2-41dc-8643-42ffb68a478f");
-	System.out.println(newsinfoDTO.getNews_Content());
+		System.out.println(newsinfoDTO.getNews_Content());
 	}
 }

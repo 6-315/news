@@ -108,23 +108,12 @@
 									</div>
 								</div>
 
-								<label for="user-intro" class="am-u-sm-3 am-form-label">文章内容
-								<span
-										class="tpl-form-line-small-title">Content</span>
-								</label>
-								<div class="am-form-group" id="div1"
-									style="width: 830px; margin-left: 300px;">
 
+								<div class="am-form-group">
+									<label for="user-intro" class="am-u-sm-3 am-form-label">文章内容</label>
 									<div class="am-u-sm-9">
-										<!-- <textarea class="" rows="10" id="user-intro"
-											placeholder="请输入文章内容" name="news_Content.NC_Content"></textarea> -->
-										<!-- 开始 -->
-
-										<input id="text1" type="hidden" name="news_Content.NC_Content">
-										<p>
-											欢迎使用 <b>wangEditor</b> 富文本编辑器
-										</p>
-										<!-- 结束 -->
+										<textarea class="" rows="10" id="user-intro"
+											placeholder="请输入文章内容" name="news_Content.NC_Content"></textarea>
 									</div>
 								</div>
 
@@ -146,23 +135,7 @@
 		</div>
 		<!-- 添加新闻结束 -->
 	</div>
-	<script type="text/javascript"
-		src="${pageContext.request.contextPath }/js/jquery1.8.2.js"></script>
-	<script type="text/javascript"
-		src="${pageContext.request.contextPath }/js/wangEditor.js"></script>
 	<script type="text/javascript">
-		/* 老王编辑器 */
-		var E = window.wangEditor
-		var editor = new E('#div1')
-		editor.customConfig.pasteFilterStyle = false
-		editor.customConfig.uploadImgShowBase64 = true
-		var $text1 = $('#text1')
-		editor.customConfig.onchange = function(html) {
-			$text1.val(html)
-		}
-		editor.create()
-		$text1.val(editor.txt.html())
-
 		function user_detail() {
 			console.log('ffff')
 			var val = "${message}";

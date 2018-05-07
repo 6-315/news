@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-5-7 8:39:27 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.news.jurisdiction.domain.News_UserJurisdiction" table="NEWS_USERJURISDICTION">
+        <id name="UJ_Id" type="java.lang.String">
+            <column name="UJ_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="UJ_UserName" type="java.lang.String">
+            <column name="UJ_USERNAME" />
+        </property>
+        <property name="UJ_UserPassWord" type="java.lang.String">
+            <column name="UJ_USERPASSWORD" />
+        </property>
+        <property name="UJ_IsDelete" type="int">
+            <column name="UJ_ISDELETE" />
+        </property>
+        <property name="UJ_IsNavigationManagement" type="java.lang.String">
+            <column name="UJ_ISNAVIGATIONMANAGEMENT" />
+        </property>
+        <property name="UJ_IsLinkeManagement" type="java.lang.String">
+            <column name="UJ_ISLINKEMANAGEMENT" />
+        </property>
+        <property name="UJ_IsCarouselManagement" type="java.lang.String">
+            <column name="UJ_ISCAROUSELMANAGEMENT" />
+        </property>
+        <property name="UJ_IsNewsManagement" type="java.lang.String">
+            <column name="UJ_ISNEWSMANAGEMENT" />
+        </property>
+        <property name="UJ_IsJurisdictionManagement" type="java.lang.String">
+            <column name="UJ_ISJURISDICTIONMANAGEMENT" />
+        </property>
+        <property name="UJ_CreateTime" type="java.lang.String">
+            <column name="UJ_CREATETIME" />
+        </property>
+        <property name="UJ_ModifyTime" type="java.lang.String">
+            <column name="UJ_MODIFYTIME" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -3,13 +3,15 @@ package com.news.user.action;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
+
 import org.apache.struts2.interceptor.ServletRequestAware;
 import org.apache.struts2.interceptor.ServletResponseAware;
 
 import com.news.user.domain.UserInfo;
 import com.news.user.domain.VO.UserNewsCountVO;
 import com.news.user.service.UserService;
-import com.opensymphony.xwork2.ActionContext;
+
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
@@ -215,6 +217,26 @@ public class UserAction extends ActionSupport implements ServletResponseAware, S
 	 */
 	public String UpdateUserInfoAction() {
 		return "listUserInfoByPage";
+	}
+
+	/**
+	 * 登录
+	 */
+	@Override
+	public String execute() throws Exception {
+		
+		// 验证登录
+		UserInfo realUser = userService.loginUser(userInfo);
+		if (realUser != null) {
+			// 登录成功
+			// 存储到Session中
+			request.getSession().setAttribute("realUser", realUser);
+			return "yemian";
+		} else {
+			// 登录失败
+
+			return "error";
+		}
 	}
 
 	/**

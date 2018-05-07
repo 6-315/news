@@ -71,6 +71,7 @@ public class SelectAllAction extends ActionSupport implements ServletResponseAwa
 	public void setServletResponse(HttpServletResponse response) {
 		this.response = response;
 	}
+
 	/**
 	 * 使用域模型SelectAllDTO
 	 */
@@ -85,7 +86,7 @@ public class SelectAllAction extends ActionSupport implements ServletResponseAwa
 	public void setListSelectAllDTO(List<SelectAllDTO> listSelectAllDTO) {
 		this.listSelectAllDTO = listSelectAllDTO;
 	}
-	
+
 	public NewsinfoDTO getNewsinfoDTO() {
 		return newsinfoDTO;
 	}
@@ -94,21 +95,21 @@ public class SelectAllAction extends ActionSupport implements ServletResponseAwa
 		this.newsinfoDTO = newsinfoDTO;
 	}
 
-	//查找二级栏目下的所有新闻
-	public String SelectNewsAction(){
+	// 查找二级栏目下的所有新闻
+	public String SelectNewsAction() {
 		listSelectAllDTO = newsInfoManagementService.listSelectAllDTO();
 		System.out.println(listSelectAllDTO);
 		return "";
 	}
-	//查找详细新闻，根据新闻ID
-	public String exactAction(){
+
+	// 查找详细新闻，根据新闻ID
+	public String exactAction() {
 		newsinfoDTO = newsInfoManagementService.getExact(news.getNI_Content());
-		return"";
+		return "";
 	}
-	
+
 	/**
-	 *结束
+	 * 结束
 	 */
-	
 
 }

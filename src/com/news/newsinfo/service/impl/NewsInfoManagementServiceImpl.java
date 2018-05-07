@@ -211,23 +211,21 @@ public class NewsInfoManagementServiceImpl implements NewsInfoManagementService 
 	}
 
 	@Override
-	public NewsinfoDTO getExact(String ni_Content) {
-		if (ni_Content == null || ni_Content.trim().length() <= 0) {
+	public NewsinfoDTO getExact(String ni_NewsId) {
+		if (ni_NewsId == null || ni_NewsId.trim().length() <= 0) {
 			return null;
 		}
-		System.out.println("fdf:" + ni_Content);
 		NewsinfoDTO newsinfoDTO = new NewsinfoDTO();
-		News_NewsInfo news_NewsInfo;
-		News_Content news_Content;
-		// news_NewsInfo = newsInfoManagementDao.listObject("from News_NewsInfo
-		// where NI_Content = '" + ni_Content + "'");
-		// news_Content = newsInfoManagementDao.listObject("from News_Content
-		// where NC_Id = '" + ni_Content + "'");
-		 news_Content = newsInfoManagementDao.getContent(ni_Content);
-		news_NewsInfo = newsInfoManagementDao.getinfo(ni_Content);
-
-		newsinfoDTO.setNews_Content(news_Content);
+		News_NewsInfo news_NewsInfo = new News_NewsInfo();
+		News_Content news_Content = new News_Content();
+		news_NewsInfo = newsInfoManagementDao.getinfo(ni_NewsId);
+		if (news_NewsInfo == null)
+			return null;
+		if (news_NewsInfo.getNI_Content() != null && news_NewsInfo.getNI_Content().trim().length() > 0) {
+			news_Content = newsInfoManagementDao.getContent(news_NewsInfo.getNI_Content().trim());
+		}
 		newsinfoDTO.setNews_NewsInfo(news_NewsInfo);
+		newsinfoDTO.setNews_Content(news_Content);
 		return newsinfoDTO;
 	}
 

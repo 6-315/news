@@ -18,6 +18,7 @@
 			</result>
 			<result name="listCarousel">/WEB-INF/views/carouse/index.jsp
 			</result>
+		
 		</action>
 		<action name="img_*" class="com.news.carousel.action.ImgAction"
 			method="{1}">

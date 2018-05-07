@@ -4,6 +4,20 @@
 	"http://struts.apache.org/dtds/struts-2.5.dtd">
 <struts>
 
+<package name="jurisdiction" namespace="/jurisdiction" extends="struts-default"
+		strict-method-invocation="false">
+		<action name="jurisdiction_*" class="com.news.jurisdiction.action.JurisdictionAction"
+			method="{1}">
+			<result name="listJurisdictionInfoByPage" type="redirectAction">jurisdiction_listJurisdictionInfoByPageAction
+			</result>
+			<result name="error" type="redirect">/error.jsp</result>
+			<result name="detail">/WEB-INF/views/jurisdiction/JurisdictionManagement.jsp</result>
+			<result name="yemian">/WEB-INF/views/control.jsp</result>
+			<result name="endHeader">/WEB-INF/views/end-header.jsp</result>
+			<result name="endNavbar">/WEB-INF/views/end-navbar.jsp</result>
+			<result name="login">/WEB-INF/views/login.jsp</result>
 
+		</action>
+	</package>
 
 </struts>

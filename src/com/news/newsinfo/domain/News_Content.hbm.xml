@@ -1,21 +1,21 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 2018-4-21 15:16:38 by Hibernate Tools 3.5.0.Final -->
+<!-- Generated 2018-5-4 16:32:46 by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-    <class name="com.news.newsinfo.domain.News_Content" table="NEWS_CONTENT">
-        <id name="NC_Id" type="java.lang.String">
-            <column name="NC_Id" />
-            <generator class="assigned" />
-        </id>
-        <property name="NC_Content" type="java.lang.String">
-            <column name="NC_Content" />
-        </property>
-        <property name="NC_CreateTime" type="java.lang.String">
-            <column name="NC_CreateTime" />
-        </property>
-        <property name="NC_ModifyTime" type="java.lang.String">
-            <column name="NC_ModifyTime" />
-        </property>
-    </class>
+	<class name="com.news.newsinfo.domain.News_Content" table="NEWS_CONTENT">
+		<id name="NC_Id" type="java.lang.String">
+			<column name="NC_Id" />
+			<generator class="assigned" />
+		</id>
+		<property name="NC_Content" type="java.lang.String">
+			<column name="NC_Content" />
+		</property>
+		<property name="NC_CreateTime" type="java.lang.String">
+			<column name="NC_CreateTime" />
+		</property>
+		<property name="NC_ModifyTime" type="java.lang.String">
+			<column name="NC_ModifyTime" />
+		</property>
+	</class>
 </hibernate-mapping>

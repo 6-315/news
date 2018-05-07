@@ -4,6 +4,28 @@
 	"http://struts.apache.org/dtds/struts-2.5.dtd">
 <struts>
 
+	<package name="newsinfo" namespace="/newsinfo" extends="struts-default"
+		strict-method-invocation="false">
+		<action name="newsinfo_*"
+			class="com.news.newsinfo.action.NewsInfoManagementAction" method="{1}">
+			<result name="popo">/WEB-INF/views/newsInfo/newsinfo.jsp
+			</result>
+			<result name="manage">/WEB-INF/views/newsInfo/manageinfo.jsp
+			</result>
+			<result name="sava" type="redirectAction">newsinfo_manageAction
+			</result>
+			<result name="delete" type="redirectAction">newsinfo_manageAction
+			</result>
+			<result name="update" type="redirectAction">newsinfo_manageAction
+			</result>
+		</action>
+		<action name="info_*" class="com.news.newsinfo.action.SelectAllAction"
+			method="{1}">
 
-
+			<result name="lookAll">/WEB-INF/views/newsInfo/newsinfo.jsp
+			</result>
+			<result name="ok">/WEB-INF/views/newsInfo/exact.jsp
+			</result>
+		</action>
+	</package>
 </struts>

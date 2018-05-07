@@ -1,0 +1,456 @@
+.clearfix, .hd, .layout {
+	*zoom: 1
+}
+
+.clearfix:after, .hd:after, .layout:after {
+	content: '\20';
+	display: block;
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+	clear: both
+}
+
+a {
+	text-decoration: none
+}
+
+a:hover, a:visited {
+	text-decoration: none
+}
+
+.hid {
+	display: none
+}
+
+.tnd {
+	overflow: hidden;
+	text-indent: -9999em
+}
+
+.ovh {
+	overflow: hidden;
+}
+
+.fl {
+	float: left;
+	display: inline
+}
+
+.fr {
+	float: right;
+	display: inline
+}
+
+li {
+	list-style-type: none;
+}
+
+.pa {
+	position: absolute;
+}
+
+.pr {
+	position: relative;
+}
+
+.ht {
+	display: block;
+	overflow: hidden;
+	text-indent: -999em
+}
+
+.w100 {
+	width: 100%
+}
+
+.cred {
+	color: #E3583C
+}
+
+.cgray {
+	color: #999
+}
+
+.cgreen {
+	color: #00A483
+}
+
+.lnk-red {
+	color: #E3583C;
+	border-bottom: 1px dotted #E3583C
+}
+
+.lnk-normal {
+	color: #666;
+	border-bottom: 1px dotted #666
+}
+
+.lnk-red:hover, .lnk-normal:hover {
+	text-decoration: none;
+	border-bottom-style: solid
+}
+
+.checkbox, .radio {
+	margin-right: 3px
+}
+
+.colbox {
+	border: 1px solid #E1E1E1;
+	box-shadow: 0 0 2px rgba(0, 0, 0, .1);
+	background: #fff
+}
+
+.borline {
+	border-bottom: 1px dotted #BFBFBF;
+	overflow: hidden;
+	zoom: 1
+}
+
+.borlineX {
+	border-bottom: 1px solid #eee
+}
+
+.MainWrap {
+	width: 1240px;
+	/*float:left;*/
+	vertical-align: middle;
+	margin: auto;
+	position: relative;
+	overflow: hidden;
+	zoom: 1;
+}
+
+.MainWrap.events.solid_1 {
+	height: 1px;
+	color: #000000;
+	border: solid;
+	width: 1240px;
+}
+
+.events {
+	margin-top: 20px;
+	height: 240px;
+	width: 100%;
+	vertical-align: middle;
+}
+
+@media screen and (max-width: 1240px) {
+	.events {
+		margin-top: 40px;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.events {
+		margin-top: 40px;
+	}
+}
+
+/*
+.events h2 {
+	font-family: "Microsoft JhengHei", "鏄庨粦", Arial, Helvetica;
+	font-size: 36px;
+	color: #fff;
+	text-align: center;
+	line-height: 1em;
+	margin-bottom: 40px;
+}*/
+@media screen and (max-width: 1000px) {
+	.events h2 {
+		font-size: 30px;
+	}
+}
+
+.events h2 b {
+	height: 1px;
+	width: 30px;
+	background: #777777;
+	display: inline-block;
+	vertical-align: middle;
+	opacity: 0.5;
+	margin: 30px 20px;
+}
+
+@media screen and (max-width: 400px) {
+	.events h2 b {
+		width: 30px;
+	}
+}
+
+.events h2 a {
+	margin-left: 750px;
+	color: #777777;
+	text-decoration: none;
+}
+
+.events h2 a:hover {
+	color: #d18e59;
+}
+
+.events ul {
+	margin-left: 0;
+}
+
+/*.clearfix:after {
+  display: block;
+  content: '';
+  clear: both;
+  height: 0px;
+  visibility: hidden; }
+
+.relative {
+  position: relative; }
+
+ .clearfix {
+  *display: table;
+  *zoom: 1; }*/
+.events ul li {
+	float: left;
+	width: 33.33%;
+}
+
+@media screen and (max-width: 1000px) {
+	.events ul li {
+		width: 100%;
+	}
+}
+
+.events ul li a {
+	display: block;
+	color: #777777;
+	border-left: 1px solid rgba(255, 255, 255, 0.3);
+	padding-left: 0px;
+	margin-left: 0px;
+}
+
+@media screen and (max-width: 1000px) {
+	.events ul li a {
+		padding-bottom: 30px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.events ul li a {
+		padding-left: 0;
+	}
+}
+
+.events ul li a:hover h3, .events ul li a:hover .time {
+	color: #d18e59;
+}
+
+.events ul li .time {
+	font-family: 'EB Garamond', serif;
+	width: 80px;
+	text-align: center;
+	float: left;
+}
+
+.events ul li .time span {
+	display: block;
+	font-size: 36px;
+	line-height: 1em;
+}
+
+@media screen and (max-width: 400px) {
+	.events ul li .time {
+		width: 140px;
+	}
+}
+
+.events ul li .txtwrapper {
+	margin-left: 20px;
+}
+
+@media screen and (max-width: 400px) {
+	.events ul li .txtwrapper {
+		margin-left: 75px;
+	}
+}
+
+.events ul li .txtwrapper h3 {
+	font-size: 16px;
+	line-height: 1.5em;
+}
+
+.events ul li .txtwrapper p {
+	opacity: 0.7;
+	padding-top: 10px;
+}
+
+/* ul自适应   */
+.clearfix:after {
+	display: block;
+	content: '';
+	clear: both;
+	height: 0px;
+	visibility: hidden;
+}
+
+.relative {
+	position: relative;
+}
+
+.clearfix {
+	*display: table;
+	*zoom: 1;
+}
+
+/* 咨询动态 */
+.info_center {
+	width: auto;
+	height: auto;
+	overflow: hidden;
+	zoom: 1;
+}
+
+.information_left {
+	height: 611.4px;
+	width: 55%;
+	vertical-align: middle;
+	float: left;
+	margin: 20px auto;
+}
+
+.information_left h2 b {
+	height: 1px;
+	width: 10px;
+	background: #777777;
+	display: inline-block;
+	vertical-align: middle;
+	opacity: 0.5;
+	margin: 30px 5px;
+}
+
+.information_left.from_1 {
+	height: auto;
+	width: auto;
+	background: black;
+}
+/*
+.information_left.intimate {
+	width: 680px;
+}*/
+.information_left.from_1 ul {
+	margin-top: 40px;
+	height: auto;
+}
+
+.information_left ul li {
+	/*list-style: disc;*/
+	list-style: none;
+	float: left;
+	color: #000000;
+	font-size: 16PX;
+	line-height: 40px;
+}
+
+.information_left ul li a {
+	text-decoration: none;
+	color: #777777;
+}
+
+.information_left ul li a:hover {
+	color: #d18e59;
+}
+
+.information_left ul li .text {
+	width: 496px;
+	float: left;
+}
+
+.information_left .from_1 li .text {
+	max-width: 496px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	display: block;
+	float: left;
+}
+
+.information_left ul li .time {
+	width: 100px;
+	text-align: center;
+	float: right;
+	margin-left: 65px;
+	display: block;
+}
+
+/*.information_left .from_1 .info_center .img_1{
+ 	margin-bottom: 20px;
+ 	width: 100%;
+ 	height:162px;
+ 	margin: auto;
+ }*/
+.information_left.solid_2 {
+	margin-bottom: 80px;
+	width: 682px;
+}
+
+.information_left  hr {
+	margin-top: 80px;
+	color: #000000;
+	width: 682px;
+}
+
+.img_1 {
+	margin-top: 68px;
+}
+
+.information_right {
+	margin-top: 20px;
+	height: 611.4px;
+	width: 30%;
+	vertical-align: middle;
+	float: right;
+}
+
+.information_right  h2 b {
+	height: 1px;
+	width: 10px;
+	background: #777777;
+	display: inline-block;
+	vertical-align: middle;
+	opacity: 0.5;
+	margin: 30px 5px;
+}
+
+.information_right ul li {
+	/*list-style: disc;*/
+	list-style: disc;
+	float: left;
+	color: #000000;
+	font-size: 16PX;
+	line-height: 40px;
+}
+
+.information_right a {
+	text-decoration: none;
+	color: #777777;
+}
+
+.information_right ul li .text {
+	max-width: 210px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	display: block;
+	float: left;
+}
+
+.information_right ul li a:hover {
+	color: #d18e59;
+}
+
+.information_right ul li .time {
+	width: 100px;
+	text-align: center;
+	float: right;
+	margin-left: 42px;
+	display: block;
+}
+
+.information_right .right_bottom {
+	margin-top: 87.4px;
+}

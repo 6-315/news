@@ -3,22 +3,25 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 2018-4-13 1:09:34 by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-    <class name="com.news.user.domain.UserInfo" table="USERINFO">
+    <class name="com.news.user.domain.UserInfo" table="UserInfo">
         <id name="userId" type="java.lang.String">
-            <column name="USERID" />
+            <column name="userId" />
             <generator class="assigned" />
         </id>
         <property name="userName" type="java.lang.String">
-            <column name="USERNAME" />
+            <column name="userName" />
         </property>
         <property name="userPassword" type="java.lang.String">
-            <column name="USERPASSWORD" />
+            <column name="userPassword" />
         </property>
         <property name="userCreateTime" type="java.lang.String">
-            <column name="USERCREATETIME" />
+            <column name="userCreateTime" />
         </property>
         <property name="userModify" type="java.lang.String">
-            <column name="USERMODIFY" />
+            <column name="userModify" />
         </property>
     </class>
+    
+     <query name="getgetLoginUserInfo"><![CDATA[from UserInfo where userName=:userName and userPassword=:userPassword]]></query>
+    
 </hibernate-mapping>

@@ -142,4 +142,9 @@ public class UserServiceImpl implements UserService {
 		userDao.saveOrUpdateObject(updateUserInfo);
 		return 1;
 	}
+
+	@Override
+	public  UserInfo loginUser(UserInfo userInfo) {	
+		return userDao.getLoginUserInfo(userInfo);
+	}
 }

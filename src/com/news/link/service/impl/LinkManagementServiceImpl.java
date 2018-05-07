@@ -19,7 +19,7 @@ import util.TimeUtil;
  * 
  * @author JXX
  * @date 2018/04/18
- * @modify JXX 2018/04/18
+ * @modify LMJ 2018/04/27
  *
  */
 public class LinkManagementServiceImpl implements LinkManagementService {
@@ -61,20 +61,16 @@ public class LinkManagementServiceImpl implements LinkManagementService {
 	@SuppressWarnings("unchecked")
 	@Override
 	public News_LinkInfoCountVO listLinkInfoByPage(News_LinkInfoCountVO news_LinkInfoCountVO) {
-		List<News_LinkInfoCountDTO> listNews_LinkInfoCountDTO = new ArrayList<>();
+		/*List<News_LinkInfoCountDTO> listNews_LinkInfoCountDTO = new ArrayList<>();*/
 		List<News_LinkInfo> listLinkInfo = new ArrayList<>();
-		News_LinkInfoCountDTO news_LinkInfoCountDTO = null;
+		/*News_LinkInfoCountDTO news_LinkInfoCountDTO = null;*/
 		// 获取数量
 		// 链接数量的hql以及遍历的hql
-		String news_LinkInfoCountHql = "select count(*) from News_LinkInfo ";
-		String listNews_LinkInfoCountDTOHql = "from News_LinkInfo ";
-		if (news_LinkInfoCountVO.getSearch() != null && news_LinkInfoCountVO.getSearch().trim().length() > 0) {
-			String search = "%" + news_LinkInfoCountVO.getSearch().trim() + "%";
-			news_LinkInfoCountHql = news_LinkInfoCountHql + "where LI_Name like '" + search + "' ";
-			listNews_LinkInfoCountDTOHql = listNews_LinkInfoCountDTOHql + "where LI_Name like '" + search + "'";
-		}
+		String news_LinkInfoCountHql = "select count(*) from News_LinkInfo where LI_IsDelete ='1' ";
+		String listNews_LinkInfoCountDTOHql = "from News_LinkInfo where LI_IsDelete ='1' ";
+		
 		// 这里如果不加desc表示正序，如果加上desc表示倒序
-		listNews_LinkInfoCountDTOHql = listNews_LinkInfoCountDTOHql + "order by LI_IsDelete desc,LI_ModifyTime desc";
+		listNews_LinkInfoCountDTOHql = listNews_LinkInfoCountDTOHql + "order by LI_ModifyTime desc";
 		int userInfoCount = linkManagementDao.getCount(news_LinkInfoCountHql);
 		// 设置总数量
 		news_LinkInfoCountVO.setTotalRecords(userInfoCount);

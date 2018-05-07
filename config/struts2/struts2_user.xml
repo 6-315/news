@@ -15,7 +15,6 @@
 			<result name="yemian">/WEB-INF/views/control.jsp</result>
 			<result name="endHeader">/WEB-INF/views/end-header.jsp</result>
 			<result name="endNavbar">/WEB-INF/views/end-navbar.jsp</result>
-
 		</action>
 	</package>
 

@@ -9,7 +9,7 @@
 <body onload="user_detail()">
 	<s:action name="user_endHeaderAction" namespace="/user"
 		executeResult="true" />
-	<div class="tpl-page-container tpl-page-header-fixed">
+	<div class="am-cf admin-main">
 		<s:action name="user_endNavbarAction" namespace="/user"
 			executeResult="true" />
 

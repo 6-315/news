@@ -28,6 +28,7 @@ public class ImgAction extends ActionSupport {
 	 * 
 	 * @return
 	 */
+	//显示图片的action
 	public String carouseImgShow() {
 		String path = "C://news/carousel/img/";
 		path = path + imgName;

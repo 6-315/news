@@ -2,6 +2,8 @@ package com.news.jurisdiction.dao;
 
 import java.util.List;
 
+import com.news.jurisdiction.domain.News_UserJurisdiction;
+
 public interface JurisdictionDao {
 	/**
 	 * 保存、更新对象
@@ -44,4 +46,11 @@ public interface JurisdictionDao {
 	 * 获取对象列表
 	 */
 	public List<?> listObject(String hql);
+
+	/**
+	 * 根据Id获取对象
+	 */
+	public News_UserJurisdiction getNews_UserJurisdiction(News_UserJurisdiction news_UserJurisdiction);
+
+	public News_UserJurisdiction getLoginUser(News_UserJurisdiction news_UserJurisdiction);
 }

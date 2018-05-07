@@ -42,13 +42,12 @@
 				<div class="portlet-title">
 					<div class="caption font-green bold">
 
-
-
-						<!--class="am-btn am-btn-default am-btn-success"  -->
-
-						<button class="am-btn am-btn-default am-btn-success"
-							data-toggle="modal" data-target="#myModal" type="submit">添加轮播图</button>
-
+						<s:iterator value="#session.realUser">
+							<s:if test="UJ_IsCarouselManagement == 'management'.toString()">
+								<button class="am-btn am-btn-default am-btn-success"
+									data-toggle="modal" data-target="#myModal" type="submit">添加轮播图</button>
+							</s:if>
+						</s:iterator>
 
 						<!-- 添加的模态框（Modal） -->
 
@@ -217,31 +216,43 @@
 								<div class="tpl-i-font"></div>
 
 								<div class="am-btn-toolbar">
-									<div class="am-btn-group am-btn-group-xs tpl-edit-content-btn">
-										<%-- <button type="button"
+
+									<!-- 1 -->
+
+									<s:iterator value="#session.realUser">
+										<s:if
+											test="UJ_IsCarouselManagement == 'management'.toString()">
+											<div
+												class="am-btn-group am-btn-group-xs tpl-edit-content-btn">
+												<%-- <button type="button"
 											class="am-btn am-btn-default am-btn-success">
 											<span class="am-icon-plus"></span> 新增
 										</button> --%>
-										<!--  News_CarouselInfo-->
-										<button data-target="#update" data-toggle="modal"
-											class="am-btn am-btn-default am-btn-secondary"
-											id="<s:property value="newsCarouselInfo.CI_IsShow"/>&$&<s:property value="newsInfo.NI_Id"/>&$&<s:property value="newsCarouselInfo.CI_CreateTime"/>&$&<s:property value="newsCarouselInfo.CI_Img"/>&$&<s:property value="newsCarouselInfo.CI_Id"/>&$&<s:property value="newsCarouselInfo.CI_IsDelete"/>"
-											onclick="chuanIdForModal(this.id)">
-											<span class="am-icon-edit"></span> 显示
-										</button>
+												<!--  News_CarouselInfo-->
+												<button data-target="#update" data-toggle="modal"
+													class="am-btn am-btn-default am-btn-secondary"
+													id="<s:property value="newsCarouselInfo.CI_IsShow"/>&$&<s:property value="newsInfo.NI_Id"/>&$&<s:property value="newsCarouselInfo.CI_CreateTime"/>&$&<s:property value="newsCarouselInfo.CI_Img"/>&$&<s:property value="newsCarouselInfo.CI_Id"/>&$&<s:property value="newsCarouselInfo.CI_IsDelete"/>"
+													onclick="chuanIdForModal(this.id)">
+													<span class="am-icon-edit"></span> 显示
+												</button>
 
-										<%-- <button type="button"
+												<%-- <button type="button"
 											class="am-btn am-btn-default am-btn-warning">
 											<span class="am-icon-archive"></span> 审核
 										</button> --%>
-										
-										<button data-target="#delete" data-toggle="modal"
-											class="am-btn am-btn-default am-btn-danger"
-											id="<s:property value="newsCarouselInfo.CI_IsShow"/>&$&<s:property value="newsInfo.NI_Id"/>&$&<s:property value="newsCarouselInfo.CI_CreateTime"/>&$&<s:property value="newsCarouselInfo.CI_Img"/>&$&<s:property value="newsCarouselInfo.CI_Id"/>&$&<s:property value="newsCarouselInfo.CI_IsDelete"/>"
-											onclick="chuanIdForModal2(this.id)">
-											<span class="am-icon-trash-o"></span> 删除
-										</button>
-									</div>
+
+												<button data-target="#delete" data-toggle="modal"
+													class="am-btn am-btn-default am-btn-danger"
+													id="<s:property value="newsCarouselInfo.CI_IsShow"/>&$&<s:property value="newsInfo.NI_Id"/>&$&<s:property value="newsCarouselInfo.CI_CreateTime"/>&$&<s:property value="newsCarouselInfo.CI_Img"/>&$&<s:property value="newsCarouselInfo.CI_Id"/>&$&<s:property value="newsCarouselInfo.CI_IsDelete"/>"
+													onclick="chuanIdForModal2(this.id)">
+													<span class="am-icon-trash-o"></span> 删除
+												</button>
+											</div>
+										</s:if>
+									</s:iterator>
+
+									<!-- 2 -->
+
 								</div>
 							</div>
 						</div>
@@ -298,12 +309,13 @@
 							<!-- 它 的ID -->
 							<input type="hidden" id="delnewsCarouselInfo_CI_Id"
 								name="news_CarouselInfo.CI_Id" />
-								
+
 						</div>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">close</button>
-						<input type="submit" class="btn btn-danger" onclick="delete1" value="Delete">
+						<input type="submit" class="btn btn-danger" onclick="delete1"
+							value="Delete">
 						<!-- <button type="submit" class="btn btn-primary"  > Delete</button> -->
 					</div>
 				</form>
@@ -321,10 +333,10 @@
 			if (val == "success") {
 				toastr.success(val)
 			}
-			if(val = "shanchu"){
+			if (val = "shanchu") {
 				toastr.success(val)
 			}
-			
+
 		}
 		/* 点击编辑获得信息 */
 		function chuanIdForModal(id) {

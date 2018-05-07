@@ -7,6 +7,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
 import com.news.jurisdiction.dao.JurisdictionDao;
+import com.news.jurisdiction.domain.News_UserJurisdiction;
+import com.news.user.domain.UserInfo;
 
 public class JurisdictionDaoImpl implements JurisdictionDao {
 	/**
@@ -58,7 +60,7 @@ public class JurisdictionDaoImpl implements JurisdictionDao {
 	public List<?> queryForPage(String hql, int offset, int length) {
 		Session session = getSession();
 		Query query = session.createQuery(hql);
-		query.setFirstResult(offset - 1);
+		query.setFirstResult((offset - 1) * length);
 		query.setMaxResults(length);
 		List<?> list = query.list();
 		session.clear();
@@ -101,5 +103,33 @@ public class JurisdictionDaoImpl implements JurisdictionDao {
 		List<?> list = query.list();
 		session.clear();
 		return list;
+	}
+
+	@Override
+	public News_UserJurisdiction getNews_UserJurisdiction(News_UserJurisdiction news_UserJurisdiction) {
+		Session session = getSession();
+		String hql = "from News_UserJurisdiction where UJ_Id =:UJ_Id";
+		Query query = session.createQuery(hql);
+		query.setParameter("UJ_Id", news_UserJurisdiction.getUJ_Id());
+		session.evict(news_UserJurisdiction);
+		return news_UserJurisdiction;
+	}
+
+	
+	/**
+	 * 获取登录信息
+	 */
+	@Override
+	public News_UserJurisdiction getLoginUser(News_UserJurisdiction news_UserJurisdiction) {
+		Session session = getSession();
+		String hql = "from News_UserJurisdiction where UJ_UserName = :name and UJ_UserPassWord = :password";
+		Query query = session.createQuery(hql);
+		query.setString("name", news_UserJurisdiction.getUJ_UserName());
+		query.setString("password", news_UserJurisdiction.getUJ_UserPassWord());
+		List<News_UserJurisdiction> list = query.list();
+		if (list != null && !list.isEmpty()) {
+			return list.get(0);
+		}
+		return null;
 	}
 }

@@ -8,6 +8,6 @@
 	<import resource="spring/spring_navigation.xml" />
 	<import resource="spring/spring_carousel.xml" />
 	<import resource="spring/spring_newsinfo.xml" />
-
+	<import resource="spring/spring_jurisdiction.xml" />
 
 </beans>

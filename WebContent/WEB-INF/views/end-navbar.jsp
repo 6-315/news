@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<%@ taglib uri="/struts-tags" prefix="s"%>
 <!doctype html>
 
 <html>
@@ -60,40 +60,82 @@
 					class="nav-link active"> <i class="am-icon-home"></i> <span>首页</span>
 
 				</a></li>
+				<s:iterator value="#session.realUser">
+					<s:if
+						test="UJ_IsCarouselManagement == 'management'.toString()">
+						<li class="tpl-left-nav-item"><a
+							href="${pageContext.request.contextPath}/carousel/carousel_selectAction?message="
+							class="nav-link"> <i class="am-icon-home"></i> <span>管理轮播图</span>
+						</a></li>
+					</s:if>
+					<s:if
+						test="UJ_IsCarouselManagement == 'see'.toString()">
+						<li class="tpl-left-nav-item"><a
+							href="${pageContext.request.contextPath}/carousel/carousel_selectAction?message="
+							class="nav-link"> <i class="am-icon-home"></i> <span>查看轮播图</span>
+						</a></li>
+					</s:if>
+					
+					<s:if
+						test="UJ_IsLinkeManagement == 'management'.toString()">
+						<li class="tpl-left-nav-item"><a
+							href="${pageContext.request.contextPath}/link/link_listLinkInfoByPageAction"
+							class="nav-link"> <i class="am-icon-home"></i> <span>管理链接</span>
+						</a></li>
+					</s:if>
+					<s:if
+						test="UJ_IsLinkeManagement == 'see'.toString()">
+						<li class="tpl-left-nav-item"><a
+							href="${pageContext.request.contextPath}/link/link_listLinkInfoByPageAction"
+							class="nav-link"> <i class="am-icon-home"></i> <span>查看链接</span>
+						</a></li>
+					</s:if>
+					
+					<s:if
+						test="UJ_IsNavigationManagement == 'management'.toString()">
+						<li class="tpl-left-nav-item"><a
+							href="${pageContext.request.contextPath}/navigation/navigation_listNavigationInfoByPageAction"
+							class="nav-link"> <i class="am-icon-home"></i> <span>管理导航</span>
+						</a></li>
+					</s:if>
+					<s:if
+						test="UJ_IsNavigationManagement == 'see'.toString()">
+						<li class="tpl-left-nav-item"><a
+							href="${pageContext.request.contextPath}/navigation/navigation_listNavigationInfoByPageAction"
+							class="nav-link"> <i class="am-icon-home"></i> <span>查看导航</span>
+						</a></li>
+					</s:if>
+					
+					<s:if
+						test="UJ_IsJurisdictionManagement == 'management'.toString()">
+						<li class="tpl-left-nav-item"><a
+							href="${pageContext.request.contextPath}/jurisdiction/jurisdiction_listJurisdictionInfoByPageAction"
+							class="nav-link"> <i class="am-icon-home"></i> <span>管理人员</span>
+						</a></li>
+					</s:if>
+					
+					
+					<s:if
+						test="UJ_IsNewsManagement == 'management'.toString() || UJ_IsNewsManagement == 'see'.toString()">
+						<li class="tpl-left-nav-item"><a href="javascript:;"
+							class="nav-link tpl-left-nav-link-list"> <i
+								class="am-icon-table"></i> <span>表格</span> <i
+								class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
 
-				<li class="tpl-left-nav-item"><a
-					href="${pageContext.request.contextPath}/carousel/carousel_selectAction?message="
-					class="nav-link"> <i class="am-icon-home"></i> <span>管理轮播图</span>
-				</a></li>
-				
-				<li class="tpl-left-nav-item"><a
-					href="${pageContext.request.contextPath}/link/link_listLinkInfoByPageAction"
-					class="nav-link"> <i class="am-icon-home"></i> <span>管理链接</span>
-				</a></li>
+						</a>
 
-				<li class="tpl-left-nav-item"><a
-					href="${pageContext.request.contextPath}/navigation/navigation_listNavigationInfoByPageAction"
-					class="nav-link"> <i class="am-icon-home"></i> <span>管理导航</span>
-				</a></li>
+							<ul class="tpl-left-nav-sub-menu">
 
-				<li class="tpl-left-nav-item"><a href="javascript:;"
-					class="nav-link tpl-left-nav-link-list"> <i
-						class="am-icon-table"></i> <span>表格</span> <i
-						class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+								<li><a href="#"> <i class="am-icon-angle-right"></i> <span>文字表格</span>
 
-				</a>
+										<i
+										class="am-icon-star tpl-left-nav-content-ico am-fr am-margin-right"></i>
 
-					<ul class="tpl-left-nav-sub-menu">
+								</a> <a href="#"> <i class="am-icon-angle-right"></i> <span>图片表格</span></a></li>
 
-						<li><a href="#"> <i class="am-icon-angle-right"></i> <span>文字表格</span>
-
-								<i
-								class="am-icon-star tpl-left-nav-content-ico am-fr am-margin-right"></i>
-
-						</a> <a href="#"> <i class="am-icon-angle-right"></i> <span>图片表格</span></a></li>
-
-					</ul></li>
-
+							</ul></li>
+					</s:if>
+				</s:iterator>
 			</ul>
 
 		</div>

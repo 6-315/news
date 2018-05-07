@@ -31,10 +31,16 @@
 			</ol>
 			<div class="tpl-portlet-components">
 				<div class="portlet-title">
-					<button class="btn btn-primary btn-lg" data-toggle="modal"
-						data-target="#myModal_One">添加一级导航</button>
-					<button class="btn btn-primary btn-lg" data-toggle="modal"
-						data-target="#myModal_Two">添加二级导航</button>
+
+					<s:iterator value="#session.realUser">
+						<s:if test="UJ_IsNavigationManagement == 'management'.toString()">
+							<button class="btn btn-primary btn-lg" data-toggle="modal"
+								data-target="#myModal_One">添加一级导航</button>
+							<button class="btn btn-primary btn-lg" data-toggle="modal"
+								data-target="#myModal_Two">添加二级导航</button>
+						</s:if>
+					</s:iterator>
+
 					<div class="portlet-input input-small input-inline"
 						style="float: right;">
 						<div class="input-icon right"></div>
@@ -142,7 +148,11 @@
 
 									<th class="table-author am-hide-sm-only">创建日期</th>
 									<th class="table-date am-hide-sm-only">修改日期</th>
+
+
 									<th class="table-set">操作</th>
+
+
 								</tr>
 							</thead>
 							<tbody>
@@ -156,25 +166,33 @@
 												value="news_OneNavigationInfo.ONI_CreateTime" /></td>
 										<td class="am-hide-sm-only"><s:property
 												value="news_OneNavigationInfo.ONI_ModifyTime" /></td>
+
+
 										<td>
 											<div class="am-btn-toolbar">
 												<div class="am-btn-group am-btn-group-xs">
-													<button
-														class="am-btn am-btn-default am-btn-xs am-text-secondary"
-														data-toggle="modal" data-target="#myModal_updateOne"
-														id="<s:property value="news_OneNavigationInfo.ONI_Id"/>&$&<s:property value="news_OneNavigationInfo.ONI_Name"/>&$&<s:property value="news_OneNavigationInfo.ONI_NavigatorIntroduce" />&$&<s:property value="news_OneNavigationInfo.ONI_CreateTime" />&$&<s:property value="news_OneNavigationInfo.ONI_IsDelete" />&$&<s:property value="news_OneNavigationInfo.ONI_Order" />"
-														onclick="chuanIdForModal(this.id)">
-														<span class="am-icon-pencil-square-o"></span> 编辑
-													</button>
+													<s:iterator value="#session.realUser">
+														<s:if
+															test="UJ_IsNavigationManagement == 'management'.toString()">
+															<button
+																class="am-btn am-btn-default am-btn-xs am-text-secondary"
+																data-toggle="modal" data-target="#myModal_updateOne"
+																id="<s:property value="news_OneNavigationInfo.ONI_Id"/>&$&<s:property value="news_OneNavigationInfo.ONI_Name"/>&$&<s:property value="news_OneNavigationInfo.ONI_NavigatorIntroduce" />&$&<s:property value="news_OneNavigationInfo.ONI_CreateTime" />&$&<s:property value="news_OneNavigationInfo.ONI_IsDelete" />&$&<s:property value="news_OneNavigationInfo.ONI_Order" />"
+																onclick="chuanIdForModal(this.id)">
+																<span class="am-icon-pencil-square-o"></span> 编辑
+															</button>
 
 
-													<button
-														class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"
-														data-toggle="modal" data-target="#myModal_deleteOne"
-														id="<s:property value="news_OneNavigationInfo.ONI_Id"/>&$&<s:property value="news_OneNavigationInfo.ONI_Name"/>&$&<s:property value="news_OneNavigationInfo.ONI_NavigatorIntroduce" />&$&<s:property value="news_OneNavigationInfo.ONI_CreateTime" />&$&<s:property value="news_OneNavigationInfo.ONI_IsDisplay" />&$&<s:property value="news_OneNavigationInfo.ONI_Order" />"
-														onclick="chuanIdForModal_1(this.id)">
-														<span class="am-icon-trash-o"></span> 删除
-													</button>
+															<button
+																class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"
+																data-toggle="modal" data-target="#myModal_deleteOne"
+																id="<s:property value="news_OneNavigationInfo.ONI_Id"/>&$&<s:property value="news_OneNavigationInfo.ONI_Name"/>&$&<s:property value="news_OneNavigationInfo.ONI_NavigatorIntroduce" />&$&<s:property value="news_OneNavigationInfo.ONI_CreateTime" />&$&<s:property value="news_OneNavigationInfo.ONI_IsDisplay" />&$&<s:property value="news_OneNavigationInfo.ONI_Order" />"
+																onclick="chuanIdForModal_1(this.id)">
+																<span class="am-icon-trash-o"></span> 删除
+															</button>
+														</s:if>
+													</s:iterator>
+
 													<button
 														class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"
 														id="<s:property value="news_OneNavigationInfo.ONI_Id"/>"
@@ -185,6 +203,8 @@
 												</div>
 											</div>
 										</td>
+
+
 									</tr>
 									<tbody
 										id="<s:property value="news_OneNavigationInfo.ONI_Id"/>&"
@@ -194,7 +214,14 @@
 											<td>&nbsp;&nbsp;&nbsp;&nbsp;二级导航名称</td>
 											<td>创建时间</td>
 											<td>修改时间</td>
-											<td>操作</td>
+
+											<s:iterator value="#session.realUser">
+												<s:if
+													test="UJ_IsNavigationManagement == 'management'.toString()">
+													<td>操作</td>
+												</s:if>
+											</s:iterator>
+
 										</tr>
 										<s:iterator value="news_TwoNavigationInfo">
 											<tr>
@@ -206,30 +233,37 @@
 														value="TNI_CreateTime" /></td>
 												<td class="am-hide-sm-only"><s:property
 														value="TNI_ModifyTime" /></td>
-												<td>
-													<div class="am-btn-toolbar">
-														<div class="am-btn-group am-btn-group-xs">
-															<button
-																class="am-btn am-btn-default am-btn-xs am-text-secondary"
-																data-toggle="modal" data-target="#myModal_updateTwo"
-																id="<s:property value="TNI_Id"/>&$&<s:property value="TNI_Name"/>&$&<s:property value="TNI_NavigatorIntroduce" />&$&<s:property value="TNI_CreateTime" />&$&<s:property value="TNI_IsDelete" />&$&<s:property value="TNI_Order" />"
-																onclick="chuanIdForModal_2(this.id)">
-																<span class="am-icon-pencil-square-o"></span> 编辑
-															</button>
+
+												<s:iterator value="#session.realUser">
+													<s:if
+														test="UJ_IsNavigationManagement == 'management'.toString()">
+														<td>
+															<div class="am-btn-toolbar">
+																<div class="am-btn-group am-btn-group-xs">
+																	<button
+																		class="am-btn am-btn-default am-btn-xs am-text-secondary"
+																		data-toggle="modal" data-target="#myModal_updateTwo"
+																		id="<s:property value="TNI_Id"/>&$&<s:property value="TNI_Name"/>&$&<s:property value="TNI_NavigatorIntroduce" />&$&<s:property value="TNI_CreateTime" />&$&<s:property value="TNI_IsDelete" />&$&<s:property value="TNI_Order" />"
+																		onclick="chuanIdForModal_2(this.id)">
+																		<span class="am-icon-pencil-square-o"></span> 编辑
+																	</button>
 
 
-															<button
-																class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"
-																data-toggle="modal" data-target="#myModal_deleteTwo"
-																id="<s:property value="TNI_Id"/>&$&<s:property value="TNI_Name"/>&$&<s:property value="TNI_NavigatorIntroduce" />&$&<s:property value="TNI_CreateTime" />&$&<s:property value="TNI_IsDisplay" />&$&<s:property value="TNI_Order" />&$&<s:property value="TNI_BelongOneNavigator" />"
-																onclick="chuanIdForModal_3(this.id)">
-																<span class="am-icon-trash-o"></span> 删除
-															</button>
+																	<button
+																		class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"
+																		data-toggle="modal" data-target="#myModal_deleteTwo"
+																		id="<s:property value="TNI_Id"/>&$&<s:property value="TNI_Name"/>&$&<s:property value="TNI_NavigatorIntroduce" />&$&<s:property value="TNI_CreateTime" />&$&<s:property value="TNI_IsDisplay" />&$&<s:property value="TNI_Order" />&$&<s:property value="TNI_BelongOneNavigator" />"
+																		onclick="chuanIdForModal_3(this.id)">
+																		<span class="am-icon-trash-o"></span> 删除
+																	</button>
 
 
-														</div>
-													</div>
-												</td>
+																</div>
+															</div>
+														</td>
+													</s:if>
+												</s:iterator>
+
 											</tr>
 
 										</s:iterator>
@@ -383,8 +417,8 @@
 						<div class="modal-body">
 							<input id="twonavigationOrder"
 								name="news_TwoNavigationInfo.TNI_Order" type="hidden"> <input
-								id="twonavigationid" name="news_TwoNavigationInfo.TNI_Id" type="hidden"> <input
-								id="twonavigationisDelete"
+								id="twonavigationid" name="news_TwoNavigationInfo.TNI_Id"
+								type="hidden"> <input id="twonavigationisDelete"
 								name="news_TwoNavigationInfo.TNI_IsDelete" type="hidden">
 							<input id="twonavigationcreateTime"
 								name="news_TwoNavigationInfo.TNI_CreateTime" type="hidden">
@@ -396,7 +430,8 @@
 								class="form-control input-sm" placeholder="请输入链接地址" /> 是否可见 <label
 								class="form-control input-sm"> <input type="radio"
 								name="news_TwoNavigationInfo.TNI_IsDisplay" id="sr1" value="1" />可见
-								<input type="radio" name="news_TwoNavigationInfo.TNI_IsDisplay" id="sr1" value="-1" />不可见
+								<input type="radio" name="news_TwoNavigationInfo.TNI_IsDisplay"
+								id="sr1" value="-1" />不可见
 							</label>
 							<!-- 1 -->
 							二级导航所属 <select
@@ -446,8 +481,8 @@
 								name="news_TwoNavigationInfo.TNI_BelongOneNavigator"
 								type="hidden"> <input id="two_navigationOrder"
 								name="news_TwoNavigationInfo.TNI_Order" type="hidden"> <input
-								id="two_navigationid" name="news_TwoNavigationInfo.TNI_Id" type="hidden"> <input
-								id="two_navigationcreateTime"
+								id="two_navigationid" name="news_TwoNavigationInfo.TNI_Id"
+								type="hidden"> <input id="two_navigationcreateTime"
 								name="news_TwoNavigationInfo.TNI_CreateTime" type="hidden">
 							<input id="two_navigationName"
 								name="news_TwoNavigationInfo.TNI_Name" type="hidden"> <input

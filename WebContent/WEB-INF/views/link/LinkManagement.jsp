@@ -31,19 +31,17 @@
 			</ol>
 			<div class="tpl-portlet-components">
 				<div class="portlet-title">
-					<button class="btn btn-primary btn-lg" data-toggle="modal"
-						data-target="#myModal">添加链接</button>
+
+					<s:iterator value="#session.realUser">
+						<s:if test="UJ_IsLinkeManagement == 'management'.toString()">
+							<button class="btn btn-primary btn-lg" data-toggle="modal"
+								data-target="#myModal">添加链接</button>
+						</s:if>
+					</s:iterator>
+
 					<div class="portlet-input input-small input-inline"
 						style="float: right;">
-						<div class="input-icon right">
-
-
-							<!-- 	<i class="am-icon-search"></i> <input
-								class="form-control form-control-solid" placeholder="搜索..."
-								type="text"> -->
-
-
-						</div>
+						<div class="input-icon right"></div>
 					</div>
 					<!-- 添加信息模态框（Modal） -->
 					<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
@@ -93,7 +91,12 @@
 									<!-- <th class="table-title">是否删除</th> -->
 									<th class="table-author am-hide-sm-only">创建日期</th>
 									<th class="table-date am-hide-sm-only">修改日期</th>
-									<th class="table-set">操作</th>
+									<s:iterator value="#session.realUser">
+										<s:if test="UJ_IsLinkeManagement == 'management'.toString()">
+											<th class="table-set">操作</th>
+										</s:if>
+									</s:iterator>
+
 								</tr>
 							</thead>
 							<tbody>
@@ -116,30 +119,35 @@
 												value="LI_CreateTime" /></td>
 										<td class="am-hide-sm-only"><s:property
 												value="LI_ModifyTime" /></td>
-										<td>
-											<div class="am-btn-toolbar">
-												<div class="am-btn-group am-btn-group-xs">
-													<button
-														class="am-btn am-btn-default am-btn-xs am-text-secondary"
-														data-toggle="modal" data-target="#myModal_1"
-														id="<s:property value="LI_Id"/>&$&<s:property value="LI_Name"/>&$&<s:property value="LI_Address" />&$&<s:property value="LI_CreateTime" />&$&<s:property value="LI_IsDelete" />"
-														onclick="chuanIdForModal(this.id)">
-														<span class="am-icon-pencil-square-o"></span> 编辑
-													</button>
+
+										<s:iterator value="#session.realUser">
+											<s:if test="UJ_IsLinkeManagement == 'management'.toString()">
+												<td>
+													<div class="am-btn-toolbar">
+														<div class="am-btn-group am-btn-group-xs">
+															<button
+																class="am-btn am-btn-default am-btn-xs am-text-secondary"
+																data-toggle="modal" data-target="#myModal_1"
+																id="<s:property value="LI_Id"/>&$&<s:property value="LI_Name"/>&$&<s:property value="LI_Address" />&$&<s:property value="LI_CreateTime" />&$&<s:property value="LI_IsDelete" />"
+																onclick="chuanIdForModal(this.id)">
+																<span class="am-icon-pencil-square-o"></span> 编辑
+															</button>
 
 
-													<button
-														class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"
-														data-toggle="modal" data-target="#myModal_2"
-														id="<s:property value="LI_Id"/>&$&<s:property value="LI_Name"/>&$&<s:property value="LI_Address" />&$&<s:property value="LI_CreateTime" />&$&<s:property value="LI_IsDisplay" />"
-														onclick="chuanIdForModal_1(this.id)">
-														<span class="am-icon-trash-o"></span> 删除
-													</button>
+															<button
+																class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"
+																data-toggle="modal" data-target="#myModal_2"
+																id="<s:property value="LI_Id"/>&$&<s:property value="LI_Name"/>&$&<s:property value="LI_Address" />&$&<s:property value="LI_CreateTime" />&$&<s:property value="LI_IsDisplay" />"
+																onclick="chuanIdForModal_1(this.id)">
+																<span class="am-icon-trash-o"></span> 删除
+															</button>
 
 
-												</div>
-											</div>
-										</td>
+														</div>
+													</div>
+												</td>
+											</s:if>
+										</s:iterator>
 									</tr>
 								</s:iterator>
 							</tbody>
@@ -208,11 +216,7 @@
 								type="radio" name="news_LinkInfo.LI_IsDisplay" id="sr1"
 								value="-1" />不可见
 							</label>
-							<!-- 是否删除 <label class="form-control input-sm"> <input
-								type="radio" name="news_LinkInfo.LI_IsDelete" id="sr2" value="1" />未删除
-								<input type="radio" name="news_LinkInfo.LI_IsDelete" id="sr2"
-								value="-1" />已删除
-							</label> -->
+							
 
 						</div>
 
@@ -250,7 +254,7 @@
 							<input id="linkisDisplay" name="news_LinkInfo.LI_IsDisplay"
 								type="hidden"> <input name="news_LinkInfo.LI_IsDelete"
 								type="hidden" value="-1">
-							<center>是否删除？</center>
+							是否删除？
 						</div>
 
 						<div class="modal-footer">

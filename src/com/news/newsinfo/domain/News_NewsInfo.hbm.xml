@@ -1,57 +1,54 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 2018-4-21 15:16:38 by Hibernate Tools 3.5.0.Final -->
+<!-- Generated 2018-5-4 16:32:46 by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-    <class name="com.news.newsinfo.domain.News_NewsInfo" table="NEWS_NEWSINFO">
-        <id name="NI_Id" type="java.lang.String">
-            <column name="NI_Id" />
-            <generator class="assigned" />
-        </id>
-        <property name="NI_ContentId" type="java.lang.String">
-            <column name="NI_ContentId" />
-        </property>
-        <property name="NI_Title" type="java.lang.String">
-            <column name="NI_Title" />
-        </property>
-        <property name="NI_Keywords" type="java.lang.String">
-            <column name="NI_Keywords" />
-        </property>
-        <property name="NI_IsCarousel" type="java.lang.String">
-            <column name="NI_IsCarousel" />
-        </property>
-        <property name="NI_BelongNavigation" type="java.lang.String">
-            <column name="NI_BelongNavigation" />
-        </property>
-        <property name="NI_BrowserCount" type="java.lang.String">
-            <column name="NI_BrowserCount" />
-        </property>
-        <property name="NI_Source" type="java.lang.String">
-            <column name="NI_Source" />
-        </property>
-        <property name="NI_Author" type="java.lang.String">
-            <column name="NI_Author" />
-        </property>
-        <property name="NI_Content" type="java.lang.String">
-            <column name="NI_Content" />
-        </property>
-        <property name="NI_IsDelete" type="java.lang.String">
-            <column name="NI_IsDelete" />
-        </property>
-        <property name="NI_IsShow" type="java.lang.String">
-            <column name="NI_IsShow" />
-        </property>
-        <property name="NI_ShowTime" type="java.lang.String">
-            <column name="NI_ShowTime" />
-        </property>
-        <property name="NI_CreateTime" type="java.lang.String">
-            <column name="NI_CreateTime" />
-        </property>
-        <property name="NI_ModifyTime" type="java.lang.String">
-            <column name="NI_ModifyTime" />
-        </property>
-        <property name="NI_IsRecommend" type="java.lang.String">
-            <column name="NI_IsRecommend" />
-        </property>
-    </class>
+	<class name="com.news.newsinfo.domain.News_NewsInfo" table="NEWS_NEWSINFO">
+		<id name="NI_Id" type="java.lang.String">
+			<column name="NI_Id" />
+			<generator class="assigned" />
+		</id>
+		<property name="NI_Title" type="java.lang.String">
+			<column name="NI_Title" />
+		</property>
+		<property name="NI_Keywords" type="java.lang.String">
+			<column name="NI_Keywords" />
+		</property>
+		<property name="NI_IsCarousel" type="java.lang.String">
+			<column name="NI_IsCarousel" />
+		</property>
+		<property name="NI_BelongNavigation" type="java.lang.String">
+			<column name="NI_BelongNavigation" />
+		</property>
+		<property name="NI_BrowserCount" type="java.lang.String">
+			<column name="NI_BrowserCount" />
+		</property>
+		<property name="NI_Source" type="java.lang.String">
+			<column name="NI_Source" />
+		</property>
+		<property name="NI_Author" type="java.lang.String">
+			<column name="NI_Author" />
+		</property>
+		<property name="NI_Content" type="java.lang.String">
+			<column name="NI_Content" />
+		</property>
+		<property name="NI_IsDelete" type="java.lang.String">
+			<column name="NI_IsDelete" />
+		</property>
+		<property name="NI_IsShow" type="java.lang.String">
+			<column name="NI_IsShow" />
+		</property>
+		<property name="NI_ShowTime" type="java.lang.String">
+			<column name="NI_ShowTime" />
+		</property>
+		<property name="NI_CreateTime" type="java.lang.String">
+			<column name="NI_CreateTime" />
+		</property>
+		<property name="NI_ModifyTime" type="java.lang.String">
+			<column name="NI_ModifyTime" />
+		</property>
+		<property name="NI_IsRecommend" type="java.lang.String">
+			<column name="NI_IsRecommend" />
+		</property>
+	</class>
 </hibernate-mapping>

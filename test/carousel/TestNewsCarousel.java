@@ -14,7 +14,7 @@ import com.news.carousel.service.CarouselManagementService;
 
 /**
  * 
- * @author 哈哈哈哈哈哈
+ * @author LW
  *
  */
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -33,6 +33,7 @@ public class TestNewsCarousel {
 
 	@Test
 	public void testListCarousel() {
+		
 		List<NewsCarouselDTO> listNewsCarouselDTO = carouselManagementService.listNewsCarouselDTO();
 		for (NewsCarouselDTO newsCarouselDTO : listNewsCarouselDTO) {
 			System.out.println(newsCarouselDTO.getNewsCarouselInfo());

@@ -1,28 +1,24 @@
-package com.news.navigation.domain.VO;
+package com.news.newsinfo.domain.VO;
 
 import java.util.List;
 
-import com.news.navigation.domain.DTO.News_NavigationInfoCountDTO;
+import com.news.newsinfo.domain.News_NewsInfo;
 
-/**
- * class 分页显示一级导航
- * 
- * @author LMJ 2018/4/27
- *
- */
-public class News_NavigationInfoCountVO {
+public class NewsinfoVO {
+
 	private int totalRecords = 0;
 
 	private int pageIndex = 1;
 
-	private int pageSize = 10;
+	private int pageSize = 8;
 
 	private int totalPages = 1;
 
 	private boolean havePrePage = false;
 	private boolean haveNextPage = false;
 
-	private List<News_NavigationInfoCountDTO> listNews_NavigationInfoCountDTO;
+	// 信息表
+	private List<News_NewsInfo> listNews;
 
 	private String search;
 
@@ -74,12 +70,12 @@ public class News_NavigationInfoCountVO {
 		this.haveNextPage = haveNextPage;
 	}
 
-	public List<News_NavigationInfoCountDTO> getListNews_NavigationInfoCountDTO() {
-		return listNews_NavigationInfoCountDTO;
+	public List<News_NewsInfo> getListNews() {
+		return listNews;
 	}
 
-	public void setListNews_NavigationInfoCountDTO(List<News_NavigationInfoCountDTO> listNews_NavigationInfoCountDTO) {
-		this.listNews_NavigationInfoCountDTO = listNews_NavigationInfoCountDTO;
+	public void setListNews(List<News_NewsInfo> listNews) {
+		this.listNews = listNews;
 	}
 
 	public String getSearch() {
@@ -92,10 +88,9 @@ public class News_NavigationInfoCountVO {
 
 	@Override
 	public String toString() {
-		return "News_NavigationInfoCountVO [totalRecords=" + totalRecords + ", pageIndex=" + pageIndex + ", pageSize="
-				+ pageSize + ", totalPages=" + totalPages + ", havePrePage=" + havePrePage + ", haveNextPage="
-				+ haveNextPage + ", listNews_NavigationInfoCountDTO=" + listNews_NavigationInfoCountDTO + ", search="
-				+ search + "]";
+		return "NewsinfoVO [totalRecords=" + totalRecords + ", pageIndex=" + pageIndex + ", pageSize=" + pageSize
+				+ ", totalPages=" + totalPages + ", havePrePage=" + havePrePage + ", haveNextPage=" + haveNextPage
+				+ ", listNews=" + listNews + ", search=" + search + "]";
 	}
 
 }

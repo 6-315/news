@@ -49,7 +49,7 @@
 							</s:if>
 						</s:iterator>
 
-						<!-- 模态框（Modal） -->
+						<!-- 添加的模态框（Modal） -->
 
 						<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
 							aria-labelledby="myModalLabel" aria-hidden="true"

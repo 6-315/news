@@ -1,27 +1,27 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 2018-4-21 15:16:38 by Hibernate Tools 3.5.0.Final -->
+<!-- Generated 2018-5-4 16:32:46 by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-    <class name="com.news.newsinfo.domain.News_Keword" table="NEWS_KEWORD">
-        <id name="NK_Id" type="java.lang.String">
-            <column name="NK_Id" />
-            <generator class="assigned" />
-        </id>
-        <property name="NK_Content" type="java.lang.String">
-            <column name="NK_Content" />
-        </property>
-        <property name="NK_Color" type="java.lang.String">
-            <column name="NK_Color" />
-        </property>
-        <property name="NK_Count" type="int">
-            <column name="NK_Count" />
-        </property>
-        <property name="NK_CreateTime" type="java.lang.String">
-            <column name="NK_CreateTime" />
-        </property>
-        <property name="NK_ModifyTime" type="java.lang.String">
-            <column name="NK_ModifyTime" />
-        </property>
-    </class>
+	<class name="com.news.newsinfo.domain.News_Keword" table="NEWS_KEWORD">
+		<id name="NK_Id" type="java.lang.String">
+			<column name="NK_Id" />
+			<generator class="assigned" />
+		</id>
+		<property name="NK_Content" type="java.lang.String">
+			<column name="NK_Content" />
+		</property>
+		<property name="NK_Color" type="java.lang.String">
+			<column name="NK_Color" />
+		</property>
+		<property name="NK_Count" type="int">
+			<column name="NK_Count" />
+		</property>
+		<property name="NK_CreateTime" type="java.lang.String">
+			<column name="NK_CreateTime" />
+		</property>
+		<property name="NK_ModifyTime" type="java.lang.String">
+			<column name="NK_ModifyTime" />
+		</property>
+	</class>
 </hibernate-mapping>

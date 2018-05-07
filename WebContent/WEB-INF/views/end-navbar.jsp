@@ -20,7 +20,7 @@
 </head>
 <body data-type="index">
 	<!--左边导航栏-->
-	<!-- <div class="tpl-page-container tpl-page-header-fixed"> -->
+	
 	<div class="tpl-left-nav tpl-left-nav-hover">
 		<div class="tpl-left-nav-list">
 			<ul class="tpl-left-nav-menu">
@@ -60,25 +60,43 @@
 							class="nav-link"> <i class="am-icon-home"></i> <span>管理导航</span>
 						</a></li>
 					</s:if>
-					
-					<li class="tpl-left-nav-item"><a href="javascript:;"
-						class="nav-link tpl-left-nav-link-list"> <i
-							class="am-icon-table"></i> <span>新闻管理</span> <i
-							class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
-					</a>
-						<ul class="tpl-left-nav-sub-menu">
-							<li><a
-								href="${pageContext.request.contextPath}/newsinfo/newsinfo_selectAction">
-									<i class="am-icon-angle-right"></i> <span>添加新闻</span> <i
-									class="am-icon-star tpl-left-nav-content-ico am-fr am-margin-right"></i>
-							</a> <a
-								href="${pageContext.request.contextPath}/newsinfo/newsinfo_manageAction">
-									<i class="am-icon-angle-right"></i> <span>新闻管理</span>
-							</a></li>
-						</ul></li>
-					
-					
-					
+
+
+					<s:if test="UJ_IsNewsManagement == 'management'.toString()">
+						<li class="tpl-left-nav-item">
+						<li class="tpl-left-nav-item"><a href="javascript:;"
+							class="nav-link tpl-left-nav-link-list"> <i
+								class="am-icon-table"></i> <span>新闻管理</span> <i
+								class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+						</a>
+							<ul class="tpl-left-nav-sub-menu">
+								<li><a
+									href="${pageContext.request.contextPath}/newsinfo/newsinfo_selectAction">
+										<i class="am-icon-angle-right"></i> <span>添加新闻</span> <i
+										class="am-icon-star tpl-left-nav-content-ico am-fr am-margin-right"></i>
+								</a> <a
+									href="${pageContext.request.contextPath}/newsinfo/newsinfo_manageAction">
+										<i class="am-icon-angle-right"></i> <span>新闻管理</span>
+								</a></li>
+							</ul></li>
+					</s:if>
+
+					<s:if test="UJ_IsNewsManagement == 'see'.toString()">
+						<li class="tpl-left-nav-item">
+						<li class="tpl-left-nav-item"><a href="javascript:;"
+							class="nav-link tpl-left-nav-link-list"> <i
+								class="am-icon-table"></i> <span>新闻管理</span> <i
+								class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+						</a>
+							<ul class="tpl-left-nav-sub-menu">
+								<li><a
+									href="${pageContext.request.contextPath}/newsinfo/newsinfo_manageAction">
+										<i class="am-icon-angle-right"></i> <span>新闻管理</span>
+								</a></li>
+							</ul></li>
+					</s:if>
+
+
 					<s:if test="UJ_IsNavigationManagement == 'see'.toString()">
 						<li class="tpl-left-nav-item"><a
 							href="${pageContext.request.contextPath}/navigation/navigation_listNavigationInfoByPageAction"
@@ -94,26 +112,7 @@
 					</s:if>
 
 
-					<s:if
-						test="UJ_IsNewsManagement == 'management'.toString() || UJ_IsNewsManagement == 'see'.toString()">
-						<li class="tpl-left-nav-item"><a href="javascript:;"
-							class="nav-link tpl-left-nav-link-list"> <i
-								class="am-icon-table"></i> <span>表格</span> <i
-								class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
-
-						</a>
-
-							<ul class="tpl-left-nav-sub-menu">
-
-								<li><a href="#"> <i class="am-icon-angle-right"></i> <span>文字表格</span>
-
-										<i
-										class="am-icon-star tpl-left-nav-content-ico am-fr am-margin-right"></i>
-
-								</a> <a href="#"> <i class="am-icon-angle-right"></i> <span>图片表格</span></a></li>
-
-							</ul></li>
-					</s:if>
+					
 				</s:iterator>
 			</ul>
 		</div>

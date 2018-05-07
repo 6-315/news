@@ -813,7 +813,9 @@
 .footer {
   position: relative;
   background: url(../images/footer.jpg) no-repeat bottom center;
-  background-size: cover; }
+  background-size: cover; 
+  margin-top:50px;
+  }
   .footer .ulink {
     padding-top: 250px;
     padding-bottom: 150px; }

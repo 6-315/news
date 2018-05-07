@@ -53,8 +53,9 @@
 										<span class="tpl-form-line-small-title">Title</span>
 									</label>
 									<div class="am-u-sm-9">
-										<input class="tpl-form-input" id="user-name"name="news_NewsInfo.NI_Title"
-											placeholder="请输入标题文字" type="text"> <small>请填写标题文字10-20字左右。</small>
+										<input class="tpl-form-input" id="user-name"
+											name="news_NewsInfo.NI_Title" placeholder="请输入标题文字"
+											type="text"> <small>请填写标题文字10-20字左右。</small>
 									</div>
 								</div>
 
@@ -74,13 +75,14 @@
 								</label>
 								<div style="width: 130px; height: 70px; margin-left: 26.5%">
 
-									<select class="form-control" name="news_NewsInfo.NI_BelongNavigation">
-									
-									<s:iterator value="listNavigation">
-										<option value="<s:property value="TNI_Id" />">
-										
-										<s:property value="TNI_Name" />
-										</option>
+									<select class="form-control"
+										name="news_NewsInfo.NI_BelongNavigation">
+
+										<s:iterator value="listNavigation">
+											<option value="<s:property value="TNI_Id" />">
+
+												<s:property value="TNI_Name" />
+											</option>
 										</s:iterator>
 									</select>
 								</div>
@@ -90,7 +92,8 @@
 									<label class="am-u-sm-3 am-form-label">SEO关键字 <span
 										class="tpl-form-line-small-title">SEO</span></label>
 									<div class="am-u-sm-9">
-										<input placeholder="输入SEO关键字" type="text" name="news_NewsInfo.NI_Keywords">
+										<input placeholder="输入SEO关键字" type="text"
+											name="news_NewsInfo.NI_Keywords">
 									</div>
 								</div>
 
@@ -99,7 +102,8 @@
 										<span class="tpl-form-line-small-title">Source</span>
 									</label>
 									<div class="am-u-sm-9">
-										<input id="user-weibo" placeholder="请添加分类用点号隔开" type="text" name="news_NewsInfo.NI_Source">
+										<input id="user-weibo" placeholder="请添加分类用点号隔开" type="text"
+											name="news_NewsInfo.NI_Source">
 										<div></div>
 									</div>
 								</div>

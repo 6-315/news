@@ -160,6 +160,7 @@ public class NewsInfoManagementAction extends ActionSupport implements ServletRe
 	 * 
 	 * @return
 	 */
+	//保存的action
 	public String savaAction() {
 		news_NewsInfo.setNI_IsDelete("1");
 		news_NewsInfo.setNI_IsShow("-1");
@@ -170,13 +171,13 @@ public class NewsInfoManagementAction extends ActionSupport implements ServletRe
 		newsInfoManagementService.addInfo(news_Content, news_NewsInfo);
 		return "sava";
 	}
-
+//查看二级菜单并且进入添加新闻
 	public String selectAction() {
 		listNavigation = newsInfoManagementService.getNavigation();
 		setMessage("success");
 		return "popo";
 	}
-
+//管理新闻
 	public String manageAction() {
 		newsinfoVO = new NewsinfoVO();
 		newsinfoVO.setPageIndex(page);//
@@ -186,13 +187,13 @@ public class NewsInfoManagementAction extends ActionSupport implements ServletRe
 		return "manage";
 
 	}
-
+//删除
 	public String deleteAction() {
 		news_NewsInfo.setNI_IsDelete("-1");
 		newsInfoManagementService.delete(news_NewsInfo);
 		return "delete";
 	}
-
+//修改
 	public String updateAction() {
 		newsInfoManagementService.update(news_NewsInfo);
 		return "update";

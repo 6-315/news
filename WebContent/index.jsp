@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
+
 <head>
 <meta charset="utf-8" />
 <title></title>
@@ -32,7 +33,7 @@
 								NEWS</span></a></li>
 					<li><a href=""
 						onclick="pgvSendClick({hottag:'v2.nav.match.link'})"
-						target="_blank">业务概览<span>BRAND  PRODUCT</span></a></li>
+						target="_blank">业务概览<span>BRAND PRODUCT</span></a></li>
 					<li><a class="" href="" onclick="">企业责任<span>RESPONSIBILITY</span></a>
 					</li>
 					<li><a class="" href="" onclick="">投资者专区<span>INVESTOR
@@ -150,26 +151,32 @@
 				<b></b>头条新闻<b></b> <a class="newsmore" href="">更多>></a>
 			</h2>
 			<ul class="clearfix">
-				<li><a href="" target="_blank"> <span class="time">
-							<span>19</span>2018.04
-					</span> <span class="txtwrapper"> <b>陈旭访问法国 深化中法教育合作</b> <b>4月14日至16日，清华大学党委书记、校务委员会主任陈旭前往法国，分别访问法国科学院、巴黎综合理工大学、巴黎科研人文大学等高校及科研院所，签署校际合作...
-						</b>
+				<li><a href="" target="_blank" style="display: block;"> <span
+						class="time"> <span>19</span>2018.04
 					</span>
+						<div class="txtwrapper">
+							<h3>陈旭访问法国 深化中法教育合作</h3>
+							<p>4月14日至16日，清华大学党委书记、校务委员会主任陈旭前往法国，分别访问法国科学院、巴黎综合理工大学、巴黎科研人文大学等高校及科研院所，签署校际合作...
+							</p>
+						</div>
 				</a></li>
-
-				<li><a href="" target="_blank"> <span class="time">
-							<span>19</span>2018.04
-					</span> <span class="txtwrapper"> <b>邱勇会见挪威奥斯陆大学校长斯韦恩·斯托伦
-								授予斯滕塞斯教授名誉教授学衔</b> <b>4月17日下午，校长邱勇在工字厅会见了奥斯陆大学校长斯韦恩·斯托伦一行，就如何深化两校的合作交流进行了探讨，并授予随行来访的奥斯陆大学尼尔斯·克里斯蒂...
-						</b>
+				<li><a href="" target="_blank" style="display: block;"> <span
+						class="time"> <span>19</span>2018.04
 					</span>
+						<div class="txtwrapper" >
+							<h3>陈旭访问法国 深化中法教育合作</h3>
+							<p>4月14日至16日，清华大学党委书记、校务委员会主任陈旭前往法国，分别访问法国科学院、巴黎综合理工大学、巴黎科研人文大学等高校及科研院所，签署校际合作...
+							</p>
+						</div>
 				</a></li>
-				<li><a href="" target="_blank"> <span class="time">
-							<span>19</span>2018.04
-					</span> <span class="txtwrapper"> <b>邱勇会见挪威奥斯陆大学校长斯韦恩·斯托伦
-								授予斯滕塞斯教授名誉教授学衔</b> <b>4月17日下午，校长邱勇在工字厅会见了奥斯陆大学校长斯韦恩·斯托伦一行，就如何深化两校的合作交流进行了探讨，并授予随行来访的奥斯陆大学尼尔斯·克里斯蒂...
-						</b>
+				<li><a href="" target="_blank" style="display: block;"> <span
+						class="time"> <span>19</span>2018.04
 					</span>
+						<div class="txtwrapper">
+							<h3>陈旭访问法国 深化中法教育合作</h3>
+							<p>4月14日至16日，清华大学党委书记、校务委员会主任陈旭前往法国，分别访问法国科学院、巴黎综合理工大学、巴黎科研人文大学等高校及科研院所，签署校际合作...
+							</p>
+						</div>
 				</a></li>
 			</ul>
 		</div>
@@ -178,7 +185,7 @@
 		<div class="info_center">
 			<div class="information_left">
 				<h2>
-					<b></b>咨询动态<b></b>
+					<b></b>咨询动态<b></b><a class="newsmore" href="">更多>></a>
 				</h2>
 				<div class="from_1">
 					<ul class="clearfix" style="margin-left: 20px;">
@@ -217,6 +224,7 @@
 								</a>
 							</div>
 						</li>
+						
 					</ul>
 					<div class="solid_2">
 						<hr />
@@ -233,7 +241,7 @@
 			<div class="information_right">
 				<div class="right_top">
 					<h2>
-						<b></b>业务动态<b></b>
+						<b></b>业务动态<b></b><a class="newsmore" href="">更多>></a>
 					</h2>
 					<div class="from_2">
 						<ul class="clearfix" style="margin-left: 20px;">
@@ -277,7 +285,7 @@
 				</div>
 				<div class="right_bottom">
 					<h2>
-						<b></b>业务动态<b></b>
+						<b></b>业务动态<b></b><a class="newsmore" href="">更多>></a>
 					</h2>
 					<div class="from_3">
 						<ul class="clearfix" style="margin-left: 20px;">

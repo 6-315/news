@@ -188,11 +188,17 @@ public class CarouselManagementAction extends ActionSupport implements ServletRe
 	 * 
 	 * @return
 	 */
+	// 添加轮播图
 	public String detailAction() {
+		if (news_CarouselInfo.getCI_BelongNews() == null) {
+			setMessage("NO Title");
+			return "save";
+		}
 		if (myfileFileName == null) {
 			setMessage("error");
 			return "save";
 		}
+
 		String path = "C://news/";
 		path = path + "carousel/img/";
 		String fileName = BuildUuid.getUuid() + "_" + myfileFileName;
@@ -209,6 +215,7 @@ public class CarouselManagementAction extends ActionSupport implements ServletRe
 		return "save";
 	}
 
+	// 查看轮播图信息可以拿到ID
 	public String selectAction() {
 		// ListNews_CarouselInfol =
 		// carouselManagementService.ListNews_CarouselInfol();
@@ -216,18 +223,26 @@ public class CarouselManagementAction extends ActionSupport implements ServletRe
 		listNews = carouselManagementService.getCarouselNews();
 		return "listCarousel";
 	}
+	public String selectAction2() {
+		// ListNews_CarouselInfol =
+		// carouselManagementService.ListNews_CarouselInfol();
+		listNewsCarouselDTO = carouselManagementService.listNewsCarouselDTO();
+		listNews = carouselManagementService.getCarouselNews();
+		return "123";
+	}
 
 	/**
 	 * update
 	 * 
 	 */
-
+	// 修改图片
 	public String updateAction() {
 		System.out.println(news_CarouselInfo);
 		carouselManagementService.update(news_CarouselInfo);
 		return "update";
 	}
 
+	// 删除
 	public String deleteAction() {
 		System.out.println("pppp" + news_CarouselInfo);
 		news_CarouselInfo.setCI_IsDelete("-1");

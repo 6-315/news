@@ -6,10 +6,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>轮播图</title>
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath }/css/MainWarp.css" />
-<script type="text/javascript"
-	src="${pageContext.request.contextPath }/js/lunbotu.js"></script>
+<link rel="stylesheet" href="${pageContext.request.contextPath }/css/MainWarp.css" />
+<script type="text/javascript" src="${pageContext.request.contextPath }/js/lunbotu.js"></script>
 </head>
 <body>
 	<div id="lunbotu" class="flexslider">

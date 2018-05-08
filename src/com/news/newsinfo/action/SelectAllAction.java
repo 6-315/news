@@ -9,7 +9,8 @@ import org.apache.struts2.interceptor.ServletRequestAware;
 import org.apache.struts2.interceptor.ServletResponseAware;
 
 import com.news.newsinfo.domain.News_NewsInfo;
-import com.news.newsinfo.domain.DTO.NewsinfoDTO;
+import com.news.newsinfo.domain.DTO.AllNavigationNewsDTO;
+import com.news.newsinfo.domain.DTO.NewsDTO;
 import com.news.newsinfo.domain.DTO.SelectAllDTO;
 import com.news.newsinfo.service.NewsInfoManagementService;
 import com.opensymphony.xwork2.ActionSupport;
@@ -76,8 +77,26 @@ public class SelectAllAction extends ActionSupport implements ServletResponseAwa
 	 * 使用域模型SelectAllDTO
 	 */
 	private List<SelectAllDTO> listSelectAllDTO;
-	private NewsinfoDTO newsinfoDTO;
+	private NewsDTO newsinfoDTO;
 	private News_NewsInfo news;
+	private List<News_NewsInfo> listNews;
+	private List<AllNavigationNewsDTO> allNavigationNewsDTO;
+
+	public List<AllNavigationNewsDTO> getAllNavigationNewsDTO() {
+		return allNavigationNewsDTO;
+	}
+
+	public void setAllNavigationNewsDTO(List<AllNavigationNewsDTO> allNavigationNewsDTO) {
+		this.allNavigationNewsDTO = allNavigationNewsDTO;
+	}
+
+	public List<News_NewsInfo> getListNews() {
+		return listNews;
+	}
+
+	public void setListNews(List<News_NewsInfo> listNews) {
+		this.listNews = listNews;
+	}
 
 	public List<SelectAllDTO> getListSelectAllDTO() {
 		return listSelectAllDTO;
@@ -95,11 +114,11 @@ public class SelectAllAction extends ActionSupport implements ServletResponseAwa
 		this.listSelectAllDTO = listSelectAllDTO;
 	}
 
-	public NewsinfoDTO getNewsinfoDTO() {
+	public NewsDTO getNewsinfoDTO() {
 		return newsinfoDTO;
 	}
 
-	public void setNewsinfoDTO(NewsinfoDTO newsinfoDTO) {
+	public void setNewsinfoDTO(NewsDTO newsinfoDTO) {
 		this.newsinfoDTO = newsinfoDTO;
 	}
 
@@ -116,8 +135,13 @@ public class SelectAllAction extends ActionSupport implements ServletResponseAwa
 		return "ok";
 	}
 
-	/**
-	 * 结束
-	 */
+	// 查找所有新闻还有新闻的详细内容
+	public String allNewsAction() {
+		/**
+		 * 拿到所有新闻及其内容
+		 */
+		allNavigationNewsDTO = newsInfoManagementService.getExact();
+		return "allNews";
+	}
 
 }

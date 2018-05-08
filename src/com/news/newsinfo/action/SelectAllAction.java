@@ -83,6 +83,14 @@ public class SelectAllAction extends ActionSupport implements ServletResponseAwa
 		return listSelectAllDTO;
 	}
 
+	public News_NewsInfo getNews() {
+		return news;
+	}
+
+	public void setNews(News_NewsInfo news) {
+		this.news = news;
+	}
+
 	public void setListSelectAllDTO(List<SelectAllDTO> listSelectAllDTO) {
 		this.listSelectAllDTO = listSelectAllDTO;
 	}
@@ -104,8 +112,8 @@ public class SelectAllAction extends ActionSupport implements ServletResponseAwa
 
 	// 查找详细新闻，根据新闻ID
 	public String exactAction() {
-		newsinfoDTO = newsInfoManagementService.getExact(news.getNI_Content());
-		return "";
+		newsinfoDTO = newsInfoManagementService.getExact(news.getNI_Id());
+		return "ok";
 	}
 
 	/**

@@ -1,16 +1,25 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="/struts-tags" prefix="s"%>
 <!DOCTYPE html >
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>轮播图</title>
-<link rel="stylesheet" href="${pageContext.request.contextPath }/css/MainWarp.css" />
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath }/css/MainWarp.css" />
 <script type="text/javascript" src="../../js/lunbotu.js"></script>
 </head>
 <body>
 
-	<div id="lunbotu" class="flexslider">
+	<s:iterator value="listNewsCarouselDTO">
+		<h1>
+			hahahahah_
+			<s:property value="newsInfo.NI_Title" />
+		</h1>
+	</s:iterator>
+
+	<%-- <div id="lunbotu" class="flexslider">
 		<div class="flex-viewport"
 			style="overflow: hidden; position: relative;">
 			<ul class="slides"
@@ -40,6 +49,6 @@
 				easing : "swing"
 			});
 		});
-	</script>
+	</script> --%>
 </body>
 </html>

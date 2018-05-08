@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="/struts-tags" prefix="s"%>
 <!DOCTYPE html>
 <html>
 
@@ -7,18 +8,32 @@
 <meta charset="utf-8" />
 <title></title>
 </head>
-<link rel="stylesheet" href="${pageContext.request.contextPath }/css/bootstrap.css" />
-<link rel="stylesheet" href="${pageContext.request.contextPath }/css/font-awesome.min.css" />
-<link rel="stylesheet" href="${pageContext.request.contextPath }/css/main.css" />
-<link rel="stylesheet" href="${pageContext.request.contextPath }/css/bootstrap-theme.css" />
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/css/MainWarp.csscss/Header.css" />
-<link rel="stylesheet" href="${pageContext.request.contextPath }/css/lunbotu.css" />
-<link rel="stylesheet" href="${pageContext.request.contextPath }/css/MainWarp.css" />
-<link rel="stylesheet" href="${pageContext.request.contextPath }/css/home.css" />
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/css/index.css" />
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath }/css/bootstrap.css" />
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath }/css/font-awesome.min.css" />
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath }/css/main.css" />
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath }/css/bootstrap-theme.css" />
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath }/css/MainWarp.csscss/Header.css" />
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath }/css/lunbotu.css" />
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath }/css/MainWarp.css" />
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath }/css/home.css" />
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath }/css/index.css" />
 <body>
+
+
+	<s:action name="carousel_selectAction2" namespace="/carousel"
+		executeResult="true" />
+
 	<!--TOP S-->
-	
+
 	<div id="lunbotu" class="flexslider">
 		<div class="flex-viewport"
 			style="overflow: hidden; position: relative;">
@@ -59,7 +74,7 @@
 				<li><a href="" target="_blank" style="display: block;"> <span
 						class="time"> <span>19</span>2018.04
 					</span>
-						<div class="txtwrapper" >
+						<div class="txtwrapper">
 							<h3>陈旭访问法国 深化中法教育合作</h3>
 							<p>4月14日至16日，清华大学党委书记、校务委员会主任陈旭前往法国，分别访问法国科学院、巴黎综合理工大学、巴黎科研人文大学等高校及科研院所，签署校际合作...
 							</p>
@@ -120,7 +135,7 @@
 								</a>
 							</div>
 						</li>
-						
+
 					</ul>
 					<div class="solid_2">
 						<hr />
@@ -309,42 +324,42 @@
 			<div class="home-service-wrap">
 				<div class="home-service-list">
 					<ul style="padding-left: 0px;">
-						<li class="home-service-item">
-							<a href="" >
-								<span class="home-service-icon"> <img src="" alt="镜像服务"> <img src="" alt="" class="active-img"> </span>
-								<span class="home-service-m-icon"> <img src="" alt="镜像服务"> </span>
-								<b class="home-service-tit"> 关于中粮 </b> </a>
-						</li>
-						<li class="home-service-item">
-							<a href="">
-								<span class="home-service-icon"> <img src="" alt="运维服务"> <img src="" alt="运维服务" class="active-img"> </span>
-								<span class="home-service-m-icon"> <img src="" alt=""> </span>
-								<b class="home-service-tit"> 咨询动态 </b> </a>
-						</li>
-						<li class="home-service-item">
-							<a href="" >
-								<span class="home-service-icon"> <img src="" alt=""> <img src="" alt="软件服务" class="active-img"> </span>
-								<span class="home-service-m-icon"> <img src="" alt="软件服务"> </span>
-								<b class="home-service-tit"> 业务概况 </b> </a>
-						</li>
-						<li class="home-service-item">
-							<a href="" >
-								<span class="home-service-icon"> <img src="" alt="安全服务"> <img src="" alt="安全服务" class="active-img"> </span>
-								<span class="home-service-m-icon"> <img src="" alt=""> </span>
-								<b class="home-service-tit"> 信息公开 </b> </a>
-						</li>
-						<li class="home-service-item">
-							<a href="" >
-								<span class="home-service-icon"> <img src="" alt="建站服务"> <img src="" alt="" class="active-img"> </span>
-								<span class="home-service-m-icon"> <img src="" alt="建站服务"> </span>
-								<b class="home-service-tit"> 企业责任 </b> </a>
-						</li>
-						<li class="home-service-item">
-							<a href="" >
-								<span class="home-service-icon"> <img src="" alt="微信小程序"> <img src="" alt="微信小程序" class="active-img"> </span>
-								<span class="home-service-m-icon"> <img src="" alt=""> </span>
-								<b class="home-service-tit"> 加入中粮 </b> </a>
-						</li>
+						<li class="home-service-item"><a href=""> <span
+								class="home-service-icon"> <img src="" alt="镜像服务">
+									<img src="" alt="" class="active-img">
+							</span> <span class="home-service-m-icon"> <img src="" alt="镜像服务">
+							</span> <b class="home-service-tit"> 关于中粮 </b>
+						</a></li>
+						<li class="home-service-item"><a href=""> <span
+								class="home-service-icon"> <img src="" alt="运维服务">
+									<img src="" alt="运维服务" class="active-img">
+							</span> <span class="home-service-m-icon"> <img src="" alt="">
+							</span> <b class="home-service-tit"> 咨询动态 </b>
+						</a></li>
+						<li class="home-service-item"><a href=""> <span
+								class="home-service-icon"> <img src="" alt=""> <img
+									src="" alt="软件服务" class="active-img">
+							</span> <span class="home-service-m-icon"> <img src="" alt="软件服务">
+							</span> <b class="home-service-tit"> 业务概况 </b>
+						</a></li>
+						<li class="home-service-item"><a href=""> <span
+								class="home-service-icon"> <img src="" alt="安全服务">
+									<img src="" alt="安全服务" class="active-img">
+							</span> <span class="home-service-m-icon"> <img src="" alt="">
+							</span> <b class="home-service-tit"> 信息公开 </b>
+						</a></li>
+						<li class="home-service-item"><a href=""> <span
+								class="home-service-icon"> <img src="" alt="建站服务">
+									<img src="" alt="" class="active-img">
+							</span> <span class="home-service-m-icon"> <img src="" alt="建站服务">
+							</span> <b class="home-service-tit"> 企业责任 </b>
+						</a></li>
+						<li class="home-service-item"><a href=""> <span
+								class="home-service-icon"> <img src="" alt="微信小程序">
+									<img src="" alt="微信小程序" class="active-img">
+							</span> <span class="home-service-m-icon"> <img src="" alt="">
+							</span> <b class="home-service-tit"> 加入中粮 </b>
+						</a></li>
 					</ul>
 				</div>
 			</div>
@@ -359,23 +374,12 @@
 						<div class="txtwrapper clearfix">
 							<h2>常用链接</h2>
 							<ul>
-								<li><a
-									href=""
-									target="_blank">投资者专区</a></li>
-								<li><a
-									href=""
-									target="_blank">加入中粮</a></li>
-								<li><a href=""
-									target="_blank">隐私政策</a></li>
-								<li><a
-									href=""
-									target="_blank">网站地图</a></li>
-								<li><a
-									href=""
-									target="_blank">实用信息</a></li>
-								<li><a
-									href=""
-									target="_blank">联系我们</a></li>
+								<li><a href="" target="_blank">投资者专区</a></li>
+								<li><a href="" target="_blank">加入中粮</a></li>
+								<li><a href="" target="_blank">隐私政策</a></li>
+								<li><a href="" target="_blank">网站地图</a></li>
+								<li><a href="" target="_blank">实用信息</a></li>
+								<li><a href="" target="_blank">联系我们</a></li>
 							</ul>
 						</div>
 					</div>
@@ -419,8 +423,11 @@
 								});
 					</script>
 					<!--class="copyrights" -->
-					<div style="color:#fff;opacity: 0.6;border-top: 1px solid rgba(255, 255, 255, 0.4);padding-top: 20px;line-height: 0;font-size: 12px;">					
-						版权所有<a href="${pageContext.request.contextPath}/jurisdiction/jurisdiction_loginAction" style="color:#fff" target="_blank">©</a>2017 中粮集团有限公司<span>京ICP备05002557号</span>
+					<div
+						style="color: #fff; opacity: 0.6; border-top: 1px solid rgba(255, 255, 255, 0.4); padding-top: 20px; line-height: 0; font-size: 12px;">
+						版权所有<a
+							href="${pageContext.request.contextPath}/jurisdiction/jurisdiction_loginAction"
+							style="color: #fff" target="_blank">©</a>2017 中粮集团有限公司<span>京ICP备05002557号</span>
 					</div>
 				</div>
 			</div>

@@ -14,7 +14,7 @@ import org.aspectj.util.FileUtil;
 import com.news.navigation.domain.News_TwoNavigationInfo;
 import com.news.newsinfo.domain.News_Content;
 import com.news.newsinfo.domain.News_NewsInfo;
-import com.news.newsinfo.domain.DTO.NewsinfoDTO;
+import com.news.newsinfo.domain.DTO.AllNavigationNewsDTO;
 import com.news.newsinfo.domain.VO.NewsinfoVO;
 import com.news.newsinfo.service.NewsInfoManagementService;
 import com.opensymphony.xwork2.ActionSupport;

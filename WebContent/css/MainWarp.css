@@ -179,9 +179,10 @@ li {
 }
 
 .events h2 a {
-	margin-left: 750px;
+	margin-left: 890px;
 	color: #777777;
 	text-decoration: none;
+	font-size: 18px;
 }
 
 .events h2 a:hover {
@@ -323,6 +324,13 @@ li {
 	margin: 30px 5px;
 }
 
+.information_left h2 a{
+	margin-left: 445px;
+	color: #777777;
+	text-decoration: none;
+	font-size: 18px;
+}
+
 .information_left.from_1 {
 	height: auto;
 	width: auto;
@@ -338,8 +346,8 @@ li {
 }
 
 .information_left ul li {
-	/*list-style: disc;*/
-	list-style: none;
+	list-style: disc;
+	/* list-style: none; */
 	float: left;
 	color: #000000;
 	font-size: 16PX;
@@ -450,7 +458,18 @@ li {
 	margin-left: 42px;
 	display: block;
 }
-
+.information_right .right_top h2 a{
+	margin-left: 135px;
+	color: #777777;
+	text-decoration: none;
+	font-size: 18px;
+}
 .information_right .right_bottom {
 	margin-top: 87.4px;
+}
+.information_right .right_bottom h2 a{
+	margin-left: 135px;
+	color: #777777;
+	text-decoration: none;
+	font-size: 18px;
 }

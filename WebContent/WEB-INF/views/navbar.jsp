@@ -5,6 +5,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>侧边栏</title>
+<link rel="stylesheet" href="${pageContext.request.contextPath }/css/bootstrap.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath }/css/MainWarp.css" />
+<script src="${pageContext.request.contextPath }/js/jquery1.8.2.js"></script>
 </head>
 <body>
 	iv class="MainWrap">

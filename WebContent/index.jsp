@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath }/css/font-awesome.min.css" />
 <link rel="stylesheet" href="${pageContext.request.contextPath }/css/main.css" />
 <link rel="stylesheet" href="${pageContext.request.contextPath }/css/bootstrap-theme.css" />
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/css/MainWarp.csscss/Header.css" />
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/css/Header.css" />
 <link rel="stylesheet" href="${pageContext.request.contextPath }/css/lunbotu.css" />
 <link rel="stylesheet" href="${pageContext.request.contextPath }/css/MainWarp.css" />
 <link rel="stylesheet" href="${pageContext.request.contextPath }/css/home.css" />

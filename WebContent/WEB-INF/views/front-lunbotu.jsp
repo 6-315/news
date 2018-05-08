@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>轮播图</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath }/css/MainWarp.css" />
-<script type="text/javascript" src="../../js/lunbotu.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath }/js/lunbotu.js"></script>
 </head>
 <body>
 

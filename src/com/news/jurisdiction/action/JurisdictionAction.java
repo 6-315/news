@@ -135,7 +135,8 @@ public class JurisdictionAction extends ActionSupport implements ServletResponse
 		news_UserJurisdictionVO = new News_UserJurisdictionVO();
 		news_UserJurisdictionVO.setPageIndex(page);
 		news_UserJurisdictionVO.setSearch(search);
-		news_UserJurisdictionVO = jurisdictionService.listJurisdictionInfoByPage(news_UserJurisdictionVO);
+		String userId = (String) request.getSession().getAttribute("userId");
+		news_UserJurisdictionVO = jurisdictionService.listJurisdictionInfoByPage(userId, news_UserJurisdictionVO);
 		return "detail";
 	}
 
@@ -165,6 +166,7 @@ public class JurisdictionAction extends ActionSupport implements ServletResponse
 			// 登录成功
 			// 存储到Session中
 			request.getSession().setAttribute("realUser", realUser);
+			request.getSession().setAttribute("userId", realUser.getUJ_Id());
 			return "yemian";
 		} else {
 			// 登录失败
@@ -194,11 +196,11 @@ public class JurisdictionAction extends ActionSupport implements ServletResponse
 
 		return "endNavbar";
 	}
-	
+
 	/**
 	 * 登录页面
 	 */
-	public String loginAction(){
+	public String loginAction() {
 		return "login";
 	}
 }

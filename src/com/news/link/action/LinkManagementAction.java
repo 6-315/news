@@ -206,7 +206,15 @@ public class LinkManagementAction extends ActionSupport implements ServletRespon
 		}
 	}
 
-	
+	/**
+	 * 底部
+	 */
+	public String footerAction(){
+		news_LinkInfoCountVO = new News_LinkInfoCountVO();
+		
+		news_LinkInfoCountVO = linkManagementService.listLinkInfoByPage(news_LinkInfoCountVO);
+		return "footer";
+	}
 	
 	/**
 	 * 跳转到后台

@@ -177,7 +177,6 @@ public class NavigationManagementAction extends ActionSupport implements Servlet
 		news_NavigationInfoCountVO.setPageIndex(page);
 		news_NavigationInfoCountVO.setSearch(search);
 		news_NavigationInfoCountVO = navigationManagementService.listNavigationInfoByPage(news_NavigationInfoCountVO);
-		System.out.println(news_NavigationInfoCountVO.getListNews_NavigationInfoCountDTO());
 		return "detail";
 	}
 
@@ -198,6 +197,15 @@ public class NavigationManagementAction extends ActionSupport implements Servlet
 		return "listNavigationInfoByPage";
 	}
 
+	/**
+	 * 首页导航
+	 */
+	public String headerAction(){
+		news_NavigationInfoCountVO = new News_NavigationInfoCountVO();
+		news_NavigationInfoCountVO = navigationManagementService.listNavigationInfoByPage(news_NavigationInfoCountVO);
+		return "header";
+	}
+	
 	/**
 	 * 跳转到后台
 	 */

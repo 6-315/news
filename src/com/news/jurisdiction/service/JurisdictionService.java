@@ -8,7 +8,7 @@ public interface JurisdictionService {
 
 	public int addJurisdiction(News_UserJurisdiction news_UserJurisdiction);
 
-	public News_UserJurisdictionVO listJurisdictionInfoByPage(News_UserJurisdictionVO news_UserJurisdictionVO);
+	public News_UserJurisdictionVO listJurisdictionInfoByPage(String userId, News_UserJurisdictionVO news_UserJurisdictionVO);
 
 	public int updateJurisdictionInfo(News_UserJurisdiction news_UserJurisdiction);
 

@@ -65,7 +65,10 @@
 									<s:iterator value="newsinfoVO.listNews">
 										<tr>
 											<td><input type="checkbox"></td>
-											<td><a href="#"><s:property value="NI_Title" /> </a></td>
+											<td><a
+												href="${pageContext.request.contextPath}/newsinfo/info_exactAction?news.NI_Id=<s:property
+														value="NI_Id" />"><s:property
+														value="NI_Title" /> </a></td>
 											<td><s:if test="NI_IsCarousel == 1">不可轮播</s:if> <s:if
 													test="NI_IsCarousel == -1">轮播</s:if></td>
 											<td><s:if test="NI_IsShow == 1">发布</s:if> <s:if
@@ -75,6 +78,15 @@
 													test="NI_IsRecommend == -1">推荐</s:if></td>
 											<td class="am-hide-sm-only"><s:property
 													value="NI_ModifyTime" /></td>
+<<<<<<< HEAD
+=======
+
+
+											<s:if test="UJ_IsNewsManagement == 'management'.toString()">
+												<td>
+													<div class="am-btn-toolbar">
+														<div class="am-btn-group am-btn-group-xs">
+>>>>>>> origin/LW
 
 											<s:iterator value="#session.realUser">
 												<s:if test="UJ_IsNewsManagement == 'management'.toString()">
@@ -104,6 +116,14 @@
 												</s:if>
 											</s:iterator>
 
+<<<<<<< HEAD
+=======
+													</div>
+												</td>
+											</s:if>
+
+
+>>>>>>> origin/LW
 										</tr>
 									</s:iterator>
 								</tbody>

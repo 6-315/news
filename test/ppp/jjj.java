@@ -9,7 +9,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.news.newsinfo.domain.News_Content;
 import com.news.newsinfo.domain.News_NewsInfo;
-import com.news.newsinfo.domain.DTO.NewsinfoDTO;
+import com.news.newsinfo.domain.DTO.AllNavigationNewsDTO;
 import com.news.newsinfo.domain.DTO.SelectAllDTO;
 import com.news.newsinfo.service.NewsInfoManagementService;
 
@@ -50,10 +50,4 @@ public class jjj {
 		System.out.println(listNews);
 	}
 
-	@Test
-	public void oo() {
-		News_Content news_Content;
-		NewsinfoDTO newsinfoDTO = newsInfoManagementService.getExact("f1c37f5d-aad2-41dc-8643-42ffb68a478f");
-		System.out.println(newsinfoDTO.getNews_Content());
-	}
 }

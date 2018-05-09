@@ -129,12 +129,6 @@ public class NewsInfoManagementDaoImpl implements NewsInfoManagementDao {
 	}
 
 	@Override
-	public News_NewsInfo getnew(String trim) {
-
-		return null;
-	}
-
-	@Override
 	public News_NewsInfo getinfo(String ni_NewsId) {
 		News_NewsInfo news_NewsInfo = new News_NewsInfo();
 		Session session = getSession();

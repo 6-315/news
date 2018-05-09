@@ -7,7 +7,8 @@ import com.news.navigation.domain.News_TwoNavigationInfo;
 import com.news.newsinfo.dao.NewsInfoManagementDao;
 import com.news.newsinfo.domain.News_Content;
 import com.news.newsinfo.domain.News_NewsInfo;
-import com.news.newsinfo.domain.DTO.NewsinfoDTO;
+import com.news.newsinfo.domain.DTO.AllNavigationNewsDTO;
+import com.news.newsinfo.domain.DTO.NewsDTO;
 import com.news.newsinfo.domain.DTO.SelectAllDTO;
 import com.news.newsinfo.domain.VO.NewsinfoVO;
 import com.news.newsinfo.service.NewsInfoManagementService;
@@ -86,8 +87,15 @@ public class NewsInfoManagementServiceImpl implements NewsInfoManagementService 
 		for (News_TwoNavigationInfo news_TwoNavigationInfo : listTwo) {
 			listNewsNewsInfo = new ArrayList<>();
 			selectAllDTO = new SelectAllDTO();
-			listNewsNewsInfo = (List<News_NewsInfo>) newsInfoManagementDao.listObject(
-					"from News_NewsInfo where NI_BelongNavigation = '" + news_TwoNavigationInfo.getTNI_Id() + "'");
+			/*
+			 * listNewsNewsInfo = (List<News_NewsInfo>)
+			 * newsInfoManagementDao.listObject(
+			 * "from News_NewsInfo where NI_BelongNavigation = '" +
+			 * news_TwoNavigationInfo.getTNI_Id() + "'");
+			 */
+			listNewsNewsInfo = (List<News_NewsInfo>) newsInfoManagementDao.queryForPage(
+					"from News_NewsInfo where NI_BelongNavigation = '" + news_TwoNavigationInfo.getTNI_Id() + "'", 0,
+					5);
 			selectAllDTO.setNews_TwoNavigationInfo(news_TwoNavigationInfo);
 			selectAllDTO.setNews_NewsInfo(listNewsNewsInfo);
 			listSelectAllDTO.add(selectAllDTO);
@@ -211,11 +219,11 @@ public class NewsInfoManagementServiceImpl implements NewsInfoManagementService 
 	}
 
 	@Override
-	public NewsinfoDTO getExact(String ni_NewsId) {
+	public NewsDTO getExact(String ni_NewsId) {
 		if (ni_NewsId == null || ni_NewsId.trim().length() <= 0) {
 			return null;
 		}
-		NewsinfoDTO newsinfoDTO = new NewsinfoDTO();
+		NewsDTO newsinfoDTO = new NewsDTO();
 		News_NewsInfo news_NewsInfo = new News_NewsInfo();
 		News_Content news_Content = new News_Content();
 		news_NewsInfo = newsInfoManagementDao.getinfo(ni_NewsId);
@@ -229,4 +237,46 @@ public class NewsInfoManagementServiceImpl implements NewsInfoManagementService 
 		return newsinfoDTO;
 	}
 
+	@Override
+	public List<News_NewsInfo> getAllNews() {
+		List<News_NewsInfo> listnews;
+		listnews = (List<News_NewsInfo>) newsInfoManagementDao.queryForPage("from News_NewsInfo where NI_IsDelete =  1",
+				0, 3);
+		return listnews;
+	}
+
+	/**
+	 * 查询某栏目的所有新闻
+	 */
+	@Override
+	public List<AllNavigationNewsDTO> getExact() {
+		List<News_TwoNavigationInfo> listAllTwoNavigation = new ArrayList<>();
+		List<NewsDTO> listNews = new ArrayList<>();
+		List<News_NewsInfo> listNewsInfo = new ArrayList<>();
+		AllNavigationNewsDTO allNavigationNewsDTO = new AllNavigationNewsDTO();
+		List<AllNavigationNewsDTO> listAllNavigation = new ArrayList<>();
+		News_Content newsContent = new News_Content();
+		NewsDTO newsDTO = new NewsDTO();
+		listAllTwoNavigation = (List<News_TwoNavigationInfo>) newsInfoManagementDao
+				.listObject("from News_TwoNavigationInfo");
+		for (News_TwoNavigationInfo news_TwoNavigationInfo : listAllTwoNavigation) {
+			listNews = new ArrayList<>();
+			allNavigationNewsDTO = new AllNavigationNewsDTO();
+			newsContent = new News_Content();
+			// 获取该栏目下的7条新闻
+			listNewsInfo = (List<News_NewsInfo>) newsInfoManagementDao.queryForPage(
+					"from News_NewsInfo where NI_BelongNavigation='" + news_TwoNavigationInfo.getTNI_Id() + "'", 0, 7);
+			for (News_NewsInfo news_NewsInfo : listNewsInfo) {
+				newsDTO = new NewsDTO();
+				newsContent = newsInfoManagementDao.getContent(news_NewsInfo.getNI_Content());
+				newsDTO.setNews_Content(newsContent);
+				newsDTO.setNews_NewsInfo(news_NewsInfo);
+				listNews.add(newsDTO);
+			}
+			allNavigationNewsDTO.setListNewsDTO(listNews);
+			allNavigationNewsDTO.setNews_TwoNavigationInfo(news_TwoNavigationInfo);
+			listAllNavigation.add(allNavigationNewsDTO);
+		}
+		return listAllNavigation;
+	}
 }

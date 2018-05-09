@@ -59,8 +59,6 @@ public interface NewsInfoManagementDao {
 
 	public News_TwoNavigationInfo getnews(String trim);
 
-	public News_NewsInfo getnew(String trim);
-
 	public News_NewsInfo getinfo(String ni_Content);
 
 	public News_Content getContent(String ni_Content);

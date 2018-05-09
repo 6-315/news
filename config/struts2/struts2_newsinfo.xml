@@ -26,6 +26,8 @@
 			</result>
 			<result name="ok">/WEB-INF/views/newsInfo/exact.jsp
 			</result>
+			<result name="allNews">/WEB-INF/views/navbar.jsp
+			</result>
 		</action>
 	</package>
 </struts>

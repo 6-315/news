@@ -18,7 +18,6 @@
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/css/index.css" />
 <body>
 	<!--TOP S-->
-	
 	<div id="lunbotu" class="flexslider">
 		<div class="flex-viewport"
 			style="overflow: hidden; position: relative;">

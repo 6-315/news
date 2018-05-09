@@ -6,13 +6,134 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>底部</title>
+<link rel="stylesheet" href="${pageContext.request.contextPath }/css/bootstrap.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath }/css/font-awesome.min.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath }/css/main.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath }/css/bootstrap-theme.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath }/css/home.css" />
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/css/index.css" />
+<script src="${pageContext.request.contextPath }/js/jquery1.8.2.js"></script>
 </head>
 <body>
+<<<<<<< HEAD
 	<div class="footer"
 		style="background-image: url(img/500604250_banner.jpg)">
 
 
 
+=======
+	div style="width: 1240px; margin: auto;">
+		<div class="jumbotron top-space">
+			<div class="container">
+				<h3 class="text-center thin">Reasons to use this template</h3>
+				<div class="row"
+					style="width: 1240px; margin-right: -15px; margin-left: -45px;">
+					<div class="col-md-3 col-sm-6 highlight" style="margin-left: 0px;">
+						<div class="h-caption">
+							<h4>
+								<i class="fa fa-cogs fa-5"></i>Bootstrap-powered
+							</h4>
+						</div>
+						<div class="h-body text-center">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								Atque aliquid adipisci aspernatur. Soluta quisquam dignissimos
+								earum quasi voluptate. Amet, dignissimos, tenetur vitae dolor
+								quam iusto assumenda hic reprehenderit?</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 highlight">
+						<div class="h-caption">
+							<h4>
+								<i class="fa fa-flash fa-5"></i>Fat-free
+							</h4>
+						</div>
+						<div class="h-body text-center">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								Asperiores, commodi, sequi quis ad fugit omnis cumque a libero
+								error nesciunt molestiae repellat quos perferendis numquam
+								quibusdam rerum repellendus laboriosam reprehenderit!</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 highlight">
+						<div class="h-caption">
+							<h4>
+								<i class="fa fa-heart fa-5"></i>Creative Commons
+							</h4>
+						</div>
+						<div class="h-body text-center">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								Voluptatem, vitae, perferendis, perspiciatis nobis voluptate
+								quod illum soluta minima ipsam ratione quia numquam eveniet eum
+								reprehenderit dolorem dicta nesciunt corporis?</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 highlight">
+						<div class="h-caption">
+							<h4>
+								<i class="fa fa-smile-o fa-5"></i>Author's support
+							</h4>
+						</div>
+						<div class="h-body text-center">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								Alias, excepturi, maiores, dolorem quasi reprehenderit illo
+								accusamus nulla minima repudiandae quas ducimus reiciendis odio
+								sequi atque temporibus facere corporis eos expedita?</p>
+						</div>
+					</div>
+				</div>
+				<!-- /row  -->
+
+			</div>
+		</div>
+
+		<div class="c-section-bd">
+			<div class="home-service-wrap">
+				<div class="home-service-list">
+					<ul style="padding-left: 0px;">
+						<li class="home-service-item">
+							<a href="" >
+								<span class="home-service-icon"> <img src="" alt="镜像服务"> <img src="" alt="" class="active-img"> </span>
+								<span class="home-service-m-icon"> <img src="" alt="镜像服务"> </span>
+								<b class="home-service-tit"> 关于中粮 </b> </a>
+						</li>
+						<li class="home-service-item">
+							<a href="">
+								<span class="home-service-icon"> <img src="" alt="运维服务"> <img src="" alt="运维服务" class="active-img"> </span>
+								<span class="home-service-m-icon"> <img src="" alt=""> </span>
+								<b class="home-service-tit"> 咨询动态 </b> </a>
+						</li>
+						<li class="home-service-item">
+							<a href="" >
+								<span class="home-service-icon"> <img src="" alt=""> <img src="" alt="软件服务" class="active-img"> </span>
+								<span class="home-service-m-icon"> <img src="" alt="软件服务"> </span>
+								<b class="home-service-tit"> 业务概况 </b> </a>
+						</li>
+						<li class="home-service-item">
+							<a href="" >
+								<span class="home-service-icon"> <img src="" alt="安全服务"> <img src="" alt="安全服务" class="active-img"> </span>
+								<span class="home-service-m-icon"> <img src="" alt=""> </span>
+								<b class="home-service-tit"> 信息公开 </b> </a>
+						</li>
+						<li class="home-service-item">
+							<a href="" >
+								<span class="home-service-icon"> <img src="" alt="建站服务"> <img src="" alt="" class="active-img"> </span>
+								<span class="home-service-m-icon"> <img src="" alt="建站服务"> </span>
+								<b class="home-service-tit"> 企业责任 </b> </a>
+						</li>
+						<li class="home-service-item">
+							<a href="" >
+								<span class="home-service-icon"> <img src="" alt="微信小程序"> <img src="" alt="微信小程序" class="active-img"> </span>
+								<span class="home-service-m-icon"> <img src="" alt=""> </span>
+								<b class="home-service-tit"> 加入中粮 </b> </a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer"
+		style="background-image: url(img/500604250_banner.jpg)">
+>>>>>>> origin/LW
 		<div style="width: 1240px; margin: auto;">
 			<div class="mainWrap">
 				<div class="ulink clearfix">
@@ -20,6 +141,7 @@
 						<div class="txtwrapper clearfix">
 							<h2>常用链接</h2>
 							<ul>
+<<<<<<< HEAD
 								<s:iterator value="news_LinkInfoCountVO.listNews_LinkInfo">
 									<s:if test="LI_IsDisplay == 1">
 
@@ -34,6 +156,25 @@
 							<li><a href="" target="_blank">网站地图</a></li>
 							<li><a href="" target="_blank">实用信息</a></li>
 							<li><a href="" target="_blank">联系我们</a></li> -->
+=======
+								<li><a
+									href=""
+									target="_blank">投资者专区</a></li>
+								<li><a
+									href=""
+									target="_blank">加入中粮</a></li>
+								<li><a href=""
+									target="_blank">隐私政策</a></li>
+								<li><a
+									href=""
+									target="_blank">网站地图</a></li>
+								<li><a
+									href=""
+									target="_blank">实用信息</a></li>
+								<li><a
+									href=""
+									target="_blank">联系我们</a></li>
+>>>>>>> origin/LW
 							</ul>
 						</div>
 					</div>
@@ -49,7 +190,10 @@
 				</div>
 			</div>
 		</div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/LW
 		<div class="copy">
 			<div style="width: 1240px; margin: auto;">
 				<div class="mainWrap">
@@ -78,18 +222,26 @@
 								});
 					</script>
 					<!--class="copyrights" -->
+<<<<<<< HEAD
 					<div
 						style="color: #fff; opacity: 0.6; border-top: 1px solid rgba(255, 255, 255, 0.4); padding-top: 20px; line-height: 0; font-size: 12px;">
 						版权所有<a
 							href="${pageContext.request.contextPath}/jurisdiction/jurisdiction_loginAction"
 							style="color: #fff" target="_blank">©</a>2017 中粮集团有限公司<span>京ICP备05002557号</span>
+=======
+					<div style="color:#fff;opacity: 0.6;border-top: 1px solid rgba(255, 255, 255, 0.4);padding-top: 20px;line-height: 0;font-size: 12px;">					
+						版权所有<a href="${pageContext.request.contextPath}/jurisdiction/jurisdiction_loginAction" style="color:#fff" target="_blank">©</a>2017 中粮集团有限公司<span>京ICP备05002557号</span>
+>>>>>>> origin/LW
 					</div>
 				</div>
 			</div>
 		</div>
+<<<<<<< HEAD
 
 
 
 	</div>
+=======
+>>>>>>> origin/LW
 </body>
 </html>

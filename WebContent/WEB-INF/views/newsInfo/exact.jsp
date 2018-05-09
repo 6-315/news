@@ -12,8 +12,7 @@
 	<div class="am-cf admin-main">
 		<s:action name="user_endNavbarAction" namespace="/user"
 			executeResult="true" />
-		<%-- <s:action name="carousel_selectAction2" namespace="/carousel"
-			executeResult="true" /> --%>
+		
 
 		<h1>测试</h1>
 		<s:iterator value="newsinfoDTO">

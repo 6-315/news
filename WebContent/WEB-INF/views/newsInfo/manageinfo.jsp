@@ -54,10 +54,11 @@
 										<th class="table-type">是否发布</th>
 										<th class="table-author am-hide-sm-only">是否推荐</th>
 										<th class="table-date am-hide-sm-only">修改时间</th>
-
-										<s:if test="UJ_IsNewsManagement == 'management'.toString()">
-											<th class="table-set">操作</th>
-										</s:if>
+										<s:iterator value="#session.realUser">
+											<s:if test="UJ_IsNewsManagement == 'management'.toString()">
+												<th class="table-set">操作</th>
+											</s:if>
+										</s:iterator>
 									</tr>
 								</thead>
 								<tbody>
@@ -77,35 +78,52 @@
 													test="NI_IsRecommend == -1">推荐</s:if></td>
 											<td class="am-hide-sm-only"><s:property
 													value="NI_ModifyTime" /></td>
+<<<<<<< HEAD
+=======
 
 
 											<s:if test="UJ_IsNewsManagement == 'management'.toString()">
 												<td>
 													<div class="am-btn-toolbar">
 														<div class="am-btn-group am-btn-group-xs">
+>>>>>>> origin/LW
+
+											<s:iterator value="#session.realUser">
+												<s:if test="UJ_IsNewsManagement == 'management'.toString()">
+													<td>
+														<div class="am-btn-toolbar">
+															<div class="am-btn-group am-btn-group-xs">
 
 
-															<button data-target="#update" data-toggle="modal"
-																class="am-btn am-btn-default am-btn-xs am-text-secondary"
-																id="<s:property value="NI_Id"/>&$&<s:property value="NI_Title"/>&$&<s:property value="NI_Keywords"/>&$&<s:property value="NI_IsCarousel"/>&$&<s:property value="NI_BelongNavigation"/>&$&<s:property value="NI_BrowserCount"/> &$&<s:property value="NI_Source"/> &$&<s:property value="NI_Author"/> &$&<s:property value="NI_Content"/> &$&<s:property value="NI_IsDelete"/> &$&<s:property value="NI_IsShow"/> &$&<s:property value="NI_ShowTime"/> &$&<s:property value="NI_CreateTime"/> &$&<s:property value="NI_ModifyTime"/> &$&<s:property value="NI_IsRecommend"/> "
-																onclick="chuanIdForModal23(this.id)">
-																<span class="am-icon-pencil-square-o"></span> 编辑
-															</button>
-															<button data-target="#delete" data-toggle="modal"
-																class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"
-																id="<s:property value="NI_Id"/>&$&<s:property value="NI_Title"/>&$&<s:property value="NI_Keywords"/>&$&<s:property value="NI_IsCarousel"/>&$&<s:property value="NI_BelongNavigation"/>&$&<s:property value="NI_BrowserCount"/> &$&<s:property value="NI_Source"/> &$&<s:property value="NI_Author"/> &$&<s:property value="NI_Content"/> &$&<s:property value="NI_IsDelete"/> &$&<s:property value="NI_IsShow"/> &$&<s:property value="NI_ShowTime"/> &$&<s:property value="NI_CreateTime"/> &$&<s:property value="NI_ModifyTime"/> &$&<s:property value="NI_IsRecommend"/> "
-																onclick="chuanIdForModal2(this.id)">
-																<span class="am-icon-trash-o"></span> 删除
-															</button>
+																<button data-target="#update" data-toggle="modal"
+																	class="am-btn am-btn-default am-btn-xs am-text-secondary"
+																	id="<s:property value="NI_Id"/>&$&<s:property value="NI_Title"/>&$&<s:property value="NI_Keywords"/>&$&<s:property value="NI_IsCarousel"/>&$&<s:property value="NI_BelongNavigation"/>&$&<s:property value="NI_BrowserCount"/> &$&<s:property value="NI_Source"/> &$&<s:property value="NI_Author"/> &$&<s:property value="NI_Content"/> &$&<s:property value="NI_IsDelete"/> &$&<s:property value="NI_IsShow"/> &$&<s:property value="NI_ShowTime"/> &$&<s:property value="NI_CreateTime"/> &$&<s:property value="NI_ModifyTime"/> &$&<s:property value="NI_IsRecommend"/> "
+																	onclick="chuanIdForModal23(this.id)">
+																	<span class="am-icon-pencil-square-o"></span> 编辑
+																</button>
+																<button data-target="#delete" data-toggle="modal"
+																	class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"
+																	id="<s:property value="NI_Id"/>&$&<s:property value="NI_Title"/>&$&<s:property value="NI_Keywords"/>&$&<s:property value="NI_IsCarousel"/>&$&<s:property value="NI_BelongNavigation"/>&$&<s:property value="NI_BrowserCount"/> &$&<s:property value="NI_Source"/> &$&<s:property value="NI_Author"/> &$&<s:property value="NI_Content"/> &$&<s:property value="NI_IsDelete"/> &$&<s:property value="NI_IsShow"/> &$&<s:property value="NI_ShowTime"/> &$&<s:property value="NI_CreateTime"/> &$&<s:property value="NI_ModifyTime"/> &$&<s:property value="NI_IsRecommend"/> "
+																	onclick="chuanIdForModal2(this.id)">
+																	<span class="am-icon-trash-o"></span> 删除
+																</button>
 
+
+															</div>
 
 														</div>
+													</td>
+												</s:if>
+											</s:iterator>
 
+<<<<<<< HEAD
+=======
 													</div>
 												</td>
 											</s:if>
 
 
+>>>>>>> origin/LW
 										</tr>
 									</s:iterator>
 								</tbody>

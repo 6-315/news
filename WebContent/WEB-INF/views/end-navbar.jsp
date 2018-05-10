@@ -20,7 +20,7 @@
 </head>
 <body data-type="index">
 	<!--左边导航栏-->
-	
+
 	<div class="tpl-left-nav tpl-left-nav-hover">
 		<div class="tpl-left-nav-list">
 			<ul class="tpl-left-nav-menu">
@@ -60,7 +60,13 @@
 							class="nav-link"> <i class="am-icon-home"></i> <span>管理导航</span>
 						</a></li>
 					</s:if>
-
+					
+					<s:if test="UJ_IsNavigationManagement == 'see'.toString()">
+						<li class="tpl-left-nav-item"><a
+							href="${pageContext.request.contextPath}/navigation/navigation_listNavigationInfoByPageAction"
+							class="nav-link"> <i class="am-icon-home"></i> <span>查看导航</span>
+						</a></li>
+					</s:if>
 
 					<s:if test="UJ_IsNewsManagement == 'management'.toString()">
 						<li class="tpl-left-nav-item">
@@ -97,12 +103,7 @@
 					</s:if>
 
 
-					<s:if test="UJ_IsNavigationManagement == 'see'.toString()">
-						<li class="tpl-left-nav-item"><a
-							href="${pageContext.request.contextPath}/navigation/navigation_listNavigationInfoByPageAction"
-							class="nav-link"> <i class="am-icon-home"></i> <span>查看导航</span>
-						</a></li>
-					</s:if>
+
 
 					<s:if test="UJ_IsJurisdictionManagement == 'management'.toString()">
 						<li class="tpl-left-nav-item"><a
@@ -112,7 +113,7 @@
 					</s:if>
 
 
-					
+
 				</s:iterator>
 			</ul>
 		</div>

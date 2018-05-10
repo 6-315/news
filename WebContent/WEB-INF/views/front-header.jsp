@@ -28,7 +28,7 @@
 						</s:if>
 					</s:iterator>
 				</ul>
-				下拉子导航
+				<!-- 下拉子导航 -->
 				<div id="J_subNav" class="sub-nav">
 					<ul class="sub-nav-inner">
 						<s:iterator

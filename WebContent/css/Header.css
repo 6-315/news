@@ -1,12 +1,5 @@
 @charset "gbk";
-/*
-Site Name: LOL Website
-Site URL: http://lol.qq.com
-Author: smallni
-Author URL: http://www.smallni.com
-Description:  LOL Website Public Style
-Version: 2.0
-*/
+
 
 /* ====================================================================================================
  * Public Styles (全站级公共样式)
@@ -99,19 +92,7 @@ li{list-style-type: none;}
 .top-search,.top-app{ float: left; width: 40px; height: 90px; margin-left: 5px; text-align: center }
 .icon-top-search{ display: inline-block; width: 27px; height: 27px; margin-top: 25px; background-position: -8px 0; cursor: pointer}
 .icon-top-app{display: inline-block; width: 21px; height: 27px; margin-top: 25px; background-position: -45px 0; vertical-align: middle }
-/*.top-user{ float: right; position: relative; width: 350px;}
-.top-user-info{ height: 90px; overflow: hidden; zoom: 1}
-.top-user-side{ float: left; position: relative; width: 100px; height: 90px;}
-.top-user-side img{ width: 66px; height: 66px; margin-left: 17px; margin-top: 12px; border-radius: 33px;}
-.top-user-side .top-user-rank{display:block; position:absolute; bottom:8px; right:6px; width: 24px; height: 24px; text-align: center; line-height: 24px; border-radius: 50%; background: #000; border: 1px solid #cea34a; color: #fff; font-size: 12px; z-index: 3}
-.user-mask{ position: absolute; left: 13px; top: 8px; z-index: 2; width: 74px; height: 74px; background-position: 0 -169px;}
-.top-user-main{ padding-top: 18px; overflow: hidden; zoom: 1; margin-left: 110px;}
-.top-user-name{ font-size: 24px; margin-bottom: 10px; color: #fff; font-weight: bold}
-.top-user-area{ color: #999999; font-size: 14px;}
-.top-user-area a{ color:#999999 }
-.top-user-unlogin{ font-size: 16px; color: #fff; padding: 5px 0; }
-.top-user-unlogin em,.top-user-unlogin a{ color: #dfb257; text-decoration: underline; margin: 0 3px; cursor: pointer}
-.top-user-tips{ color: #999; font-size: 12px;}*/
+
 .icon-arrow-down{ display: inline-block; width: 14px; height: 9px; margin-left: 5px; vertical-align: middle; background-position: -207px -52px; }
 .link-loginout{ float: right; padding-right: 5px; text-decoration: underline;}
 .top-user-hover{ background:#1b1b1b;  background:rgba(27,27,27,0.9);}
@@ -188,68 +169,3 @@ a.top-act-link:hover{ background: #111; background: rgba(0,0,0,0.9)}
     border-image-slice: 1;}
 a.top-version-link:hover{ background: #111; background: rgba(0,0,0,0.9)}
 
-
-
-
-
-
-
-/*模拟单选框*/
-/*.ms-radio{margin-right:3px;display:inline-block;width:14px;height:14px;border:1px solid #B1B1B1;border-radius:10px;cursor:pointer;position:relative}
-.ms-radio .i{display:inline-block;position:absolute;top:2px;left:2px;height:10px;width:10px;cursor:pointer;background:#fff}
-.current .ms-radio .i{background:#00A383;border-radius:10px}*/
-
-
-
-/***进度条*/
-/*.sidbar{display:block;margin-top:2px;height:9px;border:1px solid #E0E0E0;padding:2px;background:#fff;position:relative;overflow:hidden}
-.upbar-red,.upbar-green,.sidbar .empt{display:block;width:100%;height:9px;background:#eee}
-.upbar-red,.upbar-green{margin-top:-9px;position:relative}
-.upbar-green{background:#00A483}
-.upbar-red{background:#E04502}*/
-
-
-/* 翻入-X轴 */
-/*@-webkit-keyframes flipinX{
-    0%{-webkit-transform:perspective(400px) rotateX(90deg);}
-    40%{-webkit-transform:perspective(400px) rotateX(-10deg);}
-    70%{-webkit-transform:perspective(400px) rotateX(10deg);}
-    100%{-webkit-transform:perspective(400px) rotateX(0deg);}
-}
-@-moz-keyframes flipinX{
-    0%{-moz-transform:perspective(400px) rotateX(90deg);}
-    40%{-moz-transform:perspective(400px) rotateX(-10deg);}
-    70%{-moz-transform:perspective(400px) rotateX(10deg);}
-    100%{-moz-transform:perspective(400px) rotateX(0deg);}
-}
-@-ms-keyframes flipinX{
-    0%{-ms-transform:perspective(400px) rotateX(90deg);}
-    40%{-ms-transform:perspective(400px) rotateX(-10deg);}
-    70%{-ms-transform:perspective(400px) rotateX(10deg);}
-    100%{-ms-transform:perspective(400px) rotateX(0deg);}
-}
-@keyframes flipinX{
-    0%{transform:perspective(400px) rotateX(90deg);}
-    40%{transform:perspective(400px) rotateX(-10deg);}
-    70%{transform:perspective(400px) rotateX(10deg);}
-    100%{transform:perspective(400px) rotateX(0deg);}
-}
-.m_city_tips{float:right;color:#e3583c;}
-.m_city_hd h2{float:left;margin-right:15px;display:inline;}
-.m_city_focus{float:left;}
-.m_city_focus span{border:#e7e7e7 1px solid;display:inline-block;margin-right:5px;height:30px;padding:0 5px;}
-.m_city_add{cursor:pointer;overflow:hidden;zoom:1;}
-.u_city_n{float:left;}
-.u_city_i{float:left;border:1px solid #B1B1B1;display:inline-block;height:14px;position:relative;width:14px;background:#fff;margin:2px 5px 0 0;}
-.current .u_city_i{background-position:-184px 3px;border-color:#00a383;}
-.u_update_sel{float:left;}
-.u_update_sel select{border:#e7e7e7 1px solid;height:30px;line-height:30px;width:120px;}
-.u_update_file{float:left;display:inline;margin-left:20px;}
-.u_update_tip{color:#e3583c;padding:10px 0 20px;}
-.u_update_btn a{width:139px;height:40px;line-height:40px;text-align:center;display:block;background-position:0 -45px;color:#fff;font-size:14px;}*/
-
-
-/*掌盟浮窗*/
-/*.appfix{width: 104px;height: 130px;position: fixed;top: 400px;right: 50%;margin-right: -610px;}
-.appfix a{width: 104px;height: 130px;display: block;overflow: hidden;color: #6b6b6b;font-size: 12px;text-align: center;line-height: 26px}
-.appfix img{vertical-align: top;width: 104px;height: 104px;display: block;}*/

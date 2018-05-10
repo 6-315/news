@@ -6,10 +6,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>导航栏</title>
-<link rel="stylesheet" href="${pageContext.request.contextPath }/css/bootstrap.css" />
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/css/Header.css" />
-<script src="${pageContext.request.contextPath }/js/jquery1.8.2.js"></script>
-	<script src="${pageContext.request.contextPath }/js/header.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath }/css/Header.css" />
+<script type="text/javascript"
+	src="${pageContext.request.contextPath }/js/jquery1.8.2.js"></script>
+<script type="text/javascript"
+	src="${pageContext.request.contextPath }/js/header.js"></script>
 </head>
 <body>
 	<div class="top">
@@ -34,14 +36,13 @@
 						<s:iterator
 							value="news_NavigationInfoCountVO.listNews_NavigationInfoCountDTO">
 							<s:if test="news_OneNavigationInfo.ONI_IsDisplay == 1">
-								<li class="sub-nav-item">
-									<s:iterator value="news_TwoNavigationInfo">
+								<li class="sub-nav-item"><s:iterator
+										value="news_TwoNavigationInfo">
 										<s:if test="TNI_IsDisplay == 1">
 											<a class="sub-nav-lnk"> <s:property value="TNI_Name" />
 											</a>
 										</s:if>
-									</s:iterator>
-								</li>
+									</s:iterator></li>
 							</s:if>
 						</s:iterator>
 					</ul>

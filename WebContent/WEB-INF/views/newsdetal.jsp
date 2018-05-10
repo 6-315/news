@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
+	pageEncoding="utf-8"%>
+<%@ taglib uri="/struts-tags" prefix="s"%>
 <!DOCTYPE html >
 <html>
 <head>
@@ -46,11 +47,15 @@
 			<!--/中间左侧菜单开始/-->
 			<div class="col3 r30">
 				<s:iterator value="listSelectAllDTO">
-					<h1><s:property value="news_TwoNavigationInfo.TNI_Name" /></h1>
+					<h1>
+						<s:property value="news_TwoNavigationInfo.TNI_Name" />
+					</h1>
 					<div id="subnav" class="f14">
 						<ul>
 							<s:iterator value="news_NewsInfo">
-								<li><a href="${pageContext.request.contextPath}/newsinfo/info_exact2Action?news.NI_Id=<s:property value="NI_Id" />&&newsTwoNavigationInfo.TNI_Id=<s:property value="news_TwoNavigationInfo.TNI_Id" />"><s:property value="NI_Title" /></a></li>
+								<li><a
+									href="${pageContext.request.contextPath}/newsinfo/info_exact2Action?news.NI_Id=<s:property value="NI_Id" />&&newsTwoNavigationInfo.TNI_Id=<s:property value="news_TwoNavigationInfo.TNI_Id" />"><s:property
+											value="NI_Title" /></a></li>
 							</s:iterator>
 						</ul>
 					</div>
@@ -91,7 +96,7 @@
 	</div>
 	<!-- 底部 -->
 	<s:action name="link_footerAction" namespace="/link"
-		executeResult="true"></s:action> 
+		executeResult="true"></s:action>
 	<!--  底部结束-->
 </body>
 </html>

@@ -76,13 +76,14 @@ public class NewsInfoManagementServiceImpl implements NewsInfoManagementService 
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<SelectAllDTO> listSelectAllDTO() {
+	public List<SelectAllDTO> listSelectAllDTO(String string) {
 		List<SelectAllDTO> listSelectAllDTO = new ArrayList<>();
 		List<News_NewsInfo> listNewsNewsInfo = new ArrayList<>();
 		List<News_TwoNavigationInfo> listTwo = new ArrayList<>();
+		System.out.println("KKKKKKKKK:"+string);
 		SelectAllDTO selectAllDTO;
 		listTwo = (List<News_TwoNavigationInfo>) newsInfoManagementDao
-				.listObject("from News_TwoNavigationInfo where TNI_IsDelete='1'");
+				.listObject("from News_TwoNavigationInfo where TNI_Id= '"+string+"'");
 		System.out.println(listTwo.size());
 		for (News_TwoNavigationInfo news_TwoNavigationInfo : listTwo) {
 			listNewsNewsInfo = new ArrayList<>();
@@ -99,8 +100,10 @@ public class NewsInfoManagementServiceImpl implements NewsInfoManagementService 
 			selectAllDTO.setNews_TwoNavigationInfo(news_TwoNavigationInfo);
 			selectAllDTO.setNews_NewsInfo(listNewsNewsInfo);
 			listSelectAllDTO.add(selectAllDTO);
+			System.out.println("pqpqpqqp"+listSelectAllDTO);
 		}
 		return listSelectAllDTO;
+		
 		/*
 		 * listNewsNewsInfo = (List<News_NewsInfo>)
 		 * newsInfoManagementDao.listObject(
@@ -279,4 +282,13 @@ public class NewsInfoManagementServiceImpl implements NewsInfoManagementService 
 		}
 		return listAllNavigation;
 	}
+
+	@Override
+	public SelectAllDTO getOneDTO(String tni_Id) {
+		
+		
+		return null;
+	}
+
+
 }

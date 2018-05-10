@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath }/css/bootstrap.css" />
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/css/Header.css" />
 <script src="${pageContext.request.contextPath }/js/jquery1.8.2.js"></script>
-	<script src="${pageContext.request.contextPath }/js/header.js"></script>
+<script src="${pageContext.request.contextPath }/js/header.js"></script>
 </head>
 <body>
 	<div class="top">

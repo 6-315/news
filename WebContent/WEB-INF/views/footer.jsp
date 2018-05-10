@@ -15,14 +15,12 @@
 <script src="${pageContext.request.contextPath }/js/jquery1.8.2.js"></script>
 </head>
 <body>
-<<<<<<< HEAD
 	<div class="footer"
 		style="background-image: url(img/500604250_banner.jpg)">
 
 
 
-=======
-	div style="width: 1240px; margin: auto;">
+	<div style="width: 1240px; margin: auto;">
 		<div class="jumbotron top-space">
 			<div class="container">
 				<h3 class="text-center thin">Reasons to use this template</h3>
@@ -133,7 +131,6 @@
 	</div>
 	<div class="footer"
 		style="background-image: url(img/500604250_banner.jpg)">
->>>>>>> origin/LW
 		<div style="width: 1240px; margin: auto;">
 			<div class="mainWrap">
 				<div class="ulink clearfix">
@@ -141,7 +138,6 @@
 						<div class="txtwrapper clearfix">
 							<h2>常用链接</h2>
 							<ul>
-<<<<<<< HEAD
 								<s:iterator value="news_LinkInfoCountVO.listNews_LinkInfo">
 									<s:if test="LI_IsDisplay == 1">
 
@@ -156,7 +152,6 @@
 							<li><a href="" target="_blank">网站地图</a></li>
 							<li><a href="" target="_blank">实用信息</a></li>
 							<li><a href="" target="_blank">联系我们</a></li> -->
-=======
 								<li><a
 									href=""
 									target="_blank">投资者专区</a></li>
@@ -174,7 +169,6 @@
 								<li><a
 									href=""
 									target="_blank">联系我们</a></li>
->>>>>>> origin/LW
 							</ul>
 						</div>
 					</div>
@@ -190,10 +184,6 @@
 				</div>
 			</div>
 		</div>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/LW
 		<div class="copy">
 			<div style="width: 1240px; margin: auto;">
 				<div class="mainWrap">
@@ -222,26 +212,18 @@
 								});
 					</script>
 					<!--class="copyrights" -->
-<<<<<<< HEAD
 					<div
 						style="color: #fff; opacity: 0.6; border-top: 1px solid rgba(255, 255, 255, 0.4); padding-top: 20px; line-height: 0; font-size: 12px;">
 						版权所有<a
 							href="${pageContext.request.contextPath}/jurisdiction/jurisdiction_loginAction"
 							style="color: #fff" target="_blank">©</a>2017 中粮集团有限公司<span>京ICP备05002557号</span>
-=======
-					<div style="color:#fff;opacity: 0.6;border-top: 1px solid rgba(255, 255, 255, 0.4);padding-top: 20px;line-height: 0;font-size: 12px;">					
-						版权所有<a href="${pageContext.request.contextPath}/jurisdiction/jurisdiction_loginAction" style="color:#fff" target="_blank">©</a>2017 中粮集团有限公司<span>京ICP备05002557号</span>
->>>>>>> origin/LW
-					</div>
+					
 				</div>
 			</div>
 		</div>
-<<<<<<< HEAD
 
 
 
 	</div>
-=======
->>>>>>> origin/LW
 </body>
 </html>

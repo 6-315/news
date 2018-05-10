@@ -22,7 +22,7 @@ public interface NewsInfoManagementService {
 
 	public void addInfo(News_Content news_Content, News_NewsInfo news_NewsInfo);
 
-	public List<SelectAllDTO> listSelectAllDTO();
+	public List<SelectAllDTO> listSelectAllDTO(String string);
 
 	public List<News_NewsInfo> getNews();
 
@@ -39,5 +39,7 @@ public interface NewsInfoManagementService {
 	public List<News_NewsInfo> getAllNews();
 
 	public List<AllNavigationNewsDTO> getExact();
+
+	public SelectAllDTO getOneDTO(String tni_Id);
 
 }

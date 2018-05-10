@@ -5,106 +5,93 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/css/Header.css" />
-	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/xiangqing.css" />
-    <link rel="stylesheet" href="${pageContext.request.contextPath }/css/pc.css" />
-    
+<script src="${pageContext.request.contextPath }/js/jquery1.8.2.js"></script>
+<script src="${pageContext.request.contextPath }/js/header.js"></script>
+<script src="${pageContext.request.contextPath }/js/lunbotu.js"></script>
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath }/css/xiangqing.css" />
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath }/css/pc.css" />
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath }/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath }/css/Header.css" />
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath }/css/bootstrap.css" />
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath }/css/font-awesome.min.css" />
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath }/css/main.css" />
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath }/css/bootstrap-theme.css" />
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath }/css/Header.css" />
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath }/css/lunbotu.css" />
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath }/css/MainWarp.css" />
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath }/css/home.css" />
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath }/css/index.css" />
 </head>
 <body>
-				<!-- 详情导航 -->
-<div class="wrapper center">
-<div class="row mb60">
-<h1>业务概览</h1>
-<!--/中间左侧菜单开始/-->
-<div class="col3 r30">
-<div id="subnav" class="f14">
-<ul>
-<li><a href="">中粮国际</a></li>
-<li><a href="">中粮贸易</a></li>
-<li class="here"><a href="">中粮梁谷</a></li>
-<li><a href="">中粮生化</a></li>
-<li><a href="">更多</a></li>
-<li><a href="">玩家创作馆</a></li>
-</ul>
-</div>
-<div class="module related">
-<h2>相关链接</h2>
-<ul>
-<li><a target="_blank" href="">学校活动</a></li>
-<li><a target="_blank" href="">图书馆</a></li>
-<li><a target="_blank" href="">教学周历</a></li>
-<li><a target="_blank" href="">校内电话黄页</a></li>
-</ul>
-<ul style=" border:0px;" class="mb20">
-<li><a target="_blank" href="">个人门户系统</a></li>
-<li><a target="_blank" href="">新闻网</a></li>
-<li><a target="_blank" href="">家园网</a></li>
-</ul>
-</div>
+	<!--导航  -->
+	<s:action name="navigation_headerAction" namespace="/navigation"
+		executeResult="true"></s:action>
+	<!-- 结束 -->
+	<!-- 详情导航 -->
+	<div class="wrapper center">
+		<div class="row mb60">
+			<!--/中间左侧菜单开始/-->
+			<div class="col3 r30">
+				<s:iterator value="listSelectAllDTO">
+					<h1><s:property value="news_TwoNavigationInfo.TNI_Name" /></h1>
+					<div id="subnav" class="f14">
+						<ul>
+							<s:iterator value="news_NewsInfo">
+								<li><a href="${pageContext.request.contextPath}/newsinfo/info_exact2Action?news.NI_Id=<s:property value="NI_Id" />&&newsTwoNavigationInfo.TNI_Id=<s:property value="news_TwoNavigationInfo.TNI_Id" />"><s:property value="NI_Title" /></a></li>
+							</s:iterator>
+						</ul>
+					</div>
+				</s:iterator>
+				<div class="module related">
+					<h2>相关链接</h2>
+					<ul>
+						<li><a target="_blank" href="">学校活动</a></li>
+						<li><a target="_blank" href="">图书馆</a></li>
+						<li><a target="_blank" href="">教学周历</a></li>
+						<li><a target="_blank" href="">校内电话黄页</a></li>
+					</ul>
+					<ul style="border: 0px;" class="mb20">
+						<li><a target="_blank" href="">个人门户系统</a></li>
+						<li><a target="_blank" href="">新闻网</a></li>
+						<li><a target="_blank" href="">家园网</a></li>
+					</ul>
+				</div>
+			</div>
+			<!--/中间左侧菜单结束/-->
+			<!--/中间右侧内容模版开始/-->
+			<s:iterator value="newsinfoDTO">
+				<h1>
+					QQQQ:标题
+					<s:property value="news_NewsInfo.NI_Title" escapeHtml="false" />
+				</h1>
 
-</div>
-<!--/中间左侧菜单结束/-->
+				<h1>
+					QQQQ:正文
+					<s:property value="news_Content.NC_Content" escapeHtml="false" />
+				</h1>
 
-<!--/中间右侧内容模版开始/-->
-<div class="col9 ">
-<div class="maincontent">
-<h2><span class="b1">中粮梁谷</span></h2>
-<table cellspacing="0" cellpadding="0">
-    <tbody>
-        <tr>
-            <td colspan="2"><a target="_blank" href="zljgxq/zljg_yxs.html"><img title="" alt="" src="../images/21.jpg" width="112"></a><br>
-            <a target="_blank" href="zljgxq/zljg_yxs.html">喻晓社</a><br>
-            党委书记</td>
-            <td colspan="2"><a target="_blank" href="zljgxq/zljg_zcb.html"><img title="" alt="" src="../images/3.jpg" width="112"></a><br>
-            <a target="_blank" href="zljgxq/zljg_zcb.html">周创兵</a><br>
-            党委副书记、校长</td>
-        </tr>
-        <tr>
-            <td class="w10"><a target="_blank" href="zljgxq/zljg_heh.html"><img title="" alt="" src="../images/20.jpg" width="112"></a><br>
-            <a target="_blank" href="zljgxq/zljg_heh.html">黄恩华</a><br>
-            党委副书记</td>
-            <td class="w10"><a target="_blank" href="zljgxq/zljg_hy.html"><img title="" alt="" src="../images/7.jpg" width="112"></a><br>
-            <a target="_blank" href="zljgxq/zljg_hy.html">黄云</a><br>
-            党委常委、纪委书记</td>
-            <td><a target="_blank" href="zljgxq/zljg_zyl.html"><img title="" alt="" src="../images/8.jpg" width="112"></a><br>
-            <a target="_blank" href="zljgxq/zljg_zyl.html">朱友林</a><br>
-            副校长</td>
-            <td><a target="_blank" href="zljgxq/zljg_jfy.html"><img title="" alt="" src="../images/9.jpg" width="112"></a><br>
-            <a target="_blank" href="zljgxq/zljg_jfy.html">江风益</a><br>
-            党委常委、副校长</td>
-        </tr>
-        <tr>
-            <td><a target="_blank" href="zljgxq/zljg_xhb.html"><img title="" alt="" src="../images/10.jpg" width="112"></a><br>
-            <a target="_blank" href="zljgxq/zljg_xhb.html">辛洪波</a><br>
-            副校长</td>
-            <td><a target="_blank" href="zljgxq/zljg_lbm.html"><img title="" alt="" src="../images/11.jpg" width="112"></a><br>
-            <a target="_blank" href="zljgxq/zljg_lbm.html">李葆明</a><br>
-            党委常委、副校长</td>
-            <td><a target="_blank" href="zljgxq/zljg_dxh.html"><img title="" alt="" src="../images/12.jpg" width="112"></a><br>
-            <a target="_blank" href="zljgxq/zljg_dxh.html">邓晓华</a><br>
-            党委常委、副校长</td>
-            <td><a target="_blank" href="zljgxq/zljg_zxl.html"><img title="" alt="" src="../images/17.jpg" width="112"></a><br>
-            <a target="_blank" href="zljgxq/zljg_zxl.html">朱小理</a><br>
-            党委常委、副校长</td>
-        </tr>
-        <tr>
-            <td><a target="_blank" href="zljgxq/zljg_hxj.html"><img title="" alt="" src="../images/16.jpg" width="112"></a><br>
-            <a target="_blank" href="zljgxq/zljg_hxj.html">黄细嘉</a><br>
-            江西发展研究院院长</td>
-            <td><a target="_blank" href="zljgxq/zljg_sm.html"><img title="" alt="" src="../images/18.jpg" width="112"></a><br>
-            <a target="_blank" href="zljgxq/zljg_sm.html">舒明</a><br>
-            党委常委、党委组织部部长</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-    </tbody>
-</table>
-</div>
-<script id="dstb-id" language="javascript" type="text/javascript">if(typeof(dstb)!= "undefined"){ dstb();}</script><script id="dstb-id" language="javascript" type="text/javascript">if(typeof(dstb)!= "undefined"){ dstb();}</script>
-</div>
-<!--/中间右侧内容模版结束/-->
+			</s:iterator>
+			<h1>25555</h1>
+			<!--/中间右侧内容模版结束/-->
 
-</div>
-</div>
+		</div>
+	</div>
+	<!-- 底部 -->
+	<s:action name="link_footerAction" namespace="/link"
+		executeResult="true"></s:action> 
+	<!--  底部结束-->
 </body>
 </html>

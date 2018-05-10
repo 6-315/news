@@ -51,7 +51,7 @@
 					<div id="subnav" class="f14">
 						<ul>
 							<s:iterator value="news_NewsInfo">
-								<li><a href="${pageContext.request.contextPath}/newsinfo/info_exact2Action?news.NI_Id=<s:property value="news_NewsInfo.NI_Id" />&&newsTwoNavigationInfo.TNI_Id=<s:property value="news_TwoNavigationInfo.TNI_Id" />"><s:property value="NI_Title" /></a></li>
+								<li><a href="${pageContext.request.contextPath}/newsinfo/info_exact2Action?news.NI_Id=<s:property value="NI_Id" />&&newsTwoNavigationInfo.TNI_Id=<s:property value="news_TwoNavigationInfo.TNI_Id" />"><s:property value="NI_Title" /></a></li>
 							</s:iterator>
 						</ul>
 					</div>

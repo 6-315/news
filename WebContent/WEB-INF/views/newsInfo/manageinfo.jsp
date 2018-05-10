@@ -78,15 +78,12 @@
 													test="NI_IsRecommend == -1">推荐</s:if></td>
 											<td class="am-hide-sm-only"><s:property
 													value="NI_ModifyTime" /></td>
-<<<<<<< HEAD
-=======
 
 
 											<s:if test="UJ_IsNewsManagement == 'management'.toString()">
 												<td>
 													<div class="am-btn-toolbar">
 														<div class="am-btn-group am-btn-group-xs">
->>>>>>> origin/LW
 
 											<s:iterator value="#session.realUser">
 												<s:if test="UJ_IsNewsManagement == 'management'.toString()">
@@ -116,14 +113,11 @@
 												</s:if>
 											</s:iterator>
 
-<<<<<<< HEAD
-=======
 													</div>
 												</td>
 											</s:if>
 
 
->>>>>>> origin/LW
 										</tr>
 									</s:iterator>
 								</tbody>

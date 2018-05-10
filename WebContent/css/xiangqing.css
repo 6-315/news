@@ -1,0 +1,76 @@
+/* 更新时间:2014年2月13日（By：罗京华） */
+
+ /*主样式*/
+body, div, dl, dt, dd, ul, ol, li,h1, h2, h3, h4, h5, h6, pre, code,form, fieldset, legend, input, button,textarea, blockquote, th, td {margin: 0;padding: 0;}fieldset, img { border: 0;}
+body {line-height: 1.5; }ol, ul {list-style: none;}
+:link, :visited , ins {text-decoration: none;}
+.clear {clear:both;}
+body,table,input,textarea,select,button {font-family:Microsoft YaHei,"微软雅黑", Arial, Helvetica, sans-serif;}
+.center{ margin:0 auto; /* 居中 这个是必须的，，其它的属性非必须 */ }
+.mt10 {margin-top: 10px;}
+.mt20 {margin-top: 20px;}
+.mt30 {margin-top: 30px;}
+.mb5 {margin-bottom: 5px;}
+.mb10 {margin-bottom: 10px;}
+.mb15 {margin-bottom: 15px;}
+.mb20 {margin-bottom: 20px;}
+.mb25 {margin-bottom: 25px;}
+.mb30 {margin-bottom: 30px;}
+.mb40 {margin-bottom: 40px;}
+.mb50 {margin-bottom: 50px;}
+.mb60 {margin-bottom: 30px;}
+.pb15 {padding-bottom: 15px;}
+.pb40 { padding-bottom: 40px;}
+.pb50 { padding-bottom: 50px;}
+.pb30 { padding-bottom: 30px;}
+.pb20 { padding-bottom: 25px;}
+.pb60 { padding-bottom: 60px;}
+.line { border-bottom:1px #eeeeee solid; padding-top:2px;
+}
+.p10 { padding:10px;}
+.p30 { padding:20px 30px 30px 40px;}
+.p20 { padding:10px 30px 30px 30px;}
+.pt30 { padding-top: 30px;}
+.pt40 { padding-top: 40px;}
+.pt20 { padding-top: 20px;}
+.pt25 { padding-top: 25px;}
+.pt15 { padding-top: 15px;}
+.pt10 { padding-top: 10px;}
+.pl10 { padding-left: 10px;}
+.left { float:left;}
+.right {float:right;}
+.row{height:auto; overflow:hidden; clear:both;}
+.b {background-color:#143270;}
+.f {background-color:#f1f1f1;}
+.f0 {background-color:#f1f1f1;}
+.f8 {color:#888888; line-height:24px;}
+.w {background-color:#ffffff;}
+.f12{font-size:12px;}
+.f14{font-size:14px;}
+.f16{font-size:16px;}
+.af a{color:#e8e8e8;}
+.af a:hover{color:#a28a40;}
+.bf a{color:#323232;}
+.bf a:hover{color:#cc0000;}
+.ff a{color:#143270;}
+.ff a:hover{color:#cc0000;}
+.ce8 {color:#e8e8e8; font-size:12px;}
+span.c6 {color:#666666;}
+span.c1 {color:#143270;}
+span.c3 {color:#32323;}
+span.f1 a{color:#cc0000; font-weight:bold; background-image:url('../img/dot.gif'); background-repeat:no-repeat;background-position:right; padding-right:16px;}
+span.f1 a:hover{color:#cc0000; font-weight:bold; text-decoration:underline;background-image:url('../img/dot.gif'); background-repeat:no-repeat;background-position:right; padding-right:18px;}
+
+span.b2 a{color:#143270; font-size:14px; background-image:url('../img/dot3.gif'); background-repeat:no-repeat;background-position:right; padding-right:16px;}
+span.b2 a:hover{color:#cc0000;  text-decoration:underline;background-image:url('../img/dot3.gif'); background-repeat:no-repeat;background-position:right; padding-right:16px;}
+
+.divider {padding: 0 5px; color: #9d7702;}
+
+.pager_button {background-color:#666666; font-weight:normal; font-size:12px; margin:5px; color:#ffffff;padding:2px 3px ;}
+.pager_button:hover {background-color:#9d7702; font-weight:normal; font-size:12px; color:#ffffff;padding:2px 3px ;}
+
+
+span.b1{background-color:#143270; font-weight:normal; font-size:14px; color:#ffffff;padding:2px 5px ;}
+span.b6{background-color:#143270; font-weight:normal; font-size:14px; color:#ffffff;padding:2px 5px ;}
+
+

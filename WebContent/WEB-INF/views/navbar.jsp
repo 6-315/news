@@ -6,16 +6,20 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>侧边栏</title>
-<link rel="stylesheet" href="${pageContext.request.contextPath }/css/bootstrap.css" />
-<link rel="stylesheet" href="${pageContext.request.contextPath }/css/MainWarp.css" />
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath }/css/bootstrap.css" />
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath }/css/MainWarp.css" />
 <script src="${pageContext.request.contextPath }/js/jquery1.8.2.js"></script>
 </head>
 <body>
 	<%-- <s:iterator value="allNavigationNewsDTO"> --%>
 	<div class="MainWrap">
 		<div class="events">
+
 			<h2>
-				<b></b>头条新闻<b></b> <a class="newsmore" href="">更多>></a>
+				<b></b>头条新闻<b></b> <a class="newsmore"
+					href="${pageContext.request.contextPath}/newsinfo/info_exact3Action?&&newsTwoNavigationInfo.TNI_Name=='阿斯顿' />">更多>></a>
 
 			</h2>
 			<ul class="clearfix">
@@ -28,7 +32,9 @@
 								</span>
 									<div class="txtwrapper">
 										<h3>
-										<a href="${pageContext.request.contextPath}/newsinfo/info_exact2Action?news.NI_Id=<s:property value="news_NewsInfo.NI_Id" />&&newsTwoNavigationInfo.TNI_Id=<s:property value="news_TwoNavigationInfo.TNI_Id" />"><s:property value="news_NewsInfo.NI_Title" /></a>
+											<a
+												href="${pageContext.request.contextPath}/newsinfo/info_exact2Action?news.NI_Id=<s:property value="news_NewsInfo.NI_Id" />&&newsTwoNavigationInfo.TNI_Id=<s:property value="news_TwoNavigationInfo.TNI_Id" />"><s:property
+													value="news_NewsInfo.NI_Title" /></a>
 										</h3>
 										<p>
 											<s:property value="news_NewsInfo.NI_Title" />
@@ -37,9 +43,10 @@
 							</a></li>
 						</s:iterator>
 					</s:if>
-				</s:iterator>
-				<!-- 循环结束 -->
+		</s:iterator>
+					<!-- 循环结束 -->
 			</ul>
+	
 		</div>
 		<hr class="solid_1" />
 		<!-- 咨询动态 -->
@@ -55,7 +62,9 @@
 								<s:iterator value="listNewsDTO">
 									<li>
 										<div class="intimate" style="float: left; width: 100%;">
-											<a href="${pageContext.request.contextPath}/newsinfo/info_exact2Action?news.NI_Id=<s:property value="news_NewsInfo.NI_Id" />&&newsTwoNavigationInfo.TNI_Id=<s:property value="news_TwoNavigationInfo.TNI_Id" />" target="_blank"> <span class="text"> <s:property
+											<a
+												href="${pageContext.request.contextPath}/newsinfo/info_exact2Action?news.NI_Id=<s:property value="news_NewsInfo.NI_Id" />&&newsTwoNavigationInfo.TNI_Id=<s:property value="news_TwoNavigationInfo.TNI_Id" />"
+												target="_blank"> <span class="text"> <s:property
 														value="news_NewsInfo.NI_Title" /></span> <span class="time">
 													2018</span>
 											</a>
@@ -86,7 +95,9 @@
 									<s:iterator value="listNewsDTO">
 										<li>
 											<div class="intimate" style="float: left; width: 100%;">
-												<a href="${pageContext.request.contextPath}/newsinfo/info_exact2Action?news.NI_Id=<s:property value="news_NewsInfo.NI_Id" />&&newsTwoNavigationInfo.TNI_Id=<s:property value="news_TwoNavigationInfo.TNI_Id" />" target="_blank"> <span class="text"> <s:property
+												<a
+													href="${pageContext.request.contextPath}/newsinfo/info_exact2Action?news.NI_Id=<s:property value="news_NewsInfo.NI_Id" />&&newsTwoNavigationInfo.TNI_Id=<s:property value="news_TwoNavigationInfo.TNI_Id" />"
+													target="_blank"> <span class="text"> <s:property
 															value="news_NewsInfo.NI_Title" /></span> <span class="time">
 														2018</span>
 												</a>
@@ -109,7 +120,9 @@
 									<s:iterator value="listNewsDTO">
 										<li>
 											<div class="intimate" style="float: left; width: 100%;">
-												<a href="${pageContext.request.contextPath}/newsinfo/info_exact2Action?news.NI_Id=<s:property value="news_NewsInfo.NI_Id" />&&newsTwoNavigationInfo.TNI_Id=<s:property value="news_TwoNavigationInfo.TNI_Id" />" target="_blank"> <span class="text"><s:property
+												<a
+													href="${pageContext.request.contextPath}/newsinfo/info_exact2Action?news.NI_Id=<s:property value="news_NewsInfo.NI_Id" />&&newsTwoNavigationInfo.TNI_Id=<s:property value="news_TwoNavigationInfo.TNI_Id" />"
+													target="_blank"> <span class="text"><s:property
 															value="news_NewsInfo.NI_Title" /></span> <span class="time">
 														2018</span>
 												</a>

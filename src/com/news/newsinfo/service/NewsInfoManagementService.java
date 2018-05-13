@@ -42,4 +42,8 @@ public interface NewsInfoManagementService {
 
 	public SelectAllDTO getOneDTO(String tni_Id);
 
+	public List<SelectAllDTO> listSelectAllDTO2(String tni_Name);
+
+
+
 }

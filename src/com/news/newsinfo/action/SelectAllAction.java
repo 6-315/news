@@ -1,5 +1,6 @@
 package com.news.newsinfo.action;
 
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -135,7 +136,7 @@ public class SelectAllAction extends ActionSupport implements ServletResponseAwa
 
 	// 查找二级栏目下的所有新闻
 	public String SelectNewsAction() {
-		//listSelectAllDTO = newsInfoManagementService.listSelectAllDTO();
+		// listSelectAllDTO = newsInfoManagementService.listSelectAllDTO();
 		System.out.println(listSelectAllDTO);
 		return "";
 	}
@@ -145,20 +146,28 @@ public class SelectAllAction extends ActionSupport implements ServletResponseAwa
 		newsinfoDTO = newsInfoManagementService.getExact(news.getNI_Id());
 		return "ok";
 	}
-	
+
 	// 查找详细新闻，根据新闻ID（首页使用）
 	public String exact2Action() {
-		System.out.println("QQQQQQQQQ"+newsTwoNavigationInfo.getTNI_Id());
+		System.out.println("QQQQQQQQQ" + newsTwoNavigationInfo.getTNI_Id());
 		listSelectAllDTO = newsInfoManagementService.listSelectAllDTO(newsTwoNavigationInfo.getTNI_Id());
-		//selectAllDTO = newsInfoManagementService.getOneDTO(newsTwoNavigationInfo.getTNI_Id());
+		// selectAllDTO =
+		// newsInfoManagementService.getOneDTO(newsTwoNavigationInfo.getTNI_Id());
 		newsinfoDTO = newsInfoManagementService.getExact(news.getNI_Id());
 		return "ok2";
 	}
-	public String exact3Action() {
-		System.out.println("QQQQQQQQQ"+newsTwoNavigationInfo.getTNI_Name());
-	//	listSelectAllDTO = newsInfoManagementService.listSelectAllDTO(newsTwoNavigationInfo.getTNI_Name());
-		//selectAllDTO = newsInfoManagementService.getOneDTO(newsTwoNavigationInfo.getTNI_Id());
-		//newsinfoDTO = newsInfoManagementService.getExact(news.getNI_Id());
+
+	public String exact3Action() throws UnsupportedEncodingException {
+		//String kk;
+		//kk = newsTwoNavigationInfo.getTNI_Name();
+		//kk = new String(kk.getBytes("ISO-8859-1"), "UTF-8");
+		//System.out.println("AAAAAAAAA:" + kk);
+		newsTwoNavigationInfo
+				.setTNI_Name(new String(newsTwoNavigationInfo.getTNI_Name().getBytes("ISO-8859-1"), "UTF-8"));
+		listSelectAllDTO = newsInfoManagementService.listSelectAllDTO2(newsTwoNavigationInfo.getTNI_Name());
+		// selectAllDTO =
+		// newsInfoManagementService.getOneDTO(newsTwoNavigationInfo.getTNI_Id());
+		// newsinfoDTO = newsInfoManagementService.getExact(news.getNI_Id());
 		return "list";
 	}
 

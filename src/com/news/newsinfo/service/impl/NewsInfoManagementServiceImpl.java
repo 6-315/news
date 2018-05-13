@@ -290,5 +290,31 @@ public class NewsInfoManagementServiceImpl implements NewsInfoManagementService 
 		return null;
 	}
 
+	@Override
+	public List<SelectAllDTO> listSelectAllDTO2(String tni_Name) {
+		List<SelectAllDTO> listSelectAllDTO = new ArrayList<>();
+		List<News_NewsInfo> listNewsNewsInfo = new ArrayList<>();
+		List<News_TwoNavigationInfo> listTwo = new ArrayList<>();
+		System.out.println("KKKKKKKKK:"+tni_Name);
+		SelectAllDTO selectAllDTO;
+		listTwo = (List<News_TwoNavigationInfo>) newsInfoManagementDao
+				.listObject("from News_TwoNavigationInfo where TNI_Name= '"+tni_Name+"'");
+		System.out.println(listTwo.size());
+		for (News_TwoNavigationInfo news_TwoNavigationInfo : listTwo) {
+			listNewsNewsInfo = new ArrayList<>();
+			selectAllDTO = new SelectAllDTO();
+			listNewsNewsInfo = (List<News_NewsInfo>) newsInfoManagementDao.queryForPage(
+					"from News_NewsInfo where NI_BelongNavigation = '" + news_TwoNavigationInfo.getTNI_Id() + "'", 0,
+					5);
+			selectAllDTO.setNews_TwoNavigationInfo(news_TwoNavigationInfo);
+			selectAllDTO.setNews_NewsInfo(listNewsNewsInfo);
+			listSelectAllDTO.add(selectAllDTO);
+			System.out.println("pqpqpqqp"+listSelectAllDTO);
+		}
+		return listSelectAllDTO;
+		
+		
+	}
+
 
 }

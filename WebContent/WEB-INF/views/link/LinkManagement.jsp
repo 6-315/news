@@ -121,7 +121,7 @@
 																<button
 																	class="am-btn am-btn-default am-btn-xs am-text-secondary"
 																	data-toggle="modal" data-target="#myModal_1"
-																	id="<s:property value="LI_Id"/>&$&<s:property value="LI_Name"/>&$&<s:property value="LI_Address" />&$&<s:property value="LI_CreateTime" />&$&<s:property value="LI_IsDelete" />"
+																	id="<s:property value="LI_Id"/>&$&<s:property value="LI_Name"/>&$&<s:property value="LI_Address" />&$&<s:property value="LI_CreateTime" />&$&<s:property value="LI_IsDelete" />&$&<s:property value="LI_IsDisplay" />"
 																	onclick="chuanIdForModal(this.id)">
 																	<span class="am-icon-pencil-square-o"></span> 编辑
 																</button>
@@ -203,8 +203,8 @@
 									name="news_LinkInfo.LI_Address" id="link_Address" type="text"
 									class="form-control input-sm" placeholder="请输入链接地址" /> 是否可见 <label
 									class="form-control input-sm"> <input type="radio"
-									name="news_LinkInfo.LI_IsDisplay" id="sr1" value="1" />可见 <input
-									type="radio" name="news_LinkInfo.LI_IsDisplay" id="sr1"
+									name="news_LinkInfo.LI_IsDisplay" id="sr1_1" value="1" />可见 <input
+									type="radio" name="news_LinkInfo.LI_IsDisplay" id="sr1_2"
 									value="-1" />不可见
 								</label>
 							</div>
@@ -263,6 +263,13 @@
 			$('#link_Address').val(arr[2])
 			$('#link_createTime').val(arr[3])
 			$('#link_isDelete').val(arr[4])
+			$('#link_isDisplay').val(arr[5])
+			if(arr[5]==1){
+				$('#sr1_1').prop("checked", true);
+			}else{
+				$('#sr1_2').prop("checked", true);
+			}
+			
 		}
 	</script>
 	<script>

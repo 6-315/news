@@ -148,7 +148,7 @@
 								<s:iterator value="news_LinkInfoCountVO.listNews_LinkInfo">
 									<s:if test="LI_IsDisplay == 1">
 
-										<li><a href="" target="_blank"> <s:property
+										<li><a href='<s:property value="LI_Address" />' target="_blank"> <s:property
 													value="LI_Name" />
 										</a></li>
 									</s:if>

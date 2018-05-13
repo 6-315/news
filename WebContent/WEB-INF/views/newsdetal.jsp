@@ -24,7 +24,7 @@
 	href="${pageContext.request.contextPath }/css/home.css" />
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath }/css/index.css" />
-	<link rel="stylesheet"
+<link rel="stylesheet"
 	href="${pageContext.request.contextPath }/css/xiangqing.css" />
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath }/css/pc.css" />
@@ -55,12 +55,15 @@
 				</s:iterator>
 				<div class="module related">
 					<h2>相关链接</h2>
-					<ul>
-						<li><a target="_blank" href="">学校活动</a></li>
-						<li><a target="_blank" href="">图书馆</a></li>
-						<li><a target="_blank" href="">教学周历</a></li>
-						<li><a target="_blank" href="">校内电话黄页</a></li>
-					</ul>
+					<s:iterator value="news_LinkInfoCountVO.listNews_LinkInfo">
+						<ul>
+							<s:if test="LI_IsDisplay == 1">
+								<li><a target="_blank"
+									href='<s:property value="LI_Address" />'><s:property
+											value="LI_Name" /></a></li>
+							</s:if>
+						</ul>
+					</s:iterator>
 					<ul style="border: 0px;" class="mb20">
 						<li><a target="_blank" href="">个人门户系统</a></li>
 						<li><a target="_blank" href="">新闻网</a></li>

@@ -8,7 +8,6 @@ import com.news.jurisdiction.domain.News_UserJurisdiction;
 import com.news.jurisdiction.domain.VO.News_UserJurisdictionVO;
 import com.news.jurisdiction.service.JurisdictionService;
 
-
 import util.BuildUuid;
 import util.TimeUtil;
 
@@ -47,17 +46,26 @@ public class JurisdictionServiceImpl implements JurisdictionService {
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public News_UserJurisdictionVO listJurisdictionInfoByPage(News_UserJurisdictionVO news_UserJurisdictionVO) {
+	public News_UserJurisdictionVO listJurisdictionInfoByPage(String userId,
+			News_UserJurisdictionVO news_UserJurisdictionVO) {
 		List<News_UserJurisdiction> list = new ArrayList<>();
 		// 获取数量
 		// 链接数量的hql以及遍历的hql
 		String news_LinkInfoCountHql = "select count(*) from News_UserJurisdiction where UJ_IsDelete ='1' ";
 		String listNews_LinkInfoCountDTOHql = "from News_UserJurisdiction where UJ_IsDelete ='1' ";
-		/*if (news_UserJurisdictionVO.getSearch() != null && news_UserJurisdictionVO.getSearch().trim().length() > 0) {
-			String search = "%" + news_UserJurisdictionVO.getSearch().trim() + "%";
-			news_LinkInfoCountHql = news_LinkInfoCountHql + "where UJ_UserName like '" + search + "' ";
-			listNews_LinkInfoCountDTOHql = listNews_LinkInfoCountDTOHql + "where UJ_UserName like '" + search + "'";
-		}*/
+		/*
+		 * if (news_UserJurisdictionVO.getSearch() != null &&
+		 * news_UserJurisdictionVO.getSearch().trim().length() > 0) { String
+		 * search = "%" + news_UserJurisdictionVO.getSearch().trim() + "%";
+		 * news_LinkInfoCountHql = news_LinkInfoCountHql +
+		 * "where UJ_UserName like '" + search + "' ";
+		 * listNews_LinkInfoCountDTOHql = listNews_LinkInfoCountDTOHql +
+		 * "where UJ_UserName like '" + search + "'"; }
+		 */
+		if (userId != null && userId.trim().length() > 0) {
+			news_LinkInfoCountHql = news_LinkInfoCountHql + " and UJ_Id != '" + userId + "'";
+			listNews_LinkInfoCountDTOHql = listNews_LinkInfoCountDTOHql + "and UJ_Id != '" + userId + "'";
+		}
 		// 这里如果不加desc表示正序，如果加上desc表示倒序
 		listNews_LinkInfoCountDTOHql = listNews_LinkInfoCountDTOHql + "order by UJ_ModifyTime desc ";
 		int userInfoCount = jurisdictionDao.getCount(news_LinkInfoCountHql);

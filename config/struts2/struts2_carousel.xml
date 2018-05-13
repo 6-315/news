@@ -18,7 +18,12 @@
 			</result>
 			<result name="listCarousel">/WEB-INF/views/carouse/index.jsp
 			</result>
-		
+			<result name="123">/WEB-INF/views/front-lunbotu.jsp
+			</result>
+			<result name="shuangchuan">/WEB-INF/views/carouse/shangchuan.jsp
+			</result>
+			<result name="shuangchuan1" type="redirectAction">carousel_shangchuanAction
+			</result>
 		</action>
 		<action name="img_*" class="com.news.carousel.action.ImgAction"
 			method="{1}">

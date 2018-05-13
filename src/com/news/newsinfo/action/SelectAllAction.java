@@ -1,5 +1,6 @@
 package com.news.newsinfo.action;
 
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -8,8 +9,10 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.struts2.interceptor.ServletRequestAware;
 import org.apache.struts2.interceptor.ServletResponseAware;
 
+import com.news.navigation.domain.News_TwoNavigationInfo;
 import com.news.newsinfo.domain.News_NewsInfo;
-import com.news.newsinfo.domain.DTO.NewsinfoDTO;
+import com.news.newsinfo.domain.DTO.AllNavigationNewsDTO;
+import com.news.newsinfo.domain.DTO.NewsDTO;
 import com.news.newsinfo.domain.DTO.SelectAllDTO;
 import com.news.newsinfo.service.NewsInfoManagementService;
 import com.opensymphony.xwork2.ActionSupport;
@@ -76,40 +79,105 @@ public class SelectAllAction extends ActionSupport implements ServletResponseAwa
 	 * 使用域模型SelectAllDTO
 	 */
 	private List<SelectAllDTO> listSelectAllDTO;
-	private NewsinfoDTO newsinfoDTO;
+	private SelectAllDTO selectAllDTO;
+	private NewsDTO newsinfoDTO;
 	private News_NewsInfo news;
+	private News_TwoNavigationInfo newsTwoNavigationInfo;
+	private List<News_NewsInfo> listNews;
+	private List<AllNavigationNewsDTO> allNavigationNewsDTO;
+
+	public News_TwoNavigationInfo getNewsTwoNavigationInfo() {
+		return newsTwoNavigationInfo;
+	}
+
+	public void setNewsTwoNavigationInfo(News_TwoNavigationInfo newsTwoNavigationInfo) {
+		this.newsTwoNavigationInfo = newsTwoNavigationInfo;
+	}
+
+	public List<AllNavigationNewsDTO> getAllNavigationNewsDTO() {
+		return allNavigationNewsDTO;
+	}
+
+	public void setAllNavigationNewsDTO(List<AllNavigationNewsDTO> allNavigationNewsDTO) {
+		this.allNavigationNewsDTO = allNavigationNewsDTO;
+	}
+
+	public List<News_NewsInfo> getListNews() {
+		return listNews;
+	}
+
+	public void setListNews(List<News_NewsInfo> listNews) {
+		this.listNews = listNews;
+	}
 
 	public List<SelectAllDTO> getListSelectAllDTO() {
 		return listSelectAllDTO;
+	}
+
+	public News_NewsInfo getNews() {
+		return news;
+	}
+
+	public void setNews(News_NewsInfo news) {
+		this.news = news;
 	}
 
 	public void setListSelectAllDTO(List<SelectAllDTO> listSelectAllDTO) {
 		this.listSelectAllDTO = listSelectAllDTO;
 	}
 
-	public NewsinfoDTO getNewsinfoDTO() {
+	public NewsDTO getNewsinfoDTO() {
 		return newsinfoDTO;
 	}
 
-	public void setNewsinfoDTO(NewsinfoDTO newsinfoDTO) {
+	public void setNewsinfoDTO(NewsDTO newsinfoDTO) {
 		this.newsinfoDTO = newsinfoDTO;
 	}
 
 	// 查找二级栏目下的所有新闻
 	public String SelectNewsAction() {
-		listSelectAllDTO = newsInfoManagementService.listSelectAllDTO();
+		// listSelectAllDTO = newsInfoManagementService.listSelectAllDTO();
 		System.out.println(listSelectAllDTO);
 		return "";
 	}
 
-	// 查找详细新闻，根据新闻ID
+	// 查找详细新闻，根据新闻ID（后台使用）
 	public String exactAction() {
-		newsinfoDTO = newsInfoManagementService.getExact(news.getNI_Content());
-		return "";
+		newsinfoDTO = newsInfoManagementService.getExact(news.getNI_Id());
+		return "ok";
 	}
 
-	/**
-	 * 结束
-	 */
+	// 查找详细新闻，根据新闻ID（首页使用）
+	public String exact2Action() {
+		System.out.println("QQQQQQQQQ" + newsTwoNavigationInfo.getTNI_Id());
+		listSelectAllDTO = newsInfoManagementService.listSelectAllDTO(newsTwoNavigationInfo.getTNI_Id());
+		// selectAllDTO =
+		// newsInfoManagementService.getOneDTO(newsTwoNavigationInfo.getTNI_Id());
+		newsinfoDTO = newsInfoManagementService.getExact(news.getNI_Id());
+		return "ok2";
+	}
+
+	public String exact3Action() throws UnsupportedEncodingException {
+		//String kk;
+		//kk = newsTwoNavigationInfo.getTNI_Name();
+		//kk = new String(kk.getBytes("ISO-8859-1"), "UTF-8");
+		//System.out.println("AAAAAAAAA:" + kk);
+		newsTwoNavigationInfo
+				.setTNI_Name(new String(newsTwoNavigationInfo.getTNI_Name().getBytes("ISO-8859-1"), "UTF-8"));
+		listSelectAllDTO = newsInfoManagementService.listSelectAllDTO2(newsTwoNavigationInfo.getTNI_Name());
+		// selectAllDTO =
+		// newsInfoManagementService.getOneDTO(newsTwoNavigationInfo.getTNI_Id());
+		// newsinfoDTO = newsInfoManagementService.getExact(news.getNI_Id());
+		return "list";
+	}
+
+	// 查找所有新闻还有新闻的详细内容
+	public String allNewsAction() {
+		/**
+		 * 拿到所有新闻及其内容
+		 */
+		allNavigationNewsDTO = newsInfoManagementService.getExact();
+		return "allNews";
+	}
 
 }

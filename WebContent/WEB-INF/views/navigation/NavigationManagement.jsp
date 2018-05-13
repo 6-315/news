@@ -63,11 +63,12 @@
 
 										一级导航名称<input name="news_OneNavigationInfo.ONI_Name"
 											type="text" class="form-control input-sm"
-											placeholder="请输入导航名称" /> 一级导航介绍 <input
-											name="news_OneNavigationInfo.ONI_NavigatorIntroduce"
+											placeholder="请输入导航名称" /> 
+										一级导航介绍 <input name="news_OneNavigationInfo.ONI_NavigatorIntroduce"
 											type="text" class="form-control input-sm"
 											placeholder="请输入导航介绍" />
-
+										一级导航Order<input name="news_OneNavigationInfo.ONI_Order" type="text" class="form-control input-sm"
+											placeholder="请输入导航Order" >
 
 
 									</div>
@@ -105,6 +106,8 @@
 											name="news_TwoNavigationInfo.TNI_NavigatorIntroduce"
 											type="text" class="form-control input-sm"
 											placeholder="请输入导航介绍" />
+											二级导航Order<input name="news_TwoNavigationInfo.TNI_Order" type="text" class="form-control input-sm"
+											placeholder="请输入导航Order" >
 										<!-- 1 -->
 										二级导航所属 <select
 											name="news_TwoNavigationInfo.TNI_BelongOneNavigator"
@@ -177,7 +180,7 @@
 															<button
 																class="am-btn am-btn-default am-btn-xs am-text-secondary"
 																data-toggle="modal" data-target="#myModal_updateOne"
-																id="<s:property value="news_OneNavigationInfo.ONI_Id"/>&$&<s:property value="news_OneNavigationInfo.ONI_Name"/>&$&<s:property value="news_OneNavigationInfo.ONI_NavigatorIntroduce" />&$&<s:property value="news_OneNavigationInfo.ONI_CreateTime" />&$&<s:property value="news_OneNavigationInfo.ONI_IsDelete" />&$&<s:property value="news_OneNavigationInfo.ONI_Order" />"
+																id="<s:property value="news_OneNavigationInfo.ONI_Id"/>&$&<s:property value="news_OneNavigationInfo.ONI_Name"/>&$&<s:property value="news_OneNavigationInfo.ONI_NavigatorIntroduce" />&$&<s:property value="news_OneNavigationInfo.ONI_CreateTime" />&$&<s:property value="news_OneNavigationInfo.ONI_IsDelete" />&$&<s:property value="news_OneNavigationInfo.ONI_Order" />&$&<s:property value="news_OneNavigationInfo.ONI_IsDisplay" />"
 																onclick="chuanIdForModal(this.id)">
 																<span class="am-icon-pencil-square-o"></span> 编辑
 															</button>
@@ -243,7 +246,7 @@
 																	<button
 																		class="am-btn am-btn-default am-btn-xs am-text-secondary"
 																		data-toggle="modal" data-target="#myModal_updateTwo"
-																		id="<s:property value="TNI_Id"/>&$&<s:property value="TNI_Name"/>&$&<s:property value="TNI_NavigatorIntroduce" />&$&<s:property value="TNI_CreateTime" />&$&<s:property value="TNI_IsDelete" />&$&<s:property value="TNI_Order" />"
+																		id="<s:property value="TNI_Id"/>&$&<s:property value="TNI_Name"/>&$&<s:property value="TNI_NavigatorIntroduce" />&$&<s:property value="TNI_CreateTime" />&$&<s:property value="TNI_IsDelete" />&$&<s:property value="TNI_Order" />&$&<s:property value="TNI_IsDisplay" />"
 																		onclick="chuanIdForModal_2(this.id)">
 																		<span class="am-icon-pencil-square-o"></span> 编辑
 																	</button>
@@ -326,8 +329,7 @@
 							<h4 class="modal-title" id="myModalLabel">修改一级导航信息</h4>
 						</div>
 						<div class="modal-body">
-							<input id="onenavigationOrder"
-								name="news_OneNavigationInfo.ONI_Order" type="hidden"> <input
+							 <input
 								id="onenavigationid" name="news_OneNavigationInfo.ONI_Id"
 								type="hidden"> <input id="onenavigationisDelete"
 								name="news_OneNavigationInfo.ONI_IsDelete" type="hidden">
@@ -335,14 +337,20 @@
 								name="news_OneNavigationInfo.ONI_CreateTime" type="hidden">
 							一级导航名称<input id="onenavigationName"
 								name="news_OneNavigationInfo.ONI_Name" type="text"
-								class="form-control input-sm" placeholder="请输入链接名称" /> 一级导航介绍 <input
+								class="form-control input-sm"  /> 一级导航介绍 <input
 								name="news_OneNavigationInfo.ONI_NavigatorIntroduce"
 								id="onenavigatorIntroduce" type="text"
-								class="form-control input-sm" placeholder="请输入链接地址" /> 是否可见 <label
+								class="form-control input-sm"  /> 
+								一级导航Order <input
+								name="news_OneNavigationInfo.ONI_Order"
+								id="onenavigationOrder" type="text"
+								class="form-control input-sm"  /> 
+								
+								是否可见 <label
 								class="form-control input-sm"> <input type="radio"
-								name="news_OneNavigationInfo.ONI_IsDisplay" id="sr1" value="1" />可见
+								name="news_OneNavigationInfo.ONI_IsDisplay" id="sr1_1" value="1" />可见
 								<input type="radio" name="news_OneNavigationInfo.ONI_IsDisplay"
-								id="sr1" value="-1" />不可见
+								id="sr1_2" value="-1" />不可见
 							</label>
 
 
@@ -415,8 +423,7 @@
 							<h4 class="modal-title" id="myModalLabel">修改二级导航信息</h4>
 						</div>
 						<div class="modal-body">
-							<input id="twonavigationOrder"
-								name="news_TwoNavigationInfo.TNI_Order" type="hidden"> <input
+							 <input
 								id="twonavigationid" name="news_TwoNavigationInfo.TNI_Id"
 								type="hidden"> <input id="twonavigationisDelete"
 								name="news_TwoNavigationInfo.TNI_IsDelete" type="hidden">
@@ -424,14 +431,18 @@
 								name="news_TwoNavigationInfo.TNI_CreateTime" type="hidden">
 							二级导航名称<input id="twonavigationName"
 								name="news_TwoNavigationInfo.TNI_Name" type="text"
-								class="form-control input-sm" placeholder="请输入链接名称" /> 二级导航介绍 <input
+								class="form-control input-sm"  /> 二级导航介绍 <input
 								name="news_TwoNavigationInfo.TNI_NavigatorIntroduce"
 								id="twonavigatorIntroduce" type="text"
-								class="form-control input-sm" placeholder="请输入链接地址" /> 是否可见 <label
+								class="form-control input-sm"  /> 
+								二级导航Order<input id="twonavigationOrder"
+								name="news_TwoNavigationInfo.TNI_Order" type="text" class="form-control input-sm">
+								
+								是否可见 <label
 								class="form-control input-sm"> <input type="radio"
-								name="news_TwoNavigationInfo.TNI_IsDisplay" id="sr1" value="1" />可见
+								name="news_TwoNavigationInfo.TNI_IsDisplay" id="sr2_1" value="1" />可见
 								<input type="radio" name="news_TwoNavigationInfo.TNI_IsDisplay"
-								id="sr1" value="-1" />不可见
+								id="sr2_2" value="-1" />不可见
 							</label>
 							<!-- 1 -->
 							二级导航所属 <select
@@ -517,6 +528,13 @@
 			$('#onenavigationcreateTime').val(arr[3])
 			$('#onenavigationisDelete').val(arr[4])
 			$('#onenavigationOrder').val(arr[5])
+			$('#onenavigationisDisplay').val(arr[6])
+			if(arr[6]==1){
+				$('#sr1_1').prop("checked", true);
+			}else{
+				$('#sr1_2').prop("checked", true);
+			}
+			
 		}
 		function chuanIdForModal_1(id) {
 			console.log(id)
@@ -547,6 +565,12 @@
 			$('#twonavigationcreateTime').val(arr[3])
 			$('#twonavigationisDelete').val(arr[4])
 			$('#twonavigationOrder').val(arr[5])
+			$('#twonavigationisDisplay').val(arr[6])
+			if(arr[6]==1){
+				$('#sr2_1').prop("checked", true);
+			}else{
+				$('#sr2_2').prop("checked", true);
+			}
 		}
 		function chuanIdForModal_3(id) {
 			console.log(id)

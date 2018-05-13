@@ -262,17 +262,20 @@ li {
 
 .events ul li .txtwrapper {
 	margin-left: 20px;
+	
 }
 
 @media screen and (max-width: 400px) {
 	.events ul li .txtwrapper {
 		margin-left: 75px;
+		text-decoration: none;
 	}
 }
 
 .events ul li .txtwrapper h3 {
 	font-size: 16px;
 	line-height: 1.5em;
+	text-decoration: none;
 }
 
 .events ul li .txtwrapper p {
@@ -287,6 +290,7 @@ li {
 	clear: both;
 	height: 0px;
 	visibility: hidden;
+	
 }
 
 .relative {

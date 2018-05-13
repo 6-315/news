@@ -190,13 +190,14 @@ public class CarouselManagementAction extends ActionSupport implements ServletRe
 	 */
 	// 添加轮播图
 	public String detailAction() {
+		System.out.println("QQQQ:"+news_CarouselInfo.getCI_BelongNews());
 		if (news_CarouselInfo.getCI_BelongNews() == null) {
 			setMessage("NO Title");
-			return "save";
+			return "shuangchuan1";
 		}
 		if (myfileFileName == null) {
 			setMessage("error");
-			return "save";
+			return "shuangchuan1";
 		}
 
 		String path = "C://news/";
@@ -249,6 +250,14 @@ public class CarouselManagementAction extends ActionSupport implements ServletRe
 		carouselManagementService.delete(news_CarouselInfo);
 		setMessage("shanchu");
 		return "delete";
+	}
+	public String shangchuanAction(){
+		listNewsCarouselDTO = carouselManagementService.listNewsCarouselDTO();
+		listNews = carouselManagementService.getCarouselNews();
+		
+		
+		return"shuangchuan";
+		
 	}
 
 	/**

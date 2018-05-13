@@ -26,7 +26,6 @@ public class jjj {
 		this.news = news;
 	}
 
-	@Resource
 	private NewsInfoManagementService newsInfoManagementService;
 
 	public NewsInfoManagementService getNewsInfoManagementService() {
@@ -39,9 +38,9 @@ public class jjj {
 
 	@Test
 	public void ff() {
-		List<SelectAllDTO> listSelectAllDTO = newsInfoManagementService.listSelectAllDTO();
-		System.out.println(listSelectAllDTO.size());
-		System.out.println(listSelectAllDTO);
+		//List<SelectAllDTO> listSelectAllDTO = newsInfoManagementService.listSelectAllDTO(String string);
+		//System.out.println(listSelectAllDTO.size());
+		//System.out.println(listSelectAllDTO);
 	}
 
 	@Test

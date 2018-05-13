@@ -26,6 +26,10 @@
 			</result>
 			<result name="ok">/WEB-INF/views/newsInfo/exact.jsp
 			</result>
+			<result name="ok2">/WEB-INF/views/newsdetal.jsp
+			</result>
+			<result name="list">/WEB-INF/views/newslist.jsp
+			</result>
 			<result name="allNews">/WEB-INF/views/navbar.jsp
 			</result>
 		</action>

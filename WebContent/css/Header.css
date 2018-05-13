@@ -169,3 +169,51 @@ a.top-act-link:hover{ background: #111; background: rgba(0,0,0,0.9)}
     border-image-slice: 1;}
 a.top-version-link:hover{ background: #111; background: rgba(0,0,0,0.9)}
 
+
+/* 二级栏目标题 */
+#right .title { margin: -32px -1px 0 -1px; width: 259px; height: 120px; background-color: #e60b00; background-repeat: no-repeat; background-position: 24px 73px; }
+#right .about { background-image: url(../img/tit-about2.png); }
+#right .news { background-image: url(../img/tit-news2.png); }
+#right .business { background-image: url(../img/tit-business2.png); }
+#right .culture { background-image: url(../img/tit-culture2.png); background-position: 26px 38px; }
+#right .responsibility { background-image: url(../img/tit-responsibility2.png); }
+#right .hr { background-image: url(../img/tit-hr2.png); background-position: 26px 38px; }
+#right .investing { background-image: url(../img/tit-investing2.png); background-position: 26px 38px; }
+#right .contact { background-image: url(../img/tit-contact2.png); }
+
+.none{display:none;}
+
+/* 连接列表 */
+.link-list { line-height: 22px; }
+.link-list a { display: block; overflow: hidden; color:#7b6a68; transition:color 0.7s; -webkit-transition:color 0.7s; -moz-transition:color 0.7s;}
+.link-list a:hover {color:#db2020;}
+.link-list a span { float: left; width: 76px; color: inherit; }
+
+
+ #main .about-columns {position:absolute; margin-left:-12px; top:25px; width:100%; height:52px;}
+ #main .about-columns a {float:left; padding:5px 12px; font-weight:bold; font-size:13px; color:#757575;}
+ #main .about-columns .abs {position:absolute; left:12px; top:31px; width:52px; height:3px; background-color:#e80000;}
+       
+       
+                    
+#content { padding-top: 85px; background: #FFF url(../img/content_bg2.jpg) no-repeat center 0; }
+#main { position: relative; margin: 0 auto; width: 1056px; background: #fff url(../img/main_bg2.jpg) repeat-y right 0; z-index: 66; }
+#main:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+*html #main { height: 1%; }
+#left { float: left; padding: 51px 0 40px 0; width: 757px; overflow: hidden; }
+#left .crumbs { margin-bottom: 45px; padding: 5px 0 0 19px; height: 32px; line-height: 32px; border-bottom: 3px solid #999a9a; background: url(../img/crumbs_bg.jpg) no-repeat 0 18px; }
+#left .crumbs a { font-weight: bold; color: #645b58; }
+#left .crumbs span { /*margin:0 7px; */ font-weight: bold; /*font-style:italic; font-size:15px;*/ }
+#left .crumbs .last { color: #e60b00; }
+#left .content p{ width: 800px;}
+#right { /*position:absolute; right:0; top:0;*/ float: right; margin-top: -32px; padding-top: 32px; width: 258px; /*height:100%;*/ /*border-left:1px solid #e6e6e6; border-right:1px solid #e6e6e6;*/ }
+#right .menu li { position: relative; width: 100%; height: 45px; line-height: 45px; border-bottom: 1px solid #e6e6e6; }
+#right .menu li a { position: absolute; top: 0; left: 0; z-index: 2; width: 100%; height: 100%; font-weight: bold; text-indent: 22px;*position:relative; }
+#right .menu li .abs { position: absolute; top: 0; left: 0; z-index: 1; width: 0; height: 100%; background-color: #eeefeb; }
+
+
+#left .column-text { margin-bottom: -20px; }
+#left .column-text h1 { margin-bottom: 20px; font-weight: bold; font-size: 18px; color: #e60b00; }
+#left .column-text h2 { font-size: 14px; /* color:#ab753a;*/ }
+#left .column-text p { margin-bottom: 10px; text-indent: 2em;}
+#left .column-text p img { margin-top: 10px; }

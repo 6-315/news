@@ -8,11 +8,6 @@
 <title>Insert title here</title>
 <script src="${pageContext.request.contextPath }/js/jquery1.8.2.js"></script>
 <script src="${pageContext.request.contextPath }/js/header.js"></script>
-<script src="${pageContext.request.contextPath }/js/lunbotu.js"></script>
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath }/css/xiangqing.css" />
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath }/css/pc.css" />
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath }/css/bootstrap.css" />
 <link rel="stylesheet" type="text/css"
@@ -25,16 +20,14 @@
 	href="${pageContext.request.contextPath }/css/main.css" />
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath }/css/bootstrap-theme.css" />
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath }/css/Header.css" />
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath }/css/lunbotu.css" />
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath }/css/MainWarp.css" />
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath }/css/home.css" />
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath }/css/index.css" />
+	<link rel="stylesheet"
+	href="${pageContext.request.contextPath }/css/xiangqing.css" />
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath }/css/pc.css" />
 </head>
 <body>
 	<!--导航  -->

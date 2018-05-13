@@ -7,12 +7,11 @@
 <title>后台管理</title>
 </head>
 <body onload="user_detail()">
-	<s:action name="user_endHeaderAction" namespace="/user"
+<s:action name="user_endHeaderAction" namespace="/user"
 		executeResult="true" />
-	<div class="am-cf admin-main">
+	<div class="tpl-page-container tpl-page-header-fixed">
 		<s:action name="user_endNavbarAction" namespace="/user"
 			executeResult="true" />
-
 
 
 

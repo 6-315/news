@@ -19,7 +19,7 @@
 
 			<h2>
 				<b></b>头条新闻<b></b> <a class="newsmore"
-					href="${pageContext.request.contextPath}/newsinfo/info_exact3Action?&&newsTwoNavigationInfo.TNI_Name=='阿斯顿' />">更多>></a>
+					href="${pageContext.request.contextPath}/newsinfo/info_exact3Action?&&newsTwoNavigationInfo.TNI_Name=阿斯顿">更多>></a>
 
 			</h2>
 			<ul class="clearfix">
@@ -53,7 +53,7 @@
 		<div class="info_center">
 			<div class="information_left">
 				<h2>
-					<b></b>咨询动态<b></b><a class="newsmore" href="">更多>></a>
+					<b></b>咨询动态<b></b><a class="newsmore" href="${pageContext.request.contextPath}/newsinfo/info_exact3Action?&&newsTwoNavigationInfo.TNI_Name=阿斯顿">更多>></a>
 				</h2>
 				<div class="from_1">
 					<ul class="clearfix" style="margin-left: 20px;">
@@ -86,7 +86,7 @@
 			<div class="information_right">
 				<div class="right_top">
 					<h2>
-						<b></b>业务动态1<b></b><a class="newsmore" href="">更多>></a>
+						<b></b>业务动态1<b></b><a class="newsmore" href="${pageContext.request.contextPath}/newsinfo/info_exact3Action?&&newsTwoNavigationInfo.TNI_Name=阿斯顿">更多>></a>
 					</h2>
 					<div class="from_2">
 						<ul class="clearfix" style="margin-left: 20px;">
@@ -111,7 +111,7 @@
 				</div>
 				<div class="right_bottom">
 					<h2>
-						<b></b>业务动态2<b></b><a class="newsmore" href="">更多>></a>
+						<b></b>业务动态2<b></b><a class="newsmore" href="${pageContext.request.contextPath}/newsinfo/info_exact3Action?&&newsTwoNavigationInfo.TNI_Name=阿斯顿">更多>></a>
 					</h2>
 					<div class="from_3">
 						<ul class="clearfix" style="margin-left: 20px;">

@@ -80,7 +80,6 @@
 													value="NI_ModifyTime" /></td>
 
 
-											<s:if test="UJ_IsNewsManagement == 'management'.toString()">
 												<td>
 													<div class="am-btn-toolbar">
 														<div class="am-btn-group am-btn-group-xs">
@@ -115,7 +114,6 @@
 
 													</div>
 												</td>
-											</s:if>
 
 
 										</tr>

@@ -154,6 +154,13 @@ public class SelectAllAction extends ActionSupport implements ServletResponseAwa
 		newsinfoDTO = newsInfoManagementService.getExact(news.getNI_Id());
 		return "ok2";
 	}
+	public String exact3Action() {
+		System.out.println("QQQQQQQQQ"+newsTwoNavigationInfo.getTNI_Name());
+	//	listSelectAllDTO = newsInfoManagementService.listSelectAllDTO(newsTwoNavigationInfo.getTNI_Name());
+		//selectAllDTO = newsInfoManagementService.getOneDTO(newsTwoNavigationInfo.getTNI_Id());
+		//newsinfoDTO = newsInfoManagementService.getExact(news.getNI_Id());
+		return "list";
+	}
 
 	// 查找所有新闻还有新闻的详细内容
 	public String allNewsAction() {

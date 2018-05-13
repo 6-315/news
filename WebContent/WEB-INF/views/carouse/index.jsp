@@ -39,15 +39,15 @@
 				<li class="am-active">轮播图管理</li>
 			</ol>
 			<div class="tpl-portlet-components">
-				<div class="portlet-title">
+				<div class="portlet-title" style="border-bottom-width: 0px;">
 					<div class="caption font-green bold">
 
-						<s:iterator value="#session.realUser">
+					<%-- 	<s:iterator value="#session.realUser">
 							<s:if test="UJ_IsCarouselManagement == 'management'.toString()">
 								<button class="am-btn am-btn-default am-btn-success"
 									data-toggle="modal" data-target="#myModal" type="submit">添加轮播图</button>
 							</s:if>
-						</s:iterator>
+						</s:iterator> --%>
 
 						<!-- 添加的模态框（Modal） -->
 

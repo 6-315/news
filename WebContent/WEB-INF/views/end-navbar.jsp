@@ -29,16 +29,40 @@
 				</a></li>
 				<s:iterator value="#session.realUser">
 					<s:if test="UJ_IsCarouselManagement == 'management'.toString()">
-						<li class="tpl-left-nav-item"><a
-							href="${pageContext.request.contextPath}/carousel/carousel_selectAction?message="
-							class="nav-link"> <i class="am-icon-home"></i> <span>管理轮播图</span>
-						</a></li>
+					
+					
+					
+					<!--1  -->
+					<li class="tpl-left-nav-item">
+						<li class="tpl-left-nav-item"><a href="javascript:;"
+							class="nav-link tpl-left-nav-link-list"> <i
+								class="am-icon-table"></i> <span>轮播图管理</span> <i
+								class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+						</a>
+							<ul class="tpl-left-nav-sub-menu">
+								<li><a
+									href="${pageContext.request.contextPath}/carousel/carousel_shangchuanAction">
+										<i class="am-icon-angle-right"></i> <span>添加</span> <i
+										class="am-icon-star tpl-left-nav-content-ico am-fr am-margin-right"></i>
+								</a> <a
+									href="${pageContext.request.contextPath}/carousel/carousel_selectAction?message=">
+										<i class="am-icon-angle-right"></i> <span>管理</span>
+								</a></li>
+							</ul></li>
+					<!--2  -->
 					</s:if>
 					<s:if test="UJ_IsCarouselManagement == 'see'.toString()">
-						<li class="tpl-left-nav-item"><a
-							href="${pageContext.request.contextPath}/carousel/carousel_selectAction?message="
-							class="nav-link"> <i class="am-icon-home"></i> <span>查看轮播图</span>
-						</a></li>
+							<li class="tpl-left-nav-item"><a href="javascript:;"
+							class="nav-link tpl-left-nav-link-list"> <i
+								class="am-icon-table"></i> <span>轮播图管理</span> <i
+								class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+						</a>
+							<ul class="tpl-left-nav-sub-menu">
+								<li> <a
+									href="${pageContext.request.contextPath}/carousel/carousel_selectAction?message=">
+										<i class="am-icon-angle-right"></i> <span>查看</span>
+								</a></li>
+							</ul></li>
 					</s:if>
 
 					<s:if test="UJ_IsLinkeManagement == 'management'.toString()">

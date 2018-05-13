@@ -5,9 +5,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="css/Header.css" />
-<script src="js/jquery1.8.2.js"></script>
-		<script src="js/header.js"></script>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/css/Header.css" />
+<script src="${pageContext.request.contextPath }/js/jquery1.8.2.js"></script>
+		<script src="${pageContext.request.contextPath }/js/header.js"></script>
 </head>
 <body>
 	<div id="left" class="news-left" style="width: 940px; margin-left: 150px;">

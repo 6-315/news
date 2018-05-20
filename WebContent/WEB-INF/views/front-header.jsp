@@ -8,10 +8,7 @@
 <title>导航栏</title>
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath }/css/Header.css" />
-<script type="text/javascript"
-	src="${pageContext.request.contextPath }/js/jquery1.8.2.js"></script>
-<script type="text/javascript"
-	src="${pageContext.request.contextPath }/js/header.js"></script>
+
 </head>
 <body>
 	<div class="top">
@@ -50,5 +47,9 @@
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript"
+	src="${pageContext.request.contextPath }/js/jquery1.8.2.js"></script>
+<script type="text/javascript"
+	src="${pageContext.request.contextPath }/js/header.js"></script>
 </body>
 </html>

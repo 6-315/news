@@ -1,4 +1,4 @@
-package com.news.link.dao;
+ package com.news.link.dao;
 
 import java.util.List;
 

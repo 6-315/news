@@ -111,7 +111,7 @@ li{list-style-type: none;}
 .sub-nav{ position: absolute; visibility: hidden; top: 88px; left: 0; width: 100%; padding-top: 20px; padding-bottom: 20px; background: #000; background: rgba(0,0,0,0.7); z-index: 3;}
 .sub-nav-inner{ width: 1040px; height: 190px; padding-left: 200px; margin: 0 auto; overflow: hidden; zoom: 1; }
 .sub-nav .sub-nav-item{ float: left; width: 120px; }
-.sub-nav a.sub-nav-lnk{ display: block; width: 120px; height: 28px; line-height: 28px; color:#e1e1e1; font-size: 14px; text-align: center; }
+.sub-nav a.sub-nav-lnk{ display: block; width: 120px; height: 28px; line-height: 28px; color:#e1e1e1; font-size: 14px; text-align: center;text-decoration: none; cursor: pointer; }
 .sub-nav a.sub-nav-lnk:hover{ color: #e9c06c}
 .icon-new,.icon-hot{ display: inline-block; vertical-align: middle; width: 14px; height: 14px; margin-right: 2px;}
 .icon-new{ background-position: -129px 0}
@@ -149,7 +149,7 @@ a.top-act-link:hover{ background: #111; background: rgba(0,0,0,0.9)}
 .header-6th a.top-act-link{ margin-left: 540px;}
 .header-6th .top-act-desc{ width: 100%}
 
-.top-search-main{  position: absolute; margin-left:800px; width:440px; height: 90px; z-index: 4; background:#0b0b0b  }
+.top-search-main{  position: absolute; margin-left:800px; width:460px; height: 90px; z-index: 4; background:#0b0b0b  }
 .top-search-inner{ margin-top: 27px; width: 100%; height: 36px; background: #fff; overflow: hidden}
 .icon-search-inner{  float: left; width:30px; height: 30px; margin: 3px 4px 0; background-position: -662px -136px;}
 .input-search-box{  float: left; width:368px; height:20px; line-height: 20px; margin-top: 8px; background: #fff; border: 0 none; font-size: 16px; color: #545454 }

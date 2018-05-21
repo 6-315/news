@@ -21,6 +21,7 @@
 	href="${pageContext.request.contextPath }/css/home.css" />
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath }/css/index.css" />
+
 <body>
 	<!--TOP S-->
 	<s:action name="navigation_headerAction" namespace="/navigation"
@@ -34,5 +35,6 @@
 	<!-- footer -->
 	<s:action name="link_footerAction" namespace="/link"
 		executeResult="true"></s:action>
+		
 </body>
 </html>

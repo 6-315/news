@@ -18,4 +18,6 @@ public interface LinkManagementService {
 	public News_LinkInfoCountVO listLinkInfoByPage(News_LinkInfoCountVO news_LinkInfoCountVO);
 	
 	public int updateLinkInfo(News_LinkInfo news_LinkInfo);
+
+	public void ddd(News_LinkInfo news_LinkInfo);
 }

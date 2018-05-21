@@ -122,4 +122,12 @@ public class LinkManagementServiceImpl implements LinkManagementService {
 		return 1;
 	}
 
+	@Override
+	public void ddd(News_LinkInfo news_LinkInfo) {
+		System.out.println("!!!!!!!!!!:"+news_LinkInfo);
+		linkManagementDao.saveOrUpdateObject(news_LinkInfo);
+		
+		
+	}
+
 }

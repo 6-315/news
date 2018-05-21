@@ -83,6 +83,7 @@ public class LinkManagementAction extends ActionSupport implements ServletRespon
 	 * 使用域模型将News_LinkInfo对象放置到struts中 LMJ 2018/4/21
 	 */
 	private News_LinkInfo news_LinkInfo;
+	
 
 	public News_LinkInfo getNews_LinkInfo() {
 		return news_LinkInfo;
@@ -166,7 +167,9 @@ public class LinkManagementAction extends ActionSupport implements ServletRespon
 	 * @author LMJ 2018/04/23
 	 */
 	public String detailAction() {
-		if (linkManagementService.addLink(news_LinkInfo) == 1) {
+		System.out.println("QQQQQW+:"+news_LinkInfo);
+		linkManagementService.ddd(news_LinkInfo);
+;		if (linkManagementService.addLink(news_LinkInfo) == 1) {
 			return "listLinkInfoByPage";
 		} else {
 			return "error";

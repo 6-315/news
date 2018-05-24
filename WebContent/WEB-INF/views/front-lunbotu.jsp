@@ -6,54 +6,34 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>轮播图</title>
+<script src="${pageContext.request.contextPath }/js/jquery1.8.2.js"></script>
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath }/css/lunbotu.css" />
-
-	<script type="text/javascript"
-		src="${pageContext.request.contextPath }/js/jquery.flexslider-min.js"></script>	
-	<script type="text/javascript"
-		src="${pageContext.request.contextPath }/js/lunbotu.js"></script>
+<script src="${pageContext.request.contextPath }/js/lunbotu.js"></script>
+<script>
+	$(function() {
+		var myApi1 = new Myapi();
+		myApi1.JSON.lagout($('.J_banner'), 30000, 0);
+	})
+</script>
 </head>
 <body>
-	<div class="flexslider" id="lunbotu">
-		<div class="flex-viewport"
-			style="overflow: hidden; position: relative;">
-			<ul class="slides"
-				style="width: 1400%; transition-duration: 0.4s; transform: translate3d(-2880px, 0px, 0px);">
-
-				<s:iterator value="listNewsCarouselDTO">
-					<li class="clone" style="width: 100%; float: left; display: block;">
-						<div class="img">
-							<img
-								src="${pageContext.request.contextPath}/carousel/img_carouseImgShow?imgName=<s:property value="newsCarouselInfo.CI_Img" />"
-								width="100%" alt="" height="600px">
-						</div>
-					</li>
-				</s:iterator>
-			</ul>
-		</div>
-		<ul class="flex-direction-nav" style="margin-bottom: 0px;">
-			<li><a class="flex-prev" href="#">Previous</a></li>
-			<li><a class="flex-next" href="#">Next</a></li>
+	<div style="margin-left:170px;" class="J_banner">
+		<ul class="img">
+			<s:iterator value="listNewsCarouselDTO">
+				<li><img width="1249" height="450"
+					src="${pageContext.request.contextPath}/carousel/img_carouseImgShow?imgName=<s:property value="newsCarouselInfo.CI_Img" />"
+					alt=""></li>
+			</s:iterator>
 		</ul>
+		<ul class="pointer"></ul>
+		<!-- 点 -->
+		<a class="cut prev"><</a>
+		<!-- 上一张 -->
+		<a class="cut next">></a>
+		<!-- 下一张 -->
 	</div>
-	
 
-
-	<script>
-		$(function() {
-			$('#lunbotu').flexslider({
-				animation : "slide",
-				direction : "horizontal",
-				easing : "swing"
-			});
-		});
-		/*   $(document).ready(function(){  
-		$('.flexslider').flexslider({  
-		   directionNav: true,  
-		   pauseOnAction: false  
-		});  
-		});    */
-	</script>
 </body>
+
 </html>

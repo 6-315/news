@@ -49,7 +49,8 @@
 	</div>
 	<script type="text/javascript"
 	src="${pageContext.request.contextPath }/js/jquery1.8.2.js"></script>
-<script type="text/javascript"
+	<script type="text/javascript"
 	src="${pageContext.request.contextPath }/js/header.js"></script>
+	
 </body>
 </html>
